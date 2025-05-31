@@ -20,8 +20,6 @@
     
     <tags>
       
-      <tag>加密</tag>
-      
       <tag>计划</tag>
       
     </tags>
@@ -31,7 +29,7 @@
   
   
   <entry>
-    <title>Hexo+GitHub/Gitee博客操作指南</title>
+    <title>Hexo+GitHub/Gitee博客操作笔记</title>
     <link href="/2025/05/30/hexo_note/"/>
     <url>/2025/05/30/hexo_note/</url>
     
@@ -46,8 +44,6 @@
     
     
     <tags>
-      
-      <tag>加密</tag>
       
       <tag>Hexo</tag>
       
