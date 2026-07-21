@@ -19,20 +19,22 @@
   <meta name="author" content="CanShine">
   <meta name="keywords" content="">
   
-    <meta name="description" content="FPGA&#x2F;ASIC 时序违例分析与收敛指南 在数字 IC 和 FPGA 设计中，**时序收敛（Timing Closure）**是决定系统能否在目标频率下稳定运行的关键环节。本文档全面总结了建立时间（Setup）与保持时间（Hold）违例的核心区别、产生原因、源头预防机制以及行之有效的修复策略。 一、 建立时间 (Setup) 与 保持时间 (Hold) 的核心差异 在理解具体违例之前，必须清楚这">
+    <meta name="description" content="系统梳理 FPGA&#x2F;ASIC 中建立时间、保持时间等典型时序违例的原因、定位思路与收敛方法，适合作为 STA 调试与设计优化参考。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="FPGA&#x2F;ASIC 时序违例分析与收敛指南">
 <meta property="og:url" content="https://canshine.github.io/2026/04/30/ASIC%E4%B8%8EFPGA%E6%97%B6%E5%BA%8F%E8%BF%9D%E4%BE%8B%E5%88%86%E6%9E%90%E4%B8%8E%E6%94%B6%E6%95%9B%E6%8C%87%E5%8D%97/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="FPGA&#x2F;ASIC 时序违例分析与收敛指南 在数字 IC 和 FPGA 设计中，**时序收敛（Timing Closure）**是决定系统能否在目标频率下稳定运行的关键环节。本文档全面总结了建立时间（Setup）与保持时间（Hold）违例的核心区别、产生原因、源头预防机制以及行之有效的修复策略。 一、 建立时间 (Setup) 与 保持时间 (Hold) 的核心差异 在理解具体违例之前，必须清楚这">
+<meta property="og:description" content="系统梳理 FPGA&#x2F;ASIC 中建立时间、保持时间等典型时序违例的原因、定位思路与收敛方法，适合作为 STA 调试与设计优化参考。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://canshine.github.io/img/%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0.png">
 <meta property="article:published_time" content="2026-04-30T10:26:00.000Z">
-<meta property="article:modified_time" content="2026-07-21T05:27:14.284Z">
+<meta property="article:modified_time" content="2026-07-21T06:41:35.947Z">
 <meta property="article:author" content="CanShine">
-<meta property="article:tag" content="时序">
-<meta property="article:tag" content="FPGA">
 <meta property="article:tag" content="ASIC">
+<meta property="article:tag" content="FPGA">
+<meta property="article:tag" content="STA">
+<meta property="article:tag" content="时序违例">
+<meta property="article:tag" content="时序收敛">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://canshine.github.io/img/%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0.png">
   
@@ -294,21 +296,21 @@
               <div class="markdown-body">
                 
                 <h1>FPGA/ASIC 时序违例分析与收敛指南</h1>
-<p>在数字 IC 和 FPGA 设计中，**时序收敛（Timing Closure）**是决定系统能否在目标频率下稳定运行的关键环节。本文档全面总结了建立时间（Setup）与保持时间（Hold）违例的核心区别、产生原因、源头预防机制以及行之有效的修复策略。</p>
+<p>在数字 IC 和 FPGA 设计中，<strong>时序收敛（Timing Closure）</strong> 是决定系统能否在目标频率下稳定运行的关键环节。本文档全面总结了建立时间（Setup）与保持时间（Hold）违例的核心区别、产生原因、源头预防机制以及行之有效的修复策略。</p>
 <h2 id="一、-建立时间-Setup-与-保持时间-Hold-的核心差异">一、 建立时间 (Setup) 与 保持时间 (Hold) 的核心差异</h2>
 <p>在理解具体违例之前，必须清楚这两种时序要求的物理意义：</p>
 <ul>
-<li><strong>建立时间 (Setup Time)：</strong> 触发器在时钟上升沿到来<strong>之前</strong>，数据必须保持稳定的最短时间。
+<li><strong>建立时间 (Setup Time)：</strong> 触发器在时钟上升沿到来 <strong>之前</strong>，数据必须保持稳定的最短时间。
 <ul>
-<li><strong>通俗理解：</strong> 数据必须准时“赶到”并在门前站稳，不能<strong>迟到</strong>。</li>
+<li><strong>通俗理解：</strong> 数据必须准时“赶到”并在门前站稳，不能 <strong>迟到</strong>。</li>
 <li><strong>违例本质：</strong> 数据路径（Data Path）太慢，或者时钟频率太快。</li>
 <li><strong>频率敏感性：</strong> <strong>敏感。</strong> 降低时钟频率可以解决大部分建立时间违例（用于降频测试）。</li>
 <li><strong>指标：</strong> WNS (Worst Negative Slack, 最差负裕量), TNS (Total Negative Slack)。</li>
 </ul>
 </li>
-<li><strong>保持时间 (Hold Time)：</strong> 触发器在时钟上升沿到来<strong>之后</strong>，数据必须继续保持稳定的最短时间。
+<li><strong>保持时间 (Hold Time)：</strong> 触发器在时钟上升沿到来 <strong>之后</strong>，数据必须继续保持稳定的最短时间。
 <ul>
-<li><strong>通俗理解：</strong> 时钟打入后，数据不能立刻“溜走”，必须<strong>多留一会儿</strong>以免被下一个数据冲刷掉。</li>
+<li><strong>通俗理解：</strong> 时钟打入后，数据不能立刻“溜走”，必须 <strong>多留一会儿</strong> 以免被下一个数据冲刷掉。</li>
 <li><strong>违例本质：</strong> 数据路径（Data Path）太快（比如两个寄存器挨得太近），或者时钟偏移（Clock Skew）太大（目标寄存器的时钟晚到了）。</li>
 <li><strong>频率敏感性：</strong> <strong>不敏感。</strong> 保持时间违例与时钟周期长短无关，如果流片/烧写后存在 Hold 违例，<strong>芯片在任何频率下都无法正常工作（致命错误）</strong>。</li>
 <li><strong>指标：</strong> WHS (Worst Hold Slack), THS (Total Hold Slack)。</li>
@@ -324,7 +326,7 @@
 <li><strong>未合理利用硬核资源 (Suboptimal IP Usage)：</strong> 使用普通的 Slice/LUT 逻辑去拼凑 DSP 或 RAM，未使能其内部专用的流水线寄存器。</li>
 </ul>
 <h3 id="2-修复实战-对症下药">2. 修复实战 (对症下药)</h3>
-<p>建立时间违例通常需要通过修改 RTL 代码来解决。针对最棘手的<strong>高扇出问题</strong>，分为以下两阶修复策略：</p>
+<p>建立时间违例通常需要通过修改 RTL 代码来解决。针对最棘手的 <strong>高扇出问题</strong>，分为以下两阶修复策略：</p>
 <ul>
 <li><strong>策略 A：逻辑层级过深的修复</strong>
 <ul>
@@ -335,9 +337,9 @@
 <li><strong>策略 B：高扇出与长走线的分阶修复 (高阶核心)</strong>
 <ul>
 <li><strong>场景 1（局部高扇出，不增加周期）：依赖工具物理优化</strong> 如果架构不允许增加时钟周期（Latency 不变），可以在 RTL 源码对高扇出源寄存器添加属性 <code>(* max_fanout = &quot;32&quot; *)</code>，并在 Vivado 开启物理优化 (<code>phys_opt_design</code>)。工具会在布局后根据物理位置自动复制寄存器并布线。</li>
-<li><strong>场景 2（全局高扇出或跨 die 走线，允许增加周期）：手动流水线分发树 (Pipelined Tree)</strong> 如果扇出极大且物理跨度极长，0 Latency 的自动复制将无济于事。此时必须手动构建 1-N-M 的<strong>多级流水线寄存器树</strong>（每级打一拍）。
+<li><strong>场景 2（全局高扇出或跨 die 走线，允许增加周期）：手动流水线分发树 (Pipelined Tree)</strong> 如果扇出极大且物理跨度极长，0 Latency 的自动复制将无济于事。此时必须手动构建 1-N-M 的 <strong>多级流水线寄存器树</strong>（每级打一拍）。
 <ul>
-<li><strong>⚠️ 致命陷阱（等效合并）：</strong> 即使你写了多拍的分发树，综合工具默认会将<strong>同一流水级</strong>内输入相同的寄存器（比如第 2 拍的 8 个分发器）强行合并为一个！</li>
+<li><strong>⚠️ 致命陷阱（等效合并）：</strong> 即使你写了多拍的分发树，综合工具默认会将 <strong>同一流水级</strong> 内输入相同的寄存器（比如第 2 拍的 8 个分发器）强行合并为一个！</li>
 <li><strong>必加约束：</strong> 在构建这类寄存器树时，必须为同级分发的寄存器添加防合并属性： <code>(* equiv_register_removal = &quot;no&quot; *) reg [7:0] pipeline_stage2;</code> 这样既能利用多拍周期争取走线时间，又能保证物理树形结构不被优化抹平。</li>
 </ul>
 </li>
@@ -345,7 +347,7 @@
 </li>
 </ul>
 <h2 id="三、-保持时间-Hold-违例分析与修复">三、 保持时间 (Hold) 违例分析与修复</h2>
-<p>当我们看到 WHS 为负数时，需要警惕，这通常意味着<strong>时钟网络设计存在缺陷</strong>或者<strong>跨时钟域问题</strong>。</p>
+<p>当我们看到 WHS 为负数时，需要警惕，这通常意味着 <strong>时钟网络设计存在缺陷</strong> 或者 <strong>跨时钟域问题</strong>。</p>
 <h3 id="1-核心原因-2">1. 核心原因</h3>
 <ul>
 <li><strong>时钟偏移过大 (Excessive Clock Skew)：</strong> 这是 Hold 违例最常见的原因。如果目标寄存器的时钟信号比源寄存器的时钟信号晚到很久，源寄存器发出的新数据跑得太快，冲刷掉了目标寄存器本该采集的旧数据。</li>
@@ -364,15 +366,15 @@
 <p>优秀的架构可以消灭 80% 的时序隐患：</p>
 <ol>
 <li><strong>控制组合逻辑层级：</strong> 高速设计（&gt;200MHz）组合逻辑控制在 5 ~ 8 级；低速设计不超过 15 级。</li>
-<li><strong>贯彻 Flop-in / Flop-out 模块边界法则：</strong> 复杂业务模块的所有输入信号进入后立即寄存一拍；所有输出信号必须是寄存器的直接输出。这能完美实现模块间的<strong>时序隔离</strong>。</li>
+<li><strong>贯彻 Flop-in / Flop-out 模块边界法则：</strong> 复杂业务模块的所有输入信号进入后立即寄存一拍；所有输出信号必须是寄存器的直接输出。这能完美实现模块间的 <strong>时序隔离</strong>。</li>
 <li><strong>采用握手协议隔离延迟 (Handshake Protocols)：</strong> 模块间通信应采用 Valid-Ready 握手协议（如 AXI-Stream），避免硬编码固定周期延迟。</li>
 <li><strong>慎用“全组合逻辑”模块：</strong> 复杂的业务逻辑、状态机引擎，绝不允许设计成全组合逻辑，否则会导致跨模块的超长关键路径。</li>
 </ol>
 <h2 id="五、-结语">五、 结语</h2>
 <p>时序收敛是一场系统工程，<strong>“七分靠设计，三分靠约束”</strong>。</p>
 <ul>
-<li>**建立时间（Setup）**考验的是对数据流、流水线（Pipeline）深度的架构驾驭能力。</li>
-<li>**保持时间（Hold）**考验的是对时钟树（Clock Tree）、跨时钟域同步（CDC）的严谨性。 将时序意识“左移”到架构规划阶段，养成良好的 RTL 编码习惯，是彻底摆脱时序梦魇的终极之道。</li>
+<li><strong>建立时间（Setup）</strong> 考验的是对数据流、流水线（Pipeline）深度的架构驾驭能力。</li>
+<li><strong>保持时间（Hold）</strong> 考验的是对时钟树（Clock Tree）、跨时钟域同步（CDC）的严谨性。 将时序意识“左移”到架构规划阶段，养成良好的 RTL 编码习惯，是彻底摆脱时序梦魇的终极之道。</li>
 </ul>
 
                 
@@ -392,8 +394,15 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0/" class="category-chain-item">知识笔记</a>
+  <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1/" class="category-chain-item">硬件设计</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1/%E6%97%B6%E5%BA%8F%E6%94%B6%E6%95%9B/" class="category-chain-item">时序收敛</a>
+  
+  
+
   
 
       </span>
@@ -407,11 +416,15 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E6%97%B6%E5%BA%8F/" class="print-no-link">#时序</a>
+        <a href="/tags/ASIC/" class="print-no-link">#ASIC</a>
       
         <a href="/tags/FPGA/" class="print-no-link">#FPGA</a>
       
-        <a href="/tags/ASIC/" class="print-no-link">#ASIC</a>
+        <a href="/tags/STA/" class="print-no-link">#STA</a>
+      
+        <a href="/tags/%E6%97%B6%E5%BA%8F%E8%BF%9D%E4%BE%8B/" class="print-no-link">#时序违例</a>
+      
+        <a href="/tags/%E6%97%B6%E5%BA%8F%E6%94%B6%E6%95%9B/" class="print-no-link">#时序收敛</a>
       
     </div>
   

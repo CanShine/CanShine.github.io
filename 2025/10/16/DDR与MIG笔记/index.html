@@ -19,19 +19,21 @@
   <meta name="author" content="CanShine">
   <meta name="keywords" content="">
   
-    <meta name="description" content="DDR与MIG笔记 1 DDR4 SDRAM（MIG）简介 MIG(Memory Interface Generator)是Xilinx提供的一种用于生成内存接口的IP核，支持多种类型的内存，包括DDR、DDR2、DDR3、DDR4等。MIG可以帮助设计者快速配置和集成内存接口，简化设计流程，提高系统性能。 2 MIG基本配置 MIG的基本配置包括以下几个方面：   Clocking  Memor">
+    <meta name="description" content="总结 DDR 基础概念、Xilinx MIG 配置流程以及 AXI 接口相关注意事项，作为 FPGA 外部存储器接入与调试的实践笔记。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DDR与MIG笔记">
 <meta property="og:url" content="https://canshine.github.io/2025/10/16/DDR%E4%B8%8EMIG%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="DDR与MIG笔记 1 DDR4 SDRAM（MIG）简介 MIG(Memory Interface Generator)是Xilinx提供的一种用于生成内存接口的IP核，支持多种类型的内存，包括DDR、DDR2、DDR3、DDR4等。MIG可以帮助设计者快速配置和集成内存接口，简化设计流程，提高系统性能。 2 MIG基本配置 MIG的基本配置包括以下几个方面：   Clocking  Memor">
+<meta property="og:description" content="总结 DDR 基础概念、Xilinx MIG 配置流程以及 AXI 接口相关注意事项，作为 FPGA 外部存储器接入与调试的实践笔记。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://canshine.github.io/img/%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0.png">
 <meta property="article:published_time" content="2025-10-16T12:41:00.000Z">
-<meta property="article:modified_time" content="2026-07-21T05:34:39.198Z">
+<meta property="article:modified_time" content="2026-07-21T06:20:48.499Z">
 <meta property="article:author" content="CanShine">
 <meta property="article:tag" content="DDR">
 <meta property="article:tag" content="MIG">
+<meta property="article:tag" content="存储接口">
+<meta property="article:tag" content="Vivado">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://canshine.github.io/img/%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0.png">
   
@@ -338,12 +340,12 @@ Address Width(bits)：指AXI接口的地址位宽，例如32bits表示AXI接口�
     
       <span class="category-chain">
         
-  <a href="/categories/DDR/" class="category-chain-item">DDR</a>
+  <a href="/categories/%E5%8D%8F%E8%AE%AE%E4%B8%8E%E6%8E%A5%E5%8F%A3/" class="category-chain-item">协议与接口</a>
   
   
     <span>></span>
     
-  <a href="/categories/DDR/MIG/" class="category-chain-item">MIG</a>
+  <a href="/categories/%E5%8D%8F%E8%AE%AE%E4%B8%8E%E6%8E%A5%E5%8F%A3/DDR/" class="category-chain-item">DDR</a>
   
   
 
@@ -363,6 +365,10 @@ Address Width(bits)：指AXI接口的地址位宽，例如32bits表示AXI接口�
         <a href="/tags/DDR/" class="print-no-link">#DDR</a>
       
         <a href="/tags/MIG/" class="print-no-link">#MIG</a>
+      
+        <a href="/tags/%E5%AD%98%E5%82%A8%E6%8E%A5%E5%8F%A3/" class="print-no-link">#存储接口</a>
+      
+        <a href="/tags/Vivado/" class="print-no-link">#Vivado</a>
       
     </div>
   

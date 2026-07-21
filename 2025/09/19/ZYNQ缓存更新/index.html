@@ -19,18 +19,21 @@
   <meta name="author" content="CanShine">
   <meta name="keywords" content="">
   
-    <meta name="description" content="ZYNQ 缓存更新 1 函数列表    函数 作用 使用场景     Xil_DCacheInvalidate() 失效缓存，不写回 DDR DMA 写完后 CPU 读取   Xil_DCacheFlush() 写回 DDR，保持缓存有效 CPU 写完后 PL 读取   Xil_DCacheEnable() 启用 D-Cache 系统初始化   Xil_DCacheDisable() 禁用 D-C">
+    <meta name="description" content="总结 ZYNQ 中 Cache Flush、Invalidate 等缓存维护函数的使用场景，重点说明 PS、PL 与 DMA 共享 DDR 时的数据一致性问题。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ZYNQ缓存更新">
 <meta property="og:url" content="https://canshine.github.io/2025/09/19/ZYNQ%E7%BC%93%E5%AD%98%E6%9B%B4%E6%96%B0/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="ZYNQ 缓存更新 1 函数列表    函数 作用 使用场景     Xil_DCacheInvalidate() 失效缓存，不写回 DDR DMA 写完后 CPU 读取   Xil_DCacheFlush() 写回 DDR，保持缓存有效 CPU 写完后 PL 读取   Xil_DCacheEnable() 启用 D-Cache 系统初始化   Xil_DCacheDisable() 禁用 D-C">
+<meta property="og:description" content="总结 ZYNQ 中 Cache Flush、Invalidate 等缓存维护函数的使用场景，重点说明 PS、PL 与 DMA 共享 DDR 时的数据一致性问题。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://canshine.github.io/img/%E6%93%8D%E4%BD%9C%E7%AC%94%E8%AE%B0.png">
 <meta property="article:published_time" content="2025-09-19T12:17:00.000Z">
-<meta property="article:modified_time" content="2026-07-21T05:34:48.171Z">
+<meta property="article:modified_time" content="2026-07-21T06:20:56.303Z">
 <meta property="article:author" content="CanShine">
-<meta property="article:tag" content="ZYNQ缓存更新">
+<meta property="article:tag" content="DDR">
+<meta property="article:tag" content="ZYNQ">
+<meta property="article:tag" content="PS-PL">
+<meta property="article:tag" content="缓存一致性">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://canshine.github.io/img/%E6%93%8D%E4%BD%9C%E7%AC%94%E8%AE%B0.png">
   
@@ -378,8 +381,15 @@ PL 或 DMA 读取 DDR 前，需要写回缓存，确保 DDR 中有最新数据�
     
       <span class="category-chain">
         
-  <a href="/categories/ZYNQ%E7%BC%93%E5%AD%98%E6%9B%B4%E6%96%B0/" class="category-chain-item">ZYNQ缓存更新</a>
+  <a href="/categories/SoC%E4%B8%8E%E5%B9%B3%E5%8F%B0/" class="category-chain-item">SoC与平台</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/SoC%E4%B8%8E%E5%B9%B3%E5%8F%B0/ZYNQ/" class="category-chain-item">ZYNQ</a>
+  
+  
+
   
 
       </span>
@@ -393,7 +403,13 @@ PL 或 DMA 读取 DDR 前，需要写回缓存，确保 DDR 中有最新数据�
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/ZYNQ%E7%BC%93%E5%AD%98%E6%9B%B4%E6%96%B0/" class="print-no-link">#ZYNQ缓存更新</a>
+        <a href="/tags/DDR/" class="print-no-link">#DDR</a>
+      
+        <a href="/tags/ZYNQ/" class="print-no-link">#ZYNQ</a>
+      
+        <a href="/tags/PS-PL/" class="print-no-link">#PS-PL</a>
+      
+        <a href="/tags/%E7%BC%93%E5%AD%98%E4%B8%80%E8%87%B4%E6%80%A7/" class="print-no-link">#缓存一致性</a>
       
     </div>
   

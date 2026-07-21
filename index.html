@@ -241,7 +241,7 @@
       
       <a class="index-excerpt " href="/2026/04/30/ASIC%E4%B8%8EFPGA%E6%97%B6%E5%BA%8F%E8%BF%9D%E4%BE%8B%E5%88%86%E6%9E%90%E4%B8%8E%E6%94%B6%E6%95%9B%E6%8C%87%E5%8D%97/" target="_self">
         <div>
-          FPGA/ASIC 时序违例分析与收敛指南 在数字 IC 和 FPGA 设计中，**时序收敛（Timing Closure）**是决定系统能否在目标频率下稳定运行的关键环节。本文档全面总结了建立时间（Setup）与保持时间（Hold）违例的核心区别、产生原因、源头预防机制以及行之有效的修复策略。 一、 建立时间 (Setup) 与 保持时间 (Hold) 的核心差异 在理解具体违例之前，必须清楚这
+          系统梳理 FPGA/ASIC 中建立时间、保持时间等典型时序违例的原因、定位思路与收敛方法，适合作为 STA 调试与设计优化参考。
         </div>
       </a>
 
@@ -265,8 +265,15 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0/" class="category-chain-item">知识笔记</a>
+  <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1/" class="category-chain-item">硬件设计</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1/%E6%97%B6%E5%BA%8F%E6%94%B6%E6%95%9B/" class="category-chain-item">时序收敛</a>
+  
+  
+
   
 
       </span>
@@ -280,11 +287,15 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E6%97%B6%E5%BA%8F/">#时序</a>
+              <a href="/tags/ASIC/">#ASIC</a>
             
               <a href="/tags/FPGA/">#FPGA</a>
             
-              <a href="/tags/ASIC/">#ASIC</a>
+              <a href="/tags/STA/">#STA</a>
+            
+              <a href="/tags/%E6%97%B6%E5%BA%8F%E8%BF%9D%E4%BE%8B/">#时序违例</a>
+            
+              <a href="/tags/%E6%97%B6%E5%BA%8F%E6%94%B6%E6%95%9B/">#时序收敛</a>
             
           </div>
         
@@ -312,7 +323,7 @@
       
       <a class="index-excerpt " href="/2026/04/29/Vivado%E6%97%B6%E9%92%9F%E7%BA%A6%E6%9D%9F%E8%A7%84%E8%8C%83%E6%8C%87%E5%AF%BC%E6%89%8B%E5%86%8C/" target="_self">
         <div>
-          Vivado 时钟约束规范指导手册 文档版本: V1.1 (增加典型应用场景与虚拟时钟详解) 适用对象: FPGA 逻辑工程师、数字前端设计工程师 适用工具: Xilinx Vivado Design Suite 1. 概述 在 FPGA 时序驱动的设计流程中，时钟约束是静态时序分析（STA）的基石。时序分析工具必须明确所有时钟的频率、占空比以及时钟之间的相位关系，才能准确计算建立时间（Setup
+          面向 Vivado 工程整理时钟约束的黄金法则、典型场景和 XDC 写法，帮助减少约束遗漏并提升时序分析可信度。
         </div>
       </a>
 
@@ -336,8 +347,15 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0/" class="category-chain-item">知识笔记</a>
+  <a href="/categories/EDA%E4%B8%8E%E5%B7%A5%E5%85%B7/" class="category-chain-item">EDA与工具</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/EDA%E4%B8%8E%E5%B7%A5%E5%85%B7/Vivado/" class="category-chain-item">Vivado</a>
+  
+  
+
   
 
       </span>
@@ -352,6 +370,10 @@
             <i class="iconfont icon-tags"></i>
             
               <a href="/tags/Vivado/">#Vivado</a>
+            
+              <a href="/tags/STA/">#STA</a>
+            
+              <a href="/tags/XDC/">#XDC</a>
             
               <a href="/tags/%E6%97%B6%E9%92%9F%E7%BA%A6%E6%9D%9F/">#时钟约束</a>
             
@@ -381,7 +403,7 @@
       
       <a class="index-excerpt " href="/2026/04/29/Vivado-RTL-Linter%20%E5%AE%98%E6%96%B9%E8%A7%84%E5%88%99%E6%80%BB%E7%BB%93/" target="_self">
         <div>
-          Vivado RTL Linter 官方规则总结 本文档基于 AMD Xilinx 官方文档《Vivado Design Suite User Guide: Synthesis (UG901)》中的 RTL Linter 规则列表整理，并补充了实际开发中常见但官方表格略过的隐藏规则。Linter 是在代码编译和综合前检查潜在硬件电路问题的防线。 📑 官方参考链接: Vivado Synthesi
+          汇总 Vivado RTL Linter 的主要规则类型和典型检查点，帮助在编码阶段发现 RTL 风格、综合风险与潜在设计问题。
         </div>
       </a>
 
@@ -405,8 +427,15 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0/" class="category-chain-item">知识笔记</a>
+  <a href="/categories/EDA%E4%B8%8E%E5%B7%A5%E5%85%B7/" class="category-chain-item">EDA与工具</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/EDA%E4%B8%8E%E5%B7%A5%E5%85%B7/Vivado/" class="category-chain-item">Vivado</a>
+  
+  
+
   
 
       </span>
@@ -456,7 +485,7 @@
       
       <a class="index-excerpt " href="/2025/12/16/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" target="_self">
         <div>
-          Git常用命令 本文总结 Git 日常开发中最常用的命令及其推荐使用流程，适用于个人开发与基本协作场景。  一、Git 常用命令速查    命令 作用 影响区域 是否联网     status 查看当前仓库状态 只读 ❌   add 工作区 → 暂存区 暂存区 ❌   commit 暂存区 → 本地仓库 本地仓库 ❌   fetch 获取远程更新（不合并） 远程跟踪分支 ✅   pull 获取并合
+          汇总 Git 日常开发中常用的仓库管理、分支切换、提交回退和远程同步命令，便于项目协作时快速查阅。
         </div>
       </a>
 
@@ -480,12 +509,12 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Git/" class="category-chain-item">Git</a>
+  <a href="/categories/%E5%B7%A5%E7%A8%8B%E6%95%88%E7%8E%87/" class="category-chain-item">工程效率</a>
   
   
     <span>></span>
     
-  <a href="/categories/Git/%E5%91%BD%E4%BB%A4/" class="category-chain-item">命令</a>
+  <a href="/categories/%E5%B7%A5%E7%A8%8B%E6%95%88%E7%8E%87/Git/" class="category-chain-item">Git</a>
   
   
 
@@ -504,7 +533,9 @@
             
               <a href="/tags/Git/">#Git</a>
             
-              <a href="/tags/%E5%91%BD%E4%BB%A4/">#命令</a>
+              <a href="/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/">#版本控制</a>
+            
+              <a href="/tags/%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5/">#命令速查</a>
             
           </div>
         
@@ -532,7 +563,7 @@
       
       <a class="index-excerpt " href="/2025/12/10/Linux-shell%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" target="_self">
         <div>
-          Linux shell 常用命令 1 查看文件 1.1 ls 与 find 命令总结    分类 内容 命令示例 说明     命令用途 ls：列出当前目录内容（不递归） ls 查看当前目录有哪些文件和文件夹    find：递归查找文件/文件夹 find . -type f 遍历当前目录及所有子目录   ls 常用参数 显示所有文件（包括隐藏文件） ls -a 显示 .git、.bashrc 等
+          整理 Linux Shell 中常用的文件查看、目录检索、文本处理和系统操作命令，作为开发环境与服务器使用的速查笔记。
         </div>
       </a>
 
@@ -556,20 +587,13 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Linux/" class="category-chain-item">Linux</a>
+  <a href="/categories/%E5%B7%A5%E7%A8%8B%E6%95%88%E7%8E%87/" class="category-chain-item">工程效率</a>
   
   
     <span>></span>
     
-  <a href="/categories/Linux/shell/" class="category-chain-item">shell</a>
+  <a href="/categories/%E5%B7%A5%E7%A8%8B%E6%95%88%E7%8E%87/Linux/" class="category-chain-item">Linux</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/Linux/shell/%E5%91%BD%E4%BB%A4/" class="category-chain-item">命令</a>
-  
-  
-
   
 
   
@@ -585,11 +609,11 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E5%91%BD%E4%BB%A4/">#命令</a>
+              <a href="/tags/%E5%91%BD%E4%BB%A4%E9%80%9F%E6%9F%A5/">#命令速查</a>
             
               <a href="/tags/Linux/">#Linux</a>
             
-              <a href="/tags/shell/">#shell</a>
+              <a href="/tags/Shell/">#Shell</a>
             
           </div>
         
@@ -617,7 +641,7 @@
       
       <a class="index-excerpt " href="/2025/11/20/FPGA%E6%97%B6%E5%BA%8F%E7%BA%A6%E6%9D%9F/" target="_self">
         <div>
-          FPGA时序约束 1. FPGA时序约束的主要类别    类别 常用命令 应用场景     时钟约束 create_clock, create_generated_clock, set_clock_groups 定义所有时钟特性   IO 约束 set_input_delay, set_output_delay, set_load 与外设接口的时序匹配   时序例外 set_false_path,
+          梳理 FPGA 时序约束的核心概念、常见约束类型和 XDC 编写思路，帮助理解时钟、I/O 与跨时钟路径的约束方法。
         </div>
       </a>
 
@@ -641,8 +665,15 @@
     
       <span class="category-chain">
         
-  <a href="/categories/FPGA/" class="category-chain-item">FPGA</a>
+  <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1/" class="category-chain-item">硬件设计</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1/FPGA/" class="category-chain-item">FPGA</a>
+  
+  
+
   
 
       </span>
@@ -656,7 +687,13 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
+              <a href="/tags/FPGA/">#FPGA</a>
+            
+              <a href="/tags/STA/">#STA</a>
+            
               <a href="/tags/%E6%97%B6%E5%BA%8F%E7%BA%A6%E6%9D%9F/">#时序约束</a>
+            
+              <a href="/tags/XDC/">#XDC</a>
             
           </div>
         
@@ -684,7 +721,7 @@
       
       <a class="index-excerpt " href="/2025/11/20/Xilinx%E5%90%84%E7%B3%BB%E5%88%97%E6%97%B6%E5%BA%8F%E4%B8%8E%E5%BB%B6%E8%BF%9F/" target="_self">
         <div>
-          Xilinx各系列时序与延迟  注：下列数值为“典型/工程估计范围”，用于快速预算与对比。精确分析请参照目标器件的 Data Sheet（DS）与相关 User Guide（UG），并以 Vivado 生成的 Timing Report 为准。(docs.amd.com)   一、触发器（CLB FF）建立时间（Tsu）与保持时间（Th）  说明：Tsu/Th 与器件家族、速度等级、温度/电压及触
+          整理 Xilinx FPGA 中触发器、LUT、进位链、DSP 等资源的典型时序与延迟特性，为器件选型和时序估算提供参考。
         </div>
       </a>
 
@@ -708,12 +745,12 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E6%97%B6%E5%BA%8F/" class="category-chain-item">时序</a>
+  <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1/" class="category-chain-item">硬件设计</a>
   
   
     <span>></span>
     
-  <a href="/categories/%E6%97%B6%E5%BA%8F/%E5%BB%B6%E8%BF%9F/" class="category-chain-item">延迟</a>
+  <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1/%E6%97%B6%E5%BA%8F%E5%88%86%E6%9E%90/" class="category-chain-item">时序分析</a>
   
   
 
@@ -730,9 +767,15 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
+              <a href="/tags/FPGA/">#FPGA</a>
+            
+              <a href="/tags/Xilinx/">#Xilinx</a>
+            
               <a href="/tags/%E6%97%B6%E5%BA%8F/">#时序</a>
             
               <a href="/tags/%E5%BB%B6%E8%BF%9F/">#延迟</a>
+            
+              <a href="/tags/%E5%99%A8%E4%BB%B6%E7%89%B9%E6%80%A7/">#器件特性</a>
             
           </div>
         
@@ -760,7 +803,7 @@
       
       <a class="index-excerpt " href="/2025/11/13/%E5%AF%84%E5%AD%98%E5%99%A8%E7%B1%BB%E5%9E%8B%E4%BB%8B%E7%BB%8D/" target="_self">
         <div>
-          寄存器类型介绍 1 按功能角色分类（逻辑功能角度）    类型 说明 常见命名     控制寄存器（Control Register） 控制模块的工作模式、启动、复位、选择等功能 CTRL,CFG,EN,START   状态寄存器（Status Register） 反映模块内部状态（busy、error、done等） STAT,STS,FLAG   中断寄存器（Interrupt Register
+          从功能角色和访问属性两个角度梳理常见寄存器类型，帮助理解 RTL 设计、寄存器映射和软硬件接口建模。
         </div>
       </a>
 
@@ -784,8 +827,15 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E5%AF%84%E5%AD%98%E5%99%A8/" class="category-chain-item">寄存器</a>
+  <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1/" class="category-chain-item">硬件设计</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1/%E5%9F%BA%E7%A1%80%E7%94%B5%E8%B7%AF/" class="category-chain-item">基础电路</a>
+  
+  
+
   
 
       </span>
@@ -799,7 +849,13 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
+              <a href="/tags/RTL/">#RTL</a>
+            
+              <a href="/tags/Verilog/">#Verilog</a>
+            
               <a href="/tags/%E5%AF%84%E5%AD%98%E5%99%A8/">#寄存器</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/">#数字电路</a>
             
           </div>
         
@@ -827,7 +883,7 @@
       
       <a class="index-excerpt " href="/2025/11/13/%E6%95%B0%E5%AD%97IC%E4%B8%8EFPGA%E7%9A%84%E5%A4%8D%E4%BD%8D%E5%85%A8%E9%9D%A2%E8%A7%A3%E6%9E%90/" target="_self">
         <div>
-          数字IC与FPGA的复位全面解析 复位（Reset）是数字电路设计中不可或缺的控制信号，用于将寄存器、状态机或整个系统置于已知初始状态。不同类型的复位在 FPGA 与 ASIC 中的实现方式和工程影响有所不同。本文系统总结复位类型、原理、FPGA 原语支持及工程实践建议。  1 复位类型与基本概念 1.1 同步复位（Synchronous Reset）   定义：复位信号在时钟边沿生效，与普通逻辑
+          系统比较同步复位、异步复位和异步复位同步释放等方案，分析数字 IC 与 FPGA 设计中的复位策略和工程注意事项。
         </div>
       </a>
 
@@ -851,8 +907,15 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E5%A4%8D%E4%BD%8D/" class="category-chain-item">复位</a>
+  <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1/" class="category-chain-item">硬件设计</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1/%E5%9F%BA%E7%A1%80%E7%94%B5%E8%B7%AF/" class="category-chain-item">基础电路</a>
+  
+  
+
   
 
       </span>
@@ -865,6 +928,12 @@
         
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/FPGA/">#FPGA</a>
+            
+              <a href="/tags/RTL/">#RTL</a>
+            
+              <a href="/tags/%E6%95%B0%E5%AD%97IC/">#数字IC</a>
             
               <a href="/tags/%E5%A4%8D%E4%BD%8D/">#复位</a>
             
@@ -894,7 +963,7 @@
       
       <a class="index-excerpt " href="/2025/10/23/%E5%B8%B8%E8%A7%81%E9%AB%98%E9%80%9F%E6%8E%A5%E5%8F%A3%E5%92%8C%E5%8D%8F%E8%AE%AE/" target="_self">
         <div>
-          常见高速接口和协议 1 网络与通信接口    接口 典型速率 备注     Ethernet (以太网) 10 Mbps – 400 Gbps 包括 10/100/1000 Mbps、10/25/40/100 Gbps，常用 TCP/UDP/IP   InfiniBand 10 G – 400 Gbps 高性能计算(HPC)互连   USB USB 2.0: 480 MbpsUSB 3.0: 5
+          按网络通信、存储、视频显示等场景整理常见高速接口与协议，帮助快速了解各类系统接口的定位和应用边界。
         </div>
       </a>
 
@@ -918,8 +987,15 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E6%8E%A5%E5%8F%A3%E5%8D%8F%E8%AE%AE/" class="category-chain-item">接口协议</a>
+  <a href="/categories/%E5%8D%8F%E8%AE%AE%E4%B8%8E%E6%8E%A5%E5%8F%A3/" class="category-chain-item">协议与接口</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/%E5%8D%8F%E8%AE%AE%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E9%AB%98%E9%80%9F%E6%8E%A5%E5%8F%A3/" class="category-chain-item">高速接口</a>
+  
+  
+
   
 
       </span>
@@ -934,6 +1010,10 @@
             <i class="iconfont icon-tags"></i>
             
               <a href="/tags/%E6%8E%A5%E5%8F%A3%E5%8D%8F%E8%AE%AE/">#接口协议</a>
+            
+              <a href="/tags/%E9%AB%98%E9%80%9F%E6%8E%A5%E5%8F%A3/">#高速接口</a>
+            
+              <a href="/tags/%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/">#通信协议</a>
             
           </div>
         

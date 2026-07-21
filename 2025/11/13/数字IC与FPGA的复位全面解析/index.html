@@ -19,17 +19,20 @@
   <meta name="author" content="CanShine">
   <meta name="keywords" content="">
   
-    <meta name="description" content="数字IC与FPGA的复位全面解析 复位（Reset）是数字电路设计中不可或缺的控制信号，用于将寄存器、状态机或整个系统置于已知初始状态。不同类型的复位在 FPGA 与 ASIC 中的实现方式和工程影响有所不同。本文系统总结复位类型、原理、FPGA 原语支持及工程实践建议。  1 复位类型与基本概念 1.1 同步复位（Synchronous Reset）   定义：复位信号在时钟边沿生效，与普通逻辑">
+    <meta name="description" content="系统比较同步复位、异步复位和异步复位同步释放等方案，分析数字 IC 与 FPGA 设计中的复位策略和工程注意事项。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数字IC与FPGA的复位全面解析">
 <meta property="og:url" content="https://canshine.github.io/2025/11/13/%E6%95%B0%E5%AD%97IC%E4%B8%8EFPGA%E7%9A%84%E5%A4%8D%E4%BD%8D%E5%85%A8%E9%9D%A2%E8%A7%A3%E6%9E%90/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="数字IC与FPGA的复位全面解析 复位（Reset）是数字电路设计中不可或缺的控制信号，用于将寄存器、状态机或整个系统置于已知初始状态。不同类型的复位在 FPGA 与 ASIC 中的实现方式和工程影响有所不同。本文系统总结复位类型、原理、FPGA 原语支持及工程实践建议。  1 复位类型与基本概念 1.1 同步复位（Synchronous Reset）   定义：复位信号在时钟边沿生效，与普通逻辑">
+<meta property="og:description" content="系统比较同步复位、异步复位和异步复位同步释放等方案，分析数字 IC 与 FPGA 设计中的复位策略和工程注意事项。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://canshine.github.io/img/%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0.png">
 <meta property="article:published_time" content="2025-11-13T07:42:00.000Z">
-<meta property="article:modified_time" content="2026-07-21T05:27:03.186Z">
+<meta property="article:modified_time" content="2026-07-21T06:20:58.906Z">
 <meta property="article:author" content="CanShine">
+<meta property="article:tag" content="FPGA">
+<meta property="article:tag" content="RTL">
+<meta property="article:tag" content="数字IC">
 <meta property="article:tag" content="复位">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://canshine.github.io/img/%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0.png">
@@ -527,8 +530,15 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E5%A4%8D%E4%BD%8D/" class="category-chain-item">复位</a>
+  <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1/" class="category-chain-item">硬件设计</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1/%E5%9F%BA%E7%A1%80%E7%94%B5%E8%B7%AF/" class="category-chain-item">基础电路</a>
+  
+  
+
   
 
       </span>
@@ -541,6 +551,12 @@
   
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/FPGA/" class="print-no-link">#FPGA</a>
+      
+        <a href="/tags/RTL/" class="print-no-link">#RTL</a>
+      
+        <a href="/tags/%E6%95%B0%E5%AD%97IC/" class="print-no-link">#数字IC</a>
       
         <a href="/tags/%E5%A4%8D%E4%BD%8D/" class="print-no-link">#复位</a>
       

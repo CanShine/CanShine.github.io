@@ -241,7 +241,7 @@
       
       <a class="index-excerpt " href="/2025/10/23/%E4%B8%8D%E5%90%8C%E7%9A%84%E5%88%86%E8%BE%A8%E7%8E%87%E7%9A%84%E6%97%B6%E5%BA%8F%E4%B8%8E%E5%B8%A6%E5%AE%BD/" target="_self">
         <div>
-          不同的分辨率的时序与带宽 1 常用分辨率 + 帧率 + 色深表格    分辨率 宽×高 帧率 (fps) 色深 带宽 (Gbps)     480p 640×480 30 24bit 0.221   480p 640×480 60 24bit 0.442   720p 1280×720 30 24bit 0.663   720p 1280×720 60 24bit 1.327   1080p 19
+          汇总常见视频分辨率、帧率、色深对应的像素时钟与带宽需求，便于视频链路设计和接口吞吐量评估。
         </div>
       </a>
 
@@ -265,8 +265,15 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E8%A7%86%E9%A2%91%E5%A4%84%E7%90%86/" class="category-chain-item">视频处理</a>
+  <a href="/categories/%E5%8D%8F%E8%AE%AE%E4%B8%8E%E6%8E%A5%E5%8F%A3/" class="category-chain-item">协议与接口</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/%E5%8D%8F%E8%AE%AE%E4%B8%8E%E6%8E%A5%E5%8F%A3/%E8%A7%86%E9%A2%91%E6%8E%A5%E5%8F%A3/" class="category-chain-item">视频接口</a>
+  
+  
+
   
 
       </span>
@@ -280,7 +287,13 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
+              <a href="/tags/%E5%B8%A6%E5%AE%BD/">#带宽</a>
+            
               <a href="/tags/%E8%A7%86%E9%A2%91%E5%A4%84%E7%90%86/">#视频处理</a>
+            
+              <a href="/tags/%E5%88%86%E8%BE%A8%E7%8E%87/">#分辨率</a>
+            
+              <a href="/tags/%E5%83%8F%E7%B4%A0%E6%97%B6%E9%92%9F/">#像素时钟</a>
             
           </div>
         
@@ -308,7 +321,7 @@
       
       <a class="index-excerpt " href="/2025/10/22/ZYNQ%E7%9A%84PS%E7%AB%AFDDR%E5%B8%A6%E5%AE%BD/" target="_self">
         <div>
-          ZYNQ的PS端DDR带宽 1 背景概念 PS（Processing System）端的 DDR 是 ARM CPU 访问外部内存的主要通道，其性能由以下因素决定： 理论带宽 = 数据速率 (MT/s) × 总线宽度 (bits) / 8  数据速率：DDR 的有效传输速率（MT/s）。 总线宽度：DDR 控制器与 DRAM 之间的数据线宽度（bit）。 除以 8 转为字节（Byte）。  备注：
+          分析 Zynq-7000 与 Zynq UltraScale+ MPSoC 的 PS 端 DDR 带宽组成和影响因素，为系统吞吐量估算提供依据。
         </div>
       </a>
 
@@ -332,12 +345,12 @@
     
       <span class="category-chain">
         
-  <a href="/categories/DDR/" class="category-chain-item">DDR</a>
+  <a href="/categories/SoC%E4%B8%8E%E5%B9%B3%E5%8F%B0/" class="category-chain-item">SoC与平台</a>
   
   
     <span>></span>
     
-  <a href="/categories/DDR/MIG/" class="category-chain-item">MIG</a>
+  <a href="/categories/SoC%E4%B8%8E%E5%B9%B3%E5%8F%B0/ZYNQ/" class="category-chain-item">ZYNQ</a>
   
   
 
@@ -356,7 +369,11 @@
             
               <a href="/tags/DDR/">#DDR</a>
             
-              <a href="/tags/MIG/">#MIG</a>
+              <a href="/tags/ZYNQ/">#ZYNQ</a>
+            
+              <a href="/tags/%E5%B8%A6%E5%AE%BD/">#带宽</a>
+            
+              <a href="/tags/PS/">#PS</a>
             
           </div>
         
@@ -384,7 +401,7 @@
       
       <a class="index-excerpt " href="/2025/10/16/DDR%E4%B8%8EMIG%E7%AC%94%E8%AE%B0/" target="_self">
         <div>
-          DDR与MIG笔记 1 DDR4 SDRAM（MIG）简介 MIG(Memory Interface Generator)是Xilinx提供的一种用于生成内存接口的IP核，支持多种类型的内存，包括DDR、DDR2、DDR3、DDR4等。MIG可以帮助设计者快速配置和集成内存接口，简化设计流程，提高系统性能。 2 MIG基本配置 MIG的基本配置包括以下几个方面：   Clocking  Memor
+          总结 DDR 基础概念、Xilinx MIG 配置流程以及 AXI 接口相关注意事项，作为 FPGA 外部存储器接入与调试的实践笔记。
         </div>
       </a>
 
@@ -408,12 +425,12 @@
     
       <span class="category-chain">
         
-  <a href="/categories/DDR/" class="category-chain-item">DDR</a>
+  <a href="/categories/%E5%8D%8F%E8%AE%AE%E4%B8%8E%E6%8E%A5%E5%8F%A3/" class="category-chain-item">协议与接口</a>
   
   
     <span>></span>
     
-  <a href="/categories/DDR/MIG/" class="category-chain-item">MIG</a>
+  <a href="/categories/%E5%8D%8F%E8%AE%AE%E4%B8%8E%E6%8E%A5%E5%8F%A3/DDR/" class="category-chain-item">DDR</a>
   
   
 
@@ -433,6 +450,10 @@
               <a href="/tags/DDR/">#DDR</a>
             
               <a href="/tags/MIG/">#MIG</a>
+            
+              <a href="/tags/%E5%AD%98%E5%82%A8%E6%8E%A5%E5%8F%A3/">#存储接口</a>
+            
+              <a href="/tags/Vivado/">#Vivado</a>
             
           </div>
         
@@ -460,7 +481,7 @@
       
       <a class="index-excerpt " href="/2025/10/14/AXI4-Full%E5%8D%8F%E8%AE%AE%E7%AC%94%E8%AE%B0/" target="_self">
         <div>
-          AXI4-Full协议笔记 1 五个信号通道及握手 网上有众多关于这方面的资料，在此不再赘述，仅提供米联客的AXI4总线专题资料，供参考。  内容涵盖  学习AXI总线协议包括AXI-FULL、AXI-Lite 掌握基于VIVADO工具产生AXI协议模板 分析AXI代码 理解AXI中自定义寄存器的地址分配 掌握通过VIVADO封装AXI图形化IP 通过仿真验证AXI IP的工作是否正常。   文档
+          记录 AXI4-Full 五个通道、握手机制、突发传输与协议差异，帮助快速建立对 AXI 总线读写流程和接口约束的整体理解。
         </div>
       </a>
 
@@ -484,8 +505,15 @@
     
       <span class="category-chain">
         
-  <a href="/categories/AXI4-Full/" class="category-chain-item">AXI4-Full</a>
+  <a href="/categories/%E5%8D%8F%E8%AE%AE%E4%B8%8E%E6%8E%A5%E5%8F%A3/" class="category-chain-item">协议与接口</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/%E5%8D%8F%E8%AE%AE%E4%B8%8E%E6%8E%A5%E5%8F%A3/AXI/" class="category-chain-item">AXI</a>
+  
+  
+
   
 
       </span>
@@ -499,7 +527,13 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
+              <a href="/tags/AXI4/">#AXI4</a>
+            
               <a href="/tags/AXI4-Full/">#AXI4-Full</a>
+            
+              <a href="/tags/%E6%80%BB%E7%BA%BF%E5%8D%8F%E8%AE%AE/">#总线协议</a>
+            
+              <a href="/tags/%E7%89%87%E4%B8%8A%E4%BA%92%E8%81%94/">#片上互联</a>
             
           </div>
         
@@ -527,7 +561,7 @@
       
       <a class="index-excerpt " href="/2025/09/20/%E6%B5%81%E6%B0%B4%E7%BA%BF%E7%9A%84%E7%B1%BB%E5%9E%8B%E5%8F%8ARTL%E5%AE%9E%E7%8E%B0/" target="_self">
         <div>
-          流水线的类型及RTL实现 1 流水线的类型 流水线（Pipeline）是一种将复杂操作分解为若干子任务，并让这些子任务在不同硬件单元中并行处理的设计思想。根据控制和数据流的不同，常见的流水线类型主要有以下三种：  基本流水线基本流水线没有专门的数据有效性控制信号，假设每一级的数据始终有效，适用于数据流连续、无停顿的场景。其优点是实现简单，但无法处理数据间断或暂停，不能支持 back-pressur
+          介绍不同类型流水线结构及其 RTL 实现方式，对比基本流水线、有效位控制和反压处理等常见设计模式。
         </div>
       </a>
 
@@ -551,8 +585,15 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3/" class="category-chain-item">设计思想</a>
+  <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1/" class="category-chain-item">硬件设计</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1/%E5%BE%AE%E6%9E%B6%E6%9E%84/" class="category-chain-item">微架构</a>
+  
+  
+
   
 
       </span>
@@ -566,7 +607,13 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E6%B5%81%E6%B0%B4%E7%BA%BF%E8%AE%BE%E8%AE%A1%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E8%B7%B5/">#流水线设计原理与实践</a>
+              <a href="/tags/RTL/">#RTL</a>
+            
+              <a href="/tags/Verilog/">#Verilog</a>
+            
+              <a href="/tags/%E6%B5%81%E6%B0%B4%E7%BA%BF/">#流水线</a>
+            
+              <a href="/tags/%E5%BE%AE%E6%9E%B6%E6%9E%84/">#微架构</a>
             
           </div>
         
@@ -594,7 +641,7 @@
       
       <a class="index-excerpt " href="/2025/09/20/%E6%B5%81%E6%B0%B4%E7%BA%BF%E8%AE%BE%E8%AE%A1%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E8%B7%B5/" target="_self">
         <div>
-          流水线设计原理与实践 1. 流水线原理 1.1 直观理解 在数字电路和计算机体系结构中，流水线（Pipeline）是一种 通过分工合作提高效率 的思想。 为了更好地理解，我们可以从一个生活化的例子出发。 假设一件产品需要经过 采购 → 制作 → 打包 → 配送 四个步骤，每个步骤耗时 1 分钟。 单个人完成一件产品的整个流程需要 4 分钟。 1.2 并行与流水线对比 1.2.1 并行方式（全能工人
+          从吞吐率、延迟和时序优化角度解释流水线设计原理，并结合 RTL 思路说明如何用流水线提升硬件系统性能。
         </div>
       </a>
 
@@ -618,8 +665,15 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%80%9D%E6%83%B3/" class="category-chain-item">设计思想</a>
+  <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1/" class="category-chain-item">硬件设计</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1/%E5%BE%AE%E6%9E%B6%E6%9E%84/" class="category-chain-item">微架构</a>
+  
+  
+
   
 
       </span>
@@ -633,7 +687,13 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/%E6%B5%81%E6%B0%B4%E7%BA%BF%E8%AE%BE%E8%AE%A1%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E8%B7%B5/">#流水线设计原理与实践</a>
+              <a href="/tags/RTL/">#RTL</a>
+            
+              <a href="/tags/%E6%97%B6%E5%BA%8F/">#时序</a>
+            
+              <a href="/tags/%E6%B5%81%E6%B0%B4%E7%BA%BF/">#流水线</a>
+            
+              <a href="/tags/%E5%90%9E%E5%90%90%E7%8E%87/">#吞吐率</a>
             
           </div>
         
@@ -661,7 +721,7 @@
       
       <a class="index-excerpt " href="/2025/09/19/ZYNQ%E7%BC%93%E5%AD%98%E6%9B%B4%E6%96%B0/" target="_self">
         <div>
-          ZYNQ 缓存更新 1 函数列表    函数 作用 使用场景     Xil_DCacheInvalidate() 失效缓存，不写回 DDR DMA 写完后 CPU 读取   Xil_DCacheFlush() 写回 DDR，保持缓存有效 CPU 写完后 PL 读取   Xil_DCacheEnable() 启用 D-Cache 系统初始化   Xil_DCacheDisable() 禁用 D-C
+          总结 ZYNQ 中 Cache Flush、Invalidate 等缓存维护函数的使用场景，重点说明 PS、PL 与 DMA 共享 DDR 时的数据一致性问题。
         </div>
       </a>
 
@@ -685,8 +745,15 @@
     
       <span class="category-chain">
         
-  <a href="/categories/ZYNQ%E7%BC%93%E5%AD%98%E6%9B%B4%E6%96%B0/" class="category-chain-item">ZYNQ缓存更新</a>
+  <a href="/categories/SoC%E4%B8%8E%E5%B9%B3%E5%8F%B0/" class="category-chain-item">SoC与平台</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/SoC%E4%B8%8E%E5%B9%B3%E5%8F%B0/ZYNQ/" class="category-chain-item">ZYNQ</a>
+  
+  
+
   
 
       </span>
@@ -700,7 +767,13 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/ZYNQ%E7%BC%93%E5%AD%98%E6%9B%B4%E6%96%B0/">#ZYNQ缓存更新</a>
+              <a href="/tags/DDR/">#DDR</a>
+            
+              <a href="/tags/ZYNQ/">#ZYNQ</a>
+            
+              <a href="/tags/PS-PL/">#PS-PL</a>
+            
+              <a href="/tags/%E7%BC%93%E5%AD%98%E4%B8%80%E8%87%B4%E6%80%A7/">#缓存一致性</a>
             
           </div>
         
@@ -728,7 +801,7 @@
       
       <a class="index-excerpt " href="/2025/09/19/ZYNQ-VIP%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" target="_self">
         <div>
-          ZYNQ-VIP使用笔记 ZYNQ UltraScale+ PS-E VIP 官方文档（PDF）   	      	    1. 简介 ZYNQ VIP（Verification IP）是 Xilinx 针对 Zynq 系列器件推出的验证 IP，内置多种主流总线和外设协议接口，极大简化了FPGA/SoC设计中的系统级验证工作。ZYNQ VIP 支持 AXI、AXI4-Lite、AXI4-Stre
+          记录 ZYNQ VIP 的版本选择、地址映射、复位流程和 AXI 主机读写用法，帮助搭建 PS/PL 协同仿真环境。
         </div>
       </a>
 
@@ -752,8 +825,15 @@
     
       <span class="category-chain">
         
-  <a href="/categories/ZYNQ-VIP/" class="category-chain-item">ZYNQ VIP</a>
+  <a href="/categories/SoC%E4%B8%8E%E5%B9%B3%E5%8F%B0/" class="category-chain-item">SoC与平台</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/SoC%E4%B8%8E%E5%B9%B3%E5%8F%B0/ZYNQ/" class="category-chain-item">ZYNQ</a>
+  
+  
+
   
 
       </span>
@@ -767,7 +847,13 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/ZYNQ-VIP/">#ZYNQ VIP</a>
+              <a href="/tags/ZYNQ/">#ZYNQ</a>
+            
+              <a href="/tags/VIP/">#VIP</a>
+            
+              <a href="/tags/%E4%BB%BF%E7%9C%9F/">#仿真</a>
+            
+              <a href="/tags/PS-PL/">#PS-PL</a>
             
           </div>
         
@@ -795,7 +881,7 @@
       
       <a class="index-excerpt " href="/2025/08/19/%E6%95%B0%E5%AD%97IC%E8%AE%BE%E8%AE%A1%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%B2%97%E4%BD%8D%E8%81%8C%E8%B4%A3%E4%B8%8E%E4%BB%BB%E8%81%8C%E8%A6%81%E6%B1%82/" target="_self">
         <div>
-          数字IC设计工程师岗位职责与任职要求  🔹 数字 IC 前端设计完整流程 以Synopsys 工具链为例：架构分析 (Platform Architect) → RTL 编码 (VS Code) → 功能验证 (VCS+Verdi+VC Formal) → 静态检查 (SpyGlass Lint/CDC/RDC) → 逻辑综合 (DC/Fusion Compiler) → 等价性检查 (For
+          梳理数字 IC 设计工程师在需求分析、架构设计、RTL 编码、验证协作和时序收敛中的职责与能力要求，辅助职业规划。
         </div>
       </a>
 
@@ -819,8 +905,15 @@
     
       <span class="category-chain">
         
-  <a href="/categories/IC%E8%A1%8C%E4%B8%9A/" class="category-chain-item">IC行业</a>
+  <a href="/categories/%E8%81%8C%E4%B8%9A%E4%B8%8E%E8%A7%84%E5%88%92/" class="category-chain-item">职业与规划</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/%E8%81%8C%E4%B8%9A%E4%B8%8E%E8%A7%84%E5%88%92/%E5%B2%97%E4%BD%8D%E5%88%86%E6%9E%90/" class="category-chain-item">岗位分析</a>
+  
+  
+
   
 
       </span>
@@ -834,7 +927,11 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/IC%E8%A1%8C%E4%B8%9A/">#IC行业</a>
+              <a href="/tags/%E6%95%B0%E5%AD%97IC/">#数字IC</a>
+            
+              <a href="/tags/%E5%B2%97%E4%BD%8D%E5%88%86%E6%9E%90/">#岗位分析</a>
+            
+              <a href="/tags/%E8%81%8C%E4%B8%9A%E8%A7%84%E5%88%92/">#职业规划</a>
             
           </div>
         
@@ -862,7 +959,7 @@
       
       <a class="index-excerpt " href="/2025/06/05/VSCode%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5%E8%AE%BE%E7%BD%AE/" target="_self">
         <div>
-          1. 代码片段 .json 文件结构说明 VSCode 代码片段文件本质是一个 JSON 对象，每个片段以名称为 key，内容为 value。结构如下： 12345678910&#123;  &quot;片段名称&quot;: &#123;    &quot;prefix&quot;: &quot;触发前缀&quot;,    &quot;body&quot;: [      &quot;代码
+          介绍 VSCode 代码片段的 JSON 配置结构、占位符和变量用法，帮助为 Verilog/SystemVerilog 等开发场景搭建高效模板。
         </div>
       </a>
 
@@ -886,8 +983,15 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0/" class="category-chain-item">知识笔记</a>
+  <a href="/categories/EDA%E4%B8%8E%E5%B7%A5%E5%85%B7/" class="category-chain-item">EDA与工具</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/EDA%E4%B8%8E%E5%B7%A5%E5%85%B7/%E7%BC%96%E8%BE%91%E5%99%A8/" class="category-chain-item">编辑器</a>
+  
+  
+
   
 
       </span>
@@ -903,7 +1007,11 @@
             
               <a href="/tags/VSCode/">#VSCode</a>
             
-              <a href="/tags/json%EF%BC%8C%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5%EF%BC%8C%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%9D%BF/">#json，代码片段，代码模板</a>
+              <a href="/tags/JSON/">#JSON</a>
+            
+              <a href="/tags/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5/">#代码片段</a>
+            
+              <a href="/tags/%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%9D%BF/">#代码模板</a>
             
           </div>
         
