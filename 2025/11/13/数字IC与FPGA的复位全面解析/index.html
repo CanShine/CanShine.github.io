@@ -19,16 +19,16 @@
   <meta name="author" content="CanShine">
   <meta name="keywords" content="">
   
-    <meta name="description" content="复位">
+    <meta name="description" content="数字IC与FPGA的复位全面解析 复位（Reset）是数字电路设计中不可或缺的控制信号，用于将寄存器、状态机或整个系统置于已知初始状态。不同类型的复位在 FPGA 与 ASIC 中的实现方式和工程影响有所不同。本文系统总结复位类型、原理、FPGA 原语支持及工程实践建议。  1 复位类型与基本概念 1.1 同步复位（Synchronous Reset）   定义：复位信号在时钟边沿生效，与普通逻辑">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数字IC与FPGA的复位全面解析">
 <meta property="og:url" content="https://canshine.github.io/2025/11/13/%E6%95%B0%E5%AD%97IC%E4%B8%8EFPGA%E7%9A%84%E5%A4%8D%E4%BD%8D%E5%85%A8%E9%9D%A2%E8%A7%A3%E6%9E%90/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="复位">
+<meta property="og:description" content="数字IC与FPGA的复位全面解析 复位（Reset）是数字电路设计中不可或缺的控制信号，用于将寄存器、状态机或整个系统置于已知初始状态。不同类型的复位在 FPGA 与 ASIC 中的实现方式和工程影响有所不同。本文系统总结复位类型、原理、FPGA 原语支持及工程实践建议。  1 复位类型与基本概念 1.1 同步复位（Synchronous Reset）   定义：复位信号在时钟边沿生效，与普通逻辑">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://canshine.github.io/img/%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0.png">
 <meta property="article:published_time" content="2025-11-13T07:42:00.000Z">
-<meta property="article:modified_time" content="2026-04-28T04:50:30.373Z">
+<meta property="article:modified_time" content="2026-07-21T05:27:03.186Z">
 <meta property="article:author" content="CanShine">
 <meta property="article:tag" content="复位">
 <meta name="twitter:card" content="summary_large_image">
@@ -173,18 +173,6 @@
             </li>
           
         
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/academic/" target="_self">
-                <i class="iconfont icon-book"></i>
-                <span>学术</span>
-              </a>
-            </li>
-          
-        
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
@@ -301,22 +289,229 @@
             <h1 id="seo-header">数字IC与FPGA的复位全面解析</h1>
             
             
-              
-              <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误，请重试。" data-whm="博客解密失败，但仍可访问解密后的内容。">
-  <script id="hbeData" type="hbeData" data-hmacdigest="e48e6f9a480d093e25037ddf42c5fd3bc01b3e35349ccc7b78f994f038477271">9ad6c89fad563ff050d22f26b96bab82af0e3c5848a31bb1833c3f5dcdea1b036bc935624b72990a4ef9a0c5076b2210a82a237072bda61e55c0aa09a358bbc30f45f7bb94cc6976c269cf704ca38c20af00e59e711e5b30cf312a50f295fdfb313c00e0612944bcbd57500252d8df8dec0b743e153943b013589a0d81f2d5a730b160d1043c58fbebbe69807fa8346a9e066ee5b786817593d7cc7c389a8cf44f7e5751f35c2f029e0eb14dd3aa781be0a39d821410e654ef9f0e4a4e2e89602d784eb1c7582f315dc29e7fc69a20167ab8975790a341f5b0255bbbdb8154a5b7438c3895f2ec03d83a84ddefcab2cd4597f61a6851db8588d2c1d917f32f41d4381f6b3439e0f7e84c30dd87d08e3a39d7e6ccc7a8dc453ad9e864f07bfc632aa76e50da293763fcb90ac7d20ea5db6be349cf1a0a8a0dab87b46e6028b158ef7a37885df5d0190a76bfe5d0bdf209924c2548b58d9efa3d4228adb5d518f0ca939a67c32ee84c8f647bd5b72cd1bbca9a1dfb2aeec12e848f6a534f0620148d73c47c7f1e54e6cb9e4d84580179e5ca1ab0e4dec633d019c752c888256a6516074a3405e9fcd68910dbf90ef050857d8dcb188085396f073615badeb86105b8545096c86aa82192059157b045d86bf596a4c745b799285bcfdc0b534ecdd2c2665174f2219d1f197eb2638b2933cfe015006b47ddbc7d02477eb243a89fe69e23003c624af85db81dcdd803ec2fe895cb9b3671fa14a330ea9f9654347f466f145d2a6423c19e42f23738c4ac52cb33465aa3a0ca71cc32d516d2912f133965bd9636f0b4e18ed4865a4a2f98322e9349912cf7a4efe0540a9ff8a9bb717c50ffc71a5b55d527e1a9bf99b0920b16d9b8f0868f749f254d5b4605df5900b8ff046622cba0e9719fe5bf63c37138f54fc17bf3658b074509d3b93aad60a0ca9d69255b8f2af2841492829bee75ca30522bc6548c04297cd6b3ad72e962b7e7698f14d69f47bc9e7483c9e25f7c3770a36c6e05304dc60e21325a76fa458e82526e199425eb0818c8113eb24c92d9c7ffe950a65fb78bb9bc6778a79a4b9273473d04e5af8f0eb749875a005a4d8835ac91dc4b1a0148cab8ad02fa5e6f29120bf3fb6827c33c48431bb516fbbe12bbd268af42e2e0beaf7b87c3dfa98995cabefaf50eb0d957a88f361de4fa5c4f54903c20523c757874199f721968680464701042e92ba26dbb76f6a1c261e6096752b90a4eea41e5fba1511783715f840997f814e95b1cfe0979b153d43314ac0d948faae962531ae9c8bc36632221680ff3526b5d4fbe85929b4b8f673528405fa54547a9eb16a90462aeca16c9486d9f41aa60178726870f7a4246810af581f0cb44f3b0ba25fb7aa1261a3cb4bde3262c27900a99444bbb1a8afccd81644335c77b7c27299c3ffd79d441ecf88faf7fea4f3bec68f90639f7ee6d009b91fd75dea25f349255ed20195f69b0cac43bd71270b01c289e2186ed7dbfcce21bd01f21a0257a586e840dc8ec56d8f84592480c733f9328d60616bbc481b8a4d70da1d4ae0cca20a355130ad7489edc8f2e165f46080ef4b5ec35f524e095afb384b5d46503cc7b03f687cf04f65324f7a2c8330bb118321517874ef2b099363690ed1fb6e7df71edbc2f7ce1081fd5279464858d3e8b44dd3ad3cc44c78e634cb99ab7fff75350c7dfff32244ee4c036365bec992cba239624399e46244d25cd972ea8c7be312fd98736fb6de95a5111cb8c1686f0a240201799c9f80aa827f8cde80cb9f702d691235d46efcc09a1b0fed3c4a81b7173689eb135fd69ccad2c30f3cbfa6569d152789875b3d1a867873cd36d69aef7ae32d2a62d42294d8f7009d700ff9f94d670b91dd817cac589c89e34fbb35ca071f8d4bae6dc864cdaf1666cf9e74e890c536bc958576bf79026f25d4f8ad68b5879c8fcc3d16b2e35ab9df1b7ffe3aaf1f0549d6cdc6a89833a8ed9d169f16d0415910fb331d9dad4ee8ac24f1b615d514f676cef86379ccf8c65dce670ae8bd8227cf040b1e02e5d7497887b2bb97bbe82e751f3e3fac19d4cbed0a785f883a53aa90d6e21aa38d22368bc93f93dac72f6d2c8461bad120e63c47c2a961ca37a046151f0335c605bfe701a5b97ccd67586ec6877ed636614e74d239314148a63a7c8cda222de0e59db842253054906ef92a0015012ace221969f11ebc46206b2bdcca6cb75e21b4185641f3613024546166c6580ef4cfbf6e4d99115068390b29194f1950c44fdc760149b3a99dd0c0d6416d03ec67640690885b3e0b0455be40f4a49743fb80e579dca2c6346262ba4ea4db74e4c449ae64a239f1c77f881f474aae97844e773b2934539c76e91ab7dad922a0827a3fd2b7a65f940b36ca8d48d836268c9042f7bb28a5d40da4783b8345e1e7e1ee4bcbeffe6d9645d23ad3e87f2e6b9b2a59b39895bbbe8bda5dded4ca802831d8446897f98265ced892f68457436aaf108fcf1522d6d2d7db4d8557556a0b7ade0872507b51cbd83df737f9662e4c2c8ad9a066ac7f227c2712a093c9bf56652eb92a7509b3e988f79ff0e4738ca1a4ad4676fcb5c7b5ba6122ba52ddad1ea978e808f97039a2a5313d7e6c76c8a4ce7c008a81f3b70208937e603a54081ae4e555c8c34e6981d7e1cd051561d9d952dd90a7c179064d67e5200e723d7d15343d0e25adee0abfc7d7bef0a0b2389e03a733b5b5b7f73913b2938a97cecbc5695d68199297dd487be44e44603ff56c0c283c4e098953cb34d094fc02e442aedc9e575f12965def4518fd18cf343830fb0b8e229863ca18175afc9a8b36225e7744b4071464e60f609aa9bf008a806e2b065cdc68b3bf5b7dbd40cf0fe69a73afb10c47a5e46b4d404dab57d0631cd512e2acc8f8b08a46342941d4a8d299cdc21aadacecd93adaa6fb1892bea0d9e96ebd0f8c8a7d2e2a0a99047f4a1be302da0558f9a8c02645d401f069405dd23b7be1caf4f953806aed217850cf84a98fd717907a18c710e8cdf9629f02b08146b788a7130fe7556ba1e70aa063f39f66e82ef09051a560fae042d26e89cb129a6eccb18c5ce48ba88d2b0145cb77c0a8721045c7ddd79aee4d733cb8e0b07b9032c95c42cda3b7fc8da771b9db3a160bcf69f601098334d041b22942e6e1586d3dab01ace6ec37e19733fd2d905630b655d773877d7fe120cfc3550253553ead9dd26a85533147cf818275f8d93ecff7d6ac5295da69d3d0d694f66cd36924c8506908ed21b3150d8e31a96b34a8cb748fd9924166a2a838c3902a7821cf4efc48f3118cd0f58a1f823b66cd017f9f4aaeef950427f5f4f62100868a6d4ba910de10481fe0d5c54d4e08d071354cb326c3f9be22a35bd8d59cecef63b8ba2fc6c99cda3661572d721877884525a204f234049b76d2785ec4d2ef15e41d8de5eeeba0bb63fb7d6842d6e3c93e842817c2b640fa27b360768e50ed37957bd4c0ccf650f27595b900149bc6620e063d21f7e191fc4a311fb7c68fe94421cd696780dfd46f385d27ff2aea128444f67e6f00ca314b10264b5d34f06f683829239bcaa0e8b271d7cb1f730ac4caf91e7f43909d2d06237bcf4cc764c223b3e40c7d00558e9972e91be4a108a64b5e9b1eafb4d476b2c8973a01048af346a707787a7cbf9c902abd5e88b577e11ff7b71b06f4a4068be3fea5600abcf8dc78f153a559484b329b30daae0208ca20691c67dd2bb501dc640d37d7961849cd23616ddbf5a51264220720a102a94f640eade2d4d42ed080c6dfc57077ed7914573b3902d46d19195d783bf9c84086c658d8deabdbb9822a078c83176ff3f6aa5490e0eb96aaa5ef52bfd6a7c55d60d3d91339190e54fa6fef7d389864f3ef16e6ebe2e380029a8ff380d165618a57306e57480b3f9a1a8e91db3854f305a0ec3c5224b3a6534fe41cf63984adde5e1d1c7a157e22616ec86e0e139a399d4d12402bc82a6b6d9ea7ac0eb9d532f2d8e766fe6d21eee286bddb048d9828a49848197c591d718501b5e6ca4135abb73aea28f9c82d71311f29b5fb013d87f833383f0cdff5e340be02c9559f9aa9b331987af6ee80ec3acbca0159c24b4299bc0b8599c0e7bdadc9a8c155ed13ba1763ce773719efc2791106ce01eca310739dedbd93c2080f0b2de4dcc6a2f21c8db8f41c1a603b097db8d8734a70fbc8b872f8a8f740ab0588631f3c04d9fa0fc7ab78dc7b3f79c437a0ef4c11dc97ec33d2f384a6cc0594aa382b3e84b16fcab7c544bff654bcf9a4370fd79edae8fdaa6fc3da53fbd7f9939639dfbcbd492de6d16694f4f55b022c816caba6c614ad40b623843dba1cc1b48213bf778660b8346e058cd35b5a92bcd876276969e9dfb0edaaf48aee2c2bf394e90e7020a97bf60f20a9427873a687ee96a0f8876e52721437d5e248c231baea753168994cc6f097924051f3be8fa31304995e65908a09f97f313994889c7596d9c9e3b4e28870fb49ae68351d5b87c69a4068d5afb7d971fdb74ce74a2cca39fa3929ebf8eef6e86e7a0960629a4b0149a7dc9d04319187da54184603ade22a51546d896935e1d618e79053a2196de82c2ea7e7364c940c8cc38297a2b610f5ce6095b7c6a90bdb71ab12241762decea8484fb9bd33fea24237d1728f75fc7c212fe74e9dc1ad84546c7e020ccedf7ebaf5c55a17741cdbe4a7f6e98ba7108550334695ec9b3fc26fccdc666f0668ee34603e5d6de8e43abc09cf7dfca63d25de3b7882ab6cc5f6c4d0e9a2f76162bab065c666c03ae9f9496ad99becc86b25960bc540d9860642d51f79bc66ee30bd2214ccd294ea56fb4ce5ed6cdf29e3cb118bf2a878abde8f90e4389cc71df7d034584433db1d660609b013f5d1990341287a11934bb256a722587ff1d83dbe8ccd0aeeb119942edcccd0d6648cc9c416f227a5b18f209abe825662d3855a91836039fc3002d5b074c91ed3a9f79598d232f14a71b5e73ab13d37af977a46921a3f515868ca4b1e5180e257205fad8333d90ba8a22f7da1cc75641cb3cc235808e28e7403b06a22a536e7369a19a30ab173d409784bda337da40668e7fa385ab5670077f4603eeaad165c8d8e2e55e7304db97a103bfd464e17b26f3ce9751d5e739518c6c7aa4c5b409b42e669dcba9056ac015b79c6112edc8bbc00705acdd053ce55081f861ecff3a6aa91b379d278221c165443bc27cf3a13136eb5a9e82fcf48f408926a670e567ed0919240c0abba73fe7429356300227f398616d598c2289bf7dafa6d55c55760cf8dd85180cb86734b6af5a5a868718c8118f03f29a152ed2b04ef2d8a30b7ffd9391d8a1504a4da78f5124404211ea53432b4060d7662914086f1e1f084f66558c097d42f72d6281e13091a9fc57f849bd3bda98fbd32bb0bfea63bd0e766a3812f061dcaace30e030d5e5d4baf280a88616c77fe206a27ea67c0c2b826a63aebcde21156a25a2b665ffaa5960fb4134d319406a8f3af7ac0d65f8e624956784819f08a342ecf2fc9cc6a4c770fc41a82a13278c65e2e9f9da93fd8a29b01bfb47bcc40d09f2693bf6583141041839d8a455e9cfc569d520f6a0d4df194457b3a70a7c0cd15021f96703a636c7145643b692acb129e68e099d39a46cdcc0d751a7b1d093aee3fa65db5c47c71fd280f53a27f4d6634a16b9956fdf434a3e4933191fd040aaa04a0f83980a1cbdb38acf456c8b3db36cc3d47b00f94150eb8d4347b20862ca0fda6a7982d88fb6210c78248ad60798174b088c9fd6a66353e7ee311a76252c3bc305e789e42037355cc9f9782afc917d43b01fc5e023a97b428b28f3e00ade5c83e72622dfb8e9919fab8de911d17e9aa88f1acb7745961d3a3b677c4805c0233431d00517bd2345667dd5262a8e29b9edf7d3502894b287decfbcfa079a25023c0ed463a23b1c53a56889d37c24fc754707915c828064435cc47acfa650a5abed76347a63dd4a0ba5ac6f9a5c8cac6759266f2ed35715be2b8ccb2d3a792f664b0ac7dfb49b68cb646c23196c27107b910f7bbd9f0cbbdb4265299c68ecda07a41f1fdde07eb0d5b8f0a37e8cbbd1b1de1fac3531082401d778c8e84cb94e70f547f94c79cc27e1f51b1b3f540bd451e7c5fdb0a87bbeee8b9043540e5900a0632436144f279cb40f6b6760c2e1e82f8433e7890e9cc57124efff2bde8d4c13a26e08a4a54b3453aaee056d076fc1e1d46dac13ac047e2bb64df6c3ba6dbde7d9685dc46f2a3870b45441f7a3e2073a291e83180557adf10355aca2cb89cf184a01069da67229f9d9523e9adc3da1a9678f5919aaebeb62a54a0bb8887aed7f1fa3ee4cf53e55d00fd3cfa52f545083e5b3fa919ed9c5114e27933715ad994a1ba384609ae94589971d9fdb503e6fbe483737f300dbd33569039bd1a21bea20a59b2637de3da3f61620113636db70e87e58175fa2082ade9424a89a77de0066f0ff16f462797c1fcbfefe4414897cca6fb921d230fc78afb1bc7da916ae6def39ff0ad8ad8c558b9914a7402e7b7f28dfd15f549e0ddc8b5d0df16f34c77854d6fd36f599aaaa3c9dd1627e20bba1f2349d16e064062b8b4ed6f8429ad5823394ad6618740af33c613e0c24fdb029d51b09a303b0181a22729503176adf081107f8179a2750d71bd727491fc68435d37ee5a65243783995e51f545de29d1cc6eb7413eb905b937d7f2a8178be3ebc238f9d7fc33f78a6ae20533222fb21dfca58506c2c84e199b1658ce0a0ac7b13426f4f920c8ea6c05717baa8cbbca934871a5d21321b5d504fd0c116721cff9c8e4289c2de18c1841427bd7dbf2283d48628ad76a28b1ffecb4aaf97a0a5f43b943388990309300f924671541fc5eb2574e9417306ef8fe4e7656cc70a7ec4ce522f04548384e20118652656e1e60784dc443b7f4e821dad65cc445eed0bfc52987657322613f3ef3a80fe920fe36754dc12c7d82498f0048947e4ddcfd2a73e901a76fc281eb1cd9a54010c73ee07a7125d9a27a67eecf1fd751a9ac2021cdb55013cf234ea71c9039bc260a1416faf0457f94e28e3518662637ddcc52f94d46730a887a25cb215ac554c00eb9668175a207afcf43ead2b0f0b17c417f182be22e1e3f9d16371dad97e607c5e3487119f909fe5c55fd3a5ed47ed43e855f5a684e0388769c054dc7c4d1b41151b4eee0d1ea584f1cece1a20ba41f5374056d0ebf5a90ca424f2dbdddb33852c398a4312f2ffe00f26e6506985624688816b10888d16ef1470e4cef366019c3eb7ee989b2f67c2a27de29695e75b43b97172685c2f1e2fd5289c7262b2dec73b369b64be875913e3237e602dcb96c26968d23c3debbdaa6c7f08ea5d2f4cece8bef88449bacc2db13ce0fe07f9b83a3feca7ffc63ca8ce4fe578fc5b7273ae6c7edccd835b7666973d7c05c37576928414911eab92c69afe3e8b871863e3258b63cfce6fb6aec0668c7cc12d206656e449b77f83c3f14dcc3e593adb5cafb82b10e4aae601ac24a2ee5a078a0f5e83e9d6cd680b60a08b17d93d57b89ad311d220c068017a1c6926233f9597e4cfdffbebccdf47f057f4887b07ea7899dbd48a5a8720daaf1acdea9ff44a973581c9880ec7f58432570f7a9d354ef711615d4bbe7e52c30ce6831633685d6d18bfbc27d9193381b919b2d3b05e693b0f310f518874560311b5c91a0fcda6a14474cb529e26ac448e0440dcc9b742c15bd50343dfd62680e1a6a551b47db1e02e7391f4bd5215ec8f11f6d735e5e38376e6c558827dbf8ec081cbf50c0b68f6e8ca0370f272f302bf612fc20596e47350fa1affcec539f69f1e7fa559d454b2259359560ee2ced93c246d7e4fb7b02ca07dd4d26c4293ff836c9f1915f09c5a7a1ef1f4922f0ce6db493c472d3ee5f531ed4df4170336138b4f998a1626b87be526c7d081027495da16e7076098d54bceb065ea0df28c26149897a67e2f31d76dc1bb238e0fa26579be14c9cbd2b3c51e4ba7e1ccf2c85438ebe882c7ca4d193d8657b617b7e3192b1cae2a3231bab005f54d8441b6e94009102e33fd7850182b92eb57d26de52073c2cf5bf07ee3c90ef05e25ae9bdc6f3e1c2c55a30eb5eb5ab3bda9a7ed3f216a4aad4ce38b7fdd9264e03e25e6719de8fffec135187a9ea374c33558f3863b8a65f851613669d237c9a8b1932ae325285f38cb207c3d4484c73e6a6a462b779e09a076fb98c44298e2cde214cc7c258b0d5d7108d6af34f1c7c435479457c72509ff85a3a1813b2ccfe65caf33c71ff41feb89733f4fbeb7127353f6f5e451fea97636f46e36305574e5ed5a35791e1f78792add68bdc799069ee0ffcc1cff2277fb6738762df89324b3ecd45c1a82ebc88d264b3baccbae10f755a443c5142067ed2a93d1549cea6d7aaba663ff26b7e61e4cc27fa39ddb66493dec81cf7f8609d00432ff0005f9e3884fadb133f8476ad16df2911c01c1514df44ecf701d0807155ffbe8d38aabe16291201bc8ce6e7e049cbbccfcf5b3cec1adc77eeb38a8a76ad799212e99945c01f7a8a6510d25b52d787784587914a0c9a06305cac26d7a6c24fc2eed0d151b4371f9c4beb49ec6596837873f088ce6f3b5b9071f52a9b0451c337dc3467b8a29f62f7d0edab88d66f9aa5d91fc10f16fbfaa00df8a0869d81eb65a95d63ab3c3de7923972e625e96a71b034d0f7ff876afaf0581f0886e6143342b6be0904a3b22a8322b2f96d326f651997eafb85c7cd1a59ab9996659fe05ee944946f20ba40f693ccd41b7320ef66b535286fcb3df33aa563aa45be2af8dd00487518c0781b288fb87b2d9e8278d0687660c29fe54a3213edc74ee59ded4e8cdaa77f556ef7c19772e8877669ee06ecc5c8d7a8926ee120eb820a5b0739b9121f2d7256549af4fedbb648083bfdb5d55ebf17f1f46dfd5926b7757b689882fc782fd28ce643418a756e0838cfb10425738d8958628ba11f84d40e6331332a1d5ab5095de9ee7f123b452f0536eba410756dd04930788ab4e4806f6a8f9bb3a37e8320853b6da83f02d0946fcae5ce3054a21b0cbbab3a5cc5deb7159b6e629d75f5afc7c1664c0f118f324a4fe772a97a59890603730a0377e429e430392795d242b0a4ec109c72d3cfd47f00b654e6c35ad48ae04dbcc6a123fa3b3633af66b76fc2152432819432b8f0ae647dcb25851863c20ba81ee77eaf4ac1d6e45a0b23d41ca8ea41d3969a199d12269efb4f8327389fa48711991517de654462dc168c27ab363fef72d7a327520deb306e73c125c355959c4a110c2c5b1fb7086c0743ea67fbfa8d974814c88aacc83bf2969b2f6ab374286f67e205225d69c81c2d16f2c7774577fd513131517ad1b4a3005859cba95ed8b659e262afd90ac50befa09c0855bf3bb332260117a3f13adcdc5d6e982d4b013bd57b85267a662614b340593b33ed8d3567231a62f924fdeaf21b85e35e3881dfd2e13b8992446da36d6456b0f3023d9bf350dfde2ed2cc61462fff13cdfccccf9c8dc6b7ebfdfa6e16cd30fee4fd4f8ff8376296704e83936edec290bb5a8a8ea8bd20e770b4eb309af745be6001619098232bb3a127b9cec4f703acb7af5e5b994c28e11a8f54ae53da5b2a36e4337d89155821a451ca92a68418e502c88b8a462756524cc190b99140f8adffc3ff2823a35a1f8222cd2e019a0edcb10f3db71d5412d559aedbf9b068315b4c5669d9caceecffff2ff22d8ff017a72f06274565216b7f9a6c53db0891d805245e123d0e5e75780abf1f86f0d6b2416d216b478cca5bb6547887edd7cafdc66af5fdbde253be80d2bdbd652c898a0f9f14cfde07051c25b4795865708bf29e17df91d80143d87519923b3a438b13e17cc7d81f6a15ac7fc0be6781725cf3801d6ddc232ed614755d488bb6e3874dbd2143c25150edffdddf6bd2ab348dae49ba955c702534c15a48d198590b89aa3dc92da0d8bd99f888bc707f07027b14d4e11aae98e8dc9c63e8009e5295c1df09b0da1309ecf00f0f8daf7731d027b2a2b6b2034b3554eb3b54cd56dc160d9d27f1d9582c770c2e23652cd0db767d031c25e4783e4d95189f74555748e1cfeaa475670b80769be74116efccdd4116238319f8c10852a38183dcdaf291af44e5d4afb8d509bb7703aafd6e15be1a23815dba4b1369ea4bdc8036ff2e7388c4c642fd2665fd16a2650a50df3bcfea51de8701383d5b6ff19ce37915900f27c7ba6a707e68c6d35449d1d5ad115e75d60e8300f725f33a03d0ba564b75528ab97b23d30c3ad5fc7cefd6b7dae1333af1389e739e9230570f3f205b9c73271063e7657f26c40b2f9dac06903950509294eb0fe2ebd198850397fe36f2b483a8cd47a50a5c04c6bd9f71b59ada6c8111f1604b8624b7e06134cf4c058db6daba61ccb7ea1101003208e3557cc8dc56d0b30fb718ceff8cec13eee03024238894963bbe441fcf0f9ce19f128e71af34224200435ecc96c0be4b09787f30298d0dd58dd3b759db9ce24b81956ebca0d9ebe8a663006eae3130c04fda31079fed26a3012900bd84cec5d077e5251c3b11b78b14020068b2109265bdfce5a79cff990d29aabeeea742dd6a655cf694392ef9c8c6977f8859c8c900cfa549abad4610baa8a27720c65a82317fd99f8897cad60d6cf0c6250bf4d85ba5d7814538764968b192d21931ebeeadbed93786045ff202dbbfa72283555263f7769377a3bf57f3f03ff5d12019af0e3e95973f53c338d17d2467384eb4bdf9e5c8f0da733086316bb3aff8274fdd38a0b54f095db350bbb3299fba6990ebef09ec527a28377dcee6a99aa17dd242f42958eb8f64e7ffdcccc0da7abe2cb60b9bd5a1a9c9a48e64588848a27cdf385182bccf3a33d06e47cb0f0adc792c6f59a1478d84ff91b950c5917f0c58f130f85cb4c58dcb117db9f4e5c785032ceb5eed1046276688b7748fdc91555c52afe4ba09eb92f18a1843e7998e58beec473f1b35f3d44a2c5e704c2707cb3343d751f90469f201dc9b7d6b4e03cacfd4e147ae1ec923e4eed99b65d526fdf3a3fc35a017efee0655bf12b2f03cf2b27d61429f242783c733ee274437e3245069a4075b34662cf1e70008ce7f3b5bf6db34f736df95eac62921566521ed94cc9a6c5411b8b31bac2f2c2a21a10e26825ff90c2a9c565045dc86b0679f6cea83685ba71fd9e447105a377db999d7181ba03e360926d08d3858a897835cd6801b46a195b9a6e25928889743073ca421f2846e496343bb4e02d9ba587d225c367ca8bce1cb8c63e9313a224d905e7d8bd240dbad61e322d9184ba36d6b4954a1dd802e65127a09e5e07f7f689cb0d668d2f50431f4652e0fe6ea8cc5346616c121233a87e6799e4d7eb3c4a4875cf55c24c59711886306532d2201857a854bb60f8b1b24aaf46f793b2ca803f21093d3c82803924d00661d7f611b78c3b0d95659c18bd8ebadb067d7029bb2c5d1e53d4c792bb0523dcb8fc2f76b500ce7b732699cde23bf1f0751bba3c227aa57e72ace4fef2166e72c58687fdadd5483bd90c9e59683465ab2e5d65b0134c4e4fcce77e286b53caf1fd1c1b8836bea2e42471a59aa84d9cf0eee30c3d2a79b55201c7a8ada5f543552260029b9861f93750c5c1dcc25a26aa27c9ee8af0bfa9544a5b173d7ca4071a616d28bb75e3869e4a13c72db297fed44092089f423682e5c3283c5ce4d30fa95d9902d667521c8696dae7339f18e6bc0a3d19cf96f903ffda33df16c221c29b4e9f96bfadf3950d79106b8f2254a3c5b993827f2dd1ad51c306eb066be0ac8a5446d38014f2517abdb96c8118fe4c756da6dfd69fdfdaa40358ab80654e41f6516b8e8a1cbbedf6aa6266b7b8830aa12edc46180deb37df77efedff30dbef0e8a19981487e32b307d8cbcfd6a2d601755d92c47870dee4ade45689941e32033026a0cf79c3f9d3559e7c4478ba8b03280daac972351dd31a69385136eb7662f053c201dd6601067b73e74d45b08b8fc5081476e77b7bce59beeaead41152bd5129a110f37ba54cd25b4a027a128bf6af5094c12997c26ecc9c501176bfdca823624e68d732a56d0ed13c8bedbf625af9dd0c7b86122ab005b29f8b577f695c07bf9ed0966b654b55af23050d1639f6aa6b0a2599798c88f4afae4bb6237e6e273135d858d9fa034e49192dff7d584d3e5375b75f197be9a7446c18b9461aa3b4a6670083c80408d09929397c524543c3c2d59c88fb30958101bd63d65acea1df51d0548de8ad48b385aed8b704be6b64ba761a5642668f931e77fea97c05376e00a48199581e88ae0bc1ee9eb75da482f916f93fe12b025df58d82dadaf4ee03bfe66c6d2a162dab07af2d6f402e0d45384a2b0a71af3c5247c114e8a85bc25c232838b0f7d8febdc1f4ae9d5276f9a08038dcdd72c65043994362969d5b00187d7a00bb7cc201b5351cd4b4f7ea0aee7ec41223c41c7f86f734b8aafbd6596539cdbea3a9707d346337740e1d064694321b5f94d2366e3608237b7f98b77de86ce0e693ce75d1cd4eb9c50c5c9e85f39dc8d7f01f404851f4e321688d74363af484f7cf328adc09e7637d2b5426899b5865b976718cab7f6b743475e6bf21492f8034a1cce4ffcf8dbf86163aaa9814fc79315e4cf8d85163d64e890185f2d14fa82e9dd269631c38f0a456397ef0e8a25199620f27ac6cfcc290fa1727480c3f501dc4e45afa0bff8d11cdeb38807b37c13bcccdcc094b582d0826b560ba43f5008b542a4d76f7987a834fbad23f2fecdf59cf9e289b48720abd8cfb08e63bf3280d61081a82d7436f061c0020fe407a12e6c175293dcc2254ff3e0f2eadf2cc83e490b3acc4f13467eb765053ef513b97a3af7a9895938b5962acd6f5ad48ce09d9c0a9e955b8f2ffb7285ac7c011c3acf87ca83a2ecd08ab5eaa9f2f6d00de7e310415415fc2c4341059c5b935d0a5a192b5cbed0d68be567cf1d29ba4e3cda895a49a372ec36768eb8549a719b222d5326236b9748be896679f266a4442d150a0a4f7c53ceecb1a5ffe0114453349ca94617a882b07d8c942cc7a79595bbb64cea10602e73354db88c1a3f7032231619bef4fdc16ed81e40a782accbd4524c137a453822b8541112006d55890cc27aeaa1330076091096df757525b537b63e0838835251820e85dd6c1e71260232efa6da887aaa01d333cafce6eeae45505f42940e4f44c5ad6878a0198a26cb89431d2c634227306b83ffbf84e49eccbbc4de29bdb992c727f21bea85f0313187e597596a5cba17daeabe5bef08527a96914ac5ceabf378236d822655bec4d74055697c1392acbc5b97c0a88bed15eeef8fa7507f0cc8c762466471e5b48cd4cb73eaa3fc31576635fc5746ec2eaa097250a4084d36f2d09b88a29f1d3de421f4524c3b82fdfdbb3aa6ef11eac08c5f95b4075bbc34f27bd4b77b88680a504ea3ab0a82e78a5617fd740e103ab850d728c28473944452abdcbb747203a88240fbcb7d830f53b1cc54a88ae948693c9859965ff1a6581141723537c248f713a63e77aad6a95e3b4f0004bcb33bc46138b9bd9bfdfd535feb29d848791650f71a6dfdc04474ee7975f3f49d2c0a2a66780ffcc320db8f827e4da63f8e93b033229e2c41fb4949205d7afd159b3e617b8d36eb391d4417f6bde442abc38ea7f60bb1975e249ab87f7af5c2cde2fa16ad70bd68a28a90e068caa7cea0380073a9a6c29299804c74e7cc6891fc12294149a4bde0ab8a3813b2e58d84c54c7d469c7d46bfd6edc6c47e9194b5a9494403c5f2f8051070f3d87fbd9f696835fd88b6140b02cc3edfb21c0dcd0190d381d5bef146c8dd0c2d8b5e0b78da1468a86f5a307b29a33236bb7709a221121f6fe6d182293803d972bfc38a115201a2f927f1da553b9bf3ee0f9299eb8fa77080a84ba6d0db06e0dd921567309a121b5aec0e05b44e6caadaee807b0aa5d3d3fbd3c367e91faf3543cbefc4c7b67fbdc1cb5dde2c80f30019147318be8f355f85d857e01e0fe1da28dbc3d0757c22994bb0416c1b97b7e8506bb21c15102dd1afee631b76155d93b2dbd17158945cea2cc323fc7a9e616d1f9fd8b3d34465863237ab022cd401ef21d07fdff9a8031c323c0e72463bd2984a6959fef8ec32beb5f57a93ddcc413b713830effdd4afbcad1f274e9bad38d0366dfdf7e3788671851683719bc7b05d93450404d48cf541b9641f09d52d1aeb670ccd702c20eb58c56a78689b327724b2e030dea3c0ada808c2c1b603d165f0017dc7338634db62854687377a19a93d8f6590bee13fb5cb5bafe184927568e081ce6bbc4f59d8832dbbf4a7f6b456b75163eb3d130265d550bc70b178261b9c74b09ece42e0fc2df4864a8c0b088e5e0405dac3d45a7573996e17600df5ed43c2b1fab7ec7d79e92de0ddbfb30a68ee7b71978e01eebd87a4eb26edb8d52d89067046de4b30c32711e4c8e5b09fa2b06e3a9443646da74b936d00e0be3d8c701a6075fc43aee6db847d4c768346564c2fb83e9da6c24bd87812d5ae36ae553d2b2aceefcedc1592de13d75520c5486313ece1cba585113c7f28f9ccdc12cb42af62ac8acb67f52f4cf0f49a741bfc5ef0ad855ac872bbb6378be6603023e4149e6d76a3432d93bde7af90950ed519e7079d44be8353fb9a4ea58dec2fed1c181f36385615fd722aa1e97319506d3fdbb504c45cce20cde37f4bb70a80fb2cd575bcbfa68e8be9946613cbbcac5f21001af80861659f7dc1855aa573d4804b9d99ca97943254e10e0991959f035e4c71c23aa42253685fca9c0bee5d8a3af3dfaf4e6386ca23fb73777d5e939270f591c1b586562eaff4dc5c377b85822d97763551d579cb79b3f94b2fe7ed3ffbf00e2d757ad1c9d8fdb4df4a641b4f32f82913fe0046e5fd40dfb28c86bbbf23c017513160d50e1cd0973cea8a1ee11479948dff31d2357a23f97b1c2c92fa78640cff264ff520fe0ea733c78cb91eda6092a4ea48f02a7916ad5d6d66f314dc4370212644ff210fc7a46728978d71d1040dd19fd9f19844ad9593949b941369b6e3d19e811d0178e21d2d08fb21f9d6e029548e2956f897228594c3cb1de736929907f2d5d87129c3390521b91cb81616698f732a9ca37ed7528061d0eb64dd77085024916eee6c088e394d3ec61e774210b49c306eace526b388e0ad79e753bc3c7a8f84e407c1c9255d604369154579b9273b35ecf784607579c56f010037450749c627de79383e96f38b337189de87d0dfa938d9d38a1f838f60fe6d8c0d48082258e02a942f615f9cce5c4bdfed8690a6d8a611a84926f9d43a566cb575907273314ded4684ba6703fe1229b5b1b9a22dfa970ebd2b651184e7505c1a5ed06983fa92abffd4d3479d6f080f3a819b6e203bf5323a11732cc2647f42550f794e47fc6fb93f175127b8927fec29fe737f6bc466fe6f2b71c1a454ac5840f17c42c53695e803d481688ee9f93178ddc7715614f5ac68115d3b87ef902f920413e086f401d33502c252a01d89ec683dd1add2b7e563a4eac41ec9281f7cde61a5bd7e54f049c3cbd6e420e363953725923b42341a55819bbadba5862cb58138b9ecfd3987edff2a646519a8de94b4c5800dd9e07cf631814c0b3ae04d85eefd74e52fce0179c3805464ddb965542610b2c4383889dc503eceb95f95657c1402bc173e386b7a8bd3399ff39692c473e2436ecd9223b79c645776346173bb61636598f2df6da420ac0fcbaae61ecf333dc6b5acb96740234e54843d5cdb16f7eb77759d429fed89912e42bb2285fea36a357c03c43642ac80a84fa51a14188c8d778791dc8b6facf422dc714dd0f71afc568c483f2aee98cdf73c15dc1ce2196e90e359ec02e3182da9317905f1755802bffe3d276f34b12a89647950c689ab268f9cc69ded6807f15e9e8ef4ba40117675ecaf2bbee0d959e0ba777b1f61bc60c9c90ecccd620ccb5fc8ee457e54d65c11785c37bfd02eb0162190b9bc93b8f11293f42c3c38980b9e8902dbbd6a6715dcda18b806c950fe66d1d8df9df1d458cb45b065d51d8779cb3536b3b1e9314750c980274747c016834b93602d5a1675cc160eb48c71131f943546063f0fd31d5ac1525f686c949ad7c78a22082df7578fe9bb012cf7773cb5e1fdaddc313338df1c17d1261ab983627e420dcda22779c09eab879f59e4353c8c666cfb47f89a87839051e3e4ce176e195941362b5fbd6ef9916dfeb4797c075a203795b90a3c87fda4cc1015334f4f1ecef903af2b7d14ccbc1349245b0b5d65d1e71c40a075530bebc8605dfe73293b550d44c1716500bb7e3409229e0a7f2eb46ef3081156a8afe9d2514daa4e42eaf6253c61ab2c8c6e6ed2212c4eabbdf50402aa10d0dc41cfcc2ae1d0b97cd2e4b47d18041a0f28d8f69d877346a351798f2b3ca687ce674c185911933060c088c80cca0cd5f6e89779ecf853e05b9a04a40d5be263bffde746402efec768c5c7536125930b0ed572a37ae749c5da93169a8bb91a24af0c64c4e20586322ef5e21bbf9808ebf56e0d00433659f9f53f063fc991168cee41c4a0d11656cdd994467c3a01e99cd1b3d80966aac4e2bc089f87487dd6261f09cc5ce2e25289c9c15b1738dd0a3b4ac71887ae1b96b1867c65b4e683e6351e1f4a62c940d2b8126c1eeccf63d5597b13aef71cf24633c24f0f3586ef1e5c902ef4f4c3c2bdb9813eb2a2e4ed25dc84d58c1508396b89b1a328dba994788c225a9faeab0cae4efc1f5c9333faa43fd22591bb100511a48c803c5b4e99f18ecbb781ad12c1999c38fce46f50d0b2ef5f76592025ddf24c77b0d03146fc64d0c28352440746a779f47d20412ec8658124e98aebd62443f84fde99f17015c40bb721ed300d791a6dc2357060cb44bfc22507f952f0edbddd278b84d3a2f36215de71cd7d9d8e888227c759ba57f733561e1e4f7efa82ea5b666af406ef5fe464cc5942a50371fe1782d459b0ff0c1a4e1b244ce56c6bcef7b09ba838ecec9fe4f93284601127fa1897e4955d4bbc0fdf1f7da4ab893dde7652afcfe84ec0d78f1efe5d8083a187b2754f0fdb4449c4dd7ccc0b192f19cb92270ed615f3289e2c96585e8a9b338b7ba464a117ca7c66be88368a0488cc85b65b994e6f0bbca5bde2825d04397f6daef4db09ff06b62c70629e72da6c41ceac447924d7ea3534c9d9343823e72771ed137ceee71ba7c05ecf74d25130f9420abf02cdb47b520b7d04cb32e458ae86ca92f359254a2b2fad68bbb9793b4384fd5f590528e1baa5fde2d6af0c40a4d76de41e0871a9fb487f32a1ca7a0abc74525e661b1edf92077ec84e04ccaa2cea90562bbf8ffede7cd14a0e3e3026bac929528a346b95aa8e9a1aab101a092601fa1cbf1e658a44c369da6abaebd7b76dcb871f731a6f956282c0e5a7ebbf03ac42a1b8dc92a02fa3040aeccdfb72ccde46aa4c0d8fc161f9d8b94d056ab9ec5e6bb29ebec81d4a75551bbfe626e114cb897fb837263327db6d0ad280bf5985aa1aef00c8c451bb29a6028622bd85d0ab4eb30701b553c263e3f62bc68525c20e319c3d6158df00f960c0fe73132b4ad5440d3b9495b28024a9346939d832764c41fa712a726dd4cb11742d135e622baed4fe6b3da12d6478bea59defaaf5d75f23a8f81ba3e00f39f3e40c81d394f396e11ed17bb92d9b2848dd67f0227068bbf27fd4f59edc7764683c77d9bb1f65ffc58cbd21c8f5e016456f38fd789790da50a76748e6391e321eabe4f3ccd12a1ec12c5598b3032f79397e720c71fe2a856a08c8a71880800287605375ab7d2a3dfc2dff32d998093464a26cc2cddf20335b3e50332d01eb47f273bca9ed818266f51387d679430535f8719cbfece46281e16d9a94e2eb46ed271346309faa076e79de19671f53feab9bd1651cca004d87b99a6d0530d79f64b9096e634c72558ddfb24c1b683cfe6cd073bee804648fc6dc073c6794eeeb113aa96c89403180019a3deee03414d53f9812d49cc6a348e64a2510d8f2d7e485d43eb31c79cc4f7d2076e86cada2c018f554f13a064ab4656e1c3957b6d8b5e674413f4e9cb1e9b83bcb4b854720dcf670ec6826da349ea967977ed9d7a769c73f7e8529a1aba6acd6cfeaf211ca500a2da995bc2c23a6671f9e0b4caafb8bd27f5888b8667484420da464a351dc6e62c415145cd8dfedd4b676c64e1536afd0a60438a14ccddf341e453744af712046fa5b9a45c6a16e03b2a63dfe81463cdd702af85652ba4f149bbaf1caaa8fd999a7508d9134d95a47e206e7f57fe354e504bbc92dc188fe6d46358cc3d53fc52f3a1841d057a1c2b051631bfa6583d6a410c703b6e7dd7a12443d0f4e1d29602152c9b1340739c3c2f449731613a79db57fe804e5d85f9dec86972ec2762e4f28d49565b05a94bed2841a7481954bbda7aa4d4a02b6d27e4a869ae69e49c3f4d9c77a070ab975859726a85954bbf510b462a1e2599e9fe0b23a017271db4fac07620f18344fdc88086f0f51a85d212acffdcef4e2cbc81cc95e5d856028d8a09dcf31f4f53c4d80bb81849ba7b5ad7fe34dd822cddf557ebf67625c606b9617a2da516977b1f06583eb6e21f5b8a9c1d2189ac6f75dc2505feeef8275e85fe3a2e0320fb07a432295472504e3bad9a8c23473e7e07f6329910b0748e1f6914acda3c6173cd2e1ca9b32c7f91b24bf2a2c52eb68dfbfdb9d13b803530d08b2d2a471e867c3c8f1c87840bd48866f3cb33e53bc45ca1b965455aec61b32092b6675c19e04a8846cb11698e1fb7091af00d0b07a76b12c5401d104977876fa9135f916a75d2b2139a4fb6adffaefd5eef207c539b03d04cbdfcab728cf9532d6b89eaf5c848938fab70eeb752910a14a4de7ee8f2c97723afff04456f5288390ab53050fac31a51f0fe6c558ec7301a1d426dbb7586ac29651865521654d9fbabc1aeb6f07b1b72a09ed71045a4f6fec309f9add82bc7dc5839bd9c90f7b7d422bf4a8ee00464cc7d065bf909307388d58a61a203b618625d954bfef46e38b1a6f458c15d38afc667ee633ce7671f448a09a9046ed57b67754c6ad2cde355b7e7a2038dcfef13c42c6d8d3bbc6c610803f344ed0b7f209434e1b369afe302a5180c1dbe6c8387f6cfa5667ec40b7fea89aaa899bd02966d3200abd31da497b1c9da8832d62010645afe456ace66e6289fa2730097bfb04189d606194a8f0dcf942696ed59743417a40b19a2ff4027bc98de51cc8d4fc6112bdbe4649b93386d2729eea80a56ecd7fcb9be3671024d073f353718c6d01f0d9d9858415c90b00a2734eec81baa6cf5e328932e9ab46d4dc378b29866503e84dfca5c0408d0796319f8db0aa7e6e61ceb1c639a34840b1feb2ea51896c6233dba1f793e5caf5e1c4a2da62ca247517e71f90eea83edff9779f88a3d91b4bded32bab579e6fa736671619ea5e8d1c8258508737fb567195707cb4a2f092a2</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入密码：</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
-              
+              <div class="markdown-body">
+                
+                <h1>数字IC与FPGA的复位全面解析</h1>
+<p>复位（Reset）是数字电路设计中不可或缺的控制信号，用于将寄存器、状态机或整个系统置于已知初始状态。不同类型的复位在 FPGA 与 ASIC 中的实现方式和工程影响有所不同。本文系统总结复位类型、原理、FPGA 原语支持及工程实践建议。</p>
+<hr>
+<h2 id="1-复位类型与基本概念">1 复位类型与基本概念</h2>
+<h3 id="1-1-同步复位（Synchronous-Reset）">1.1 同步复位（Synchronous Reset）</h3>
+<ul>
+<li>
+<p><strong>定义</strong>：复位信号在时钟边沿生效，与普通逻辑输入类似。</p>
+</li>
+<li>
+<p><strong>特点</strong>：</p>
+<ul>
+<li>时序分析简单，易综合优化。</li>
+<li>无法在时钟未稳定时立即复位。</li>
+</ul>
+</li>
+<li>
+<p><strong>应用场景</strong>：数据路径寄存器、时序敏感逻辑。</p>
+</li>
+</ul>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs verilog"><span class="hljs-comment">// 同步复位示例</span><br><span class="hljs-keyword">always</span> @(<span class="hljs-keyword">posedge</span> clk) <span class="hljs-keyword">begin</span><br>    <span class="hljs-keyword">if</span> (rst_sync) <br>        q &lt;= <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">else</span><br>        q &lt;= d;<br><span class="hljs-keyword">end</span><br></code></pre></td></tr></table></figure>
+<h3 id="1-2-异步复位（Asynchronous-Reset）">1.2 异步复位（Asynchronous Reset）</h3>
+<ul>
+<li>
+<p><strong>定义</strong>：复位信号一旦有效即可立即生效，不依赖时钟。</p>
+</li>
+<li>
+<p><strong>特点</strong>：</p>
+<ul>
+<li>可在上电或紧急情况下立即复位。</li>
+<li>释放复位可能导致寄存器亚稳态，需要同步处理。</li>
+</ul>
+</li>
+<li>
+<p><strong>应用场景</strong>：系统上电复位、全局紧急复位。</p>
+</li>
+</ul>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs verilog"><span class="hljs-comment">// 异步复位示例（高电平有效）</span><br><span class="hljs-keyword">always</span> @(<span class="hljs-keyword">posedge</span> clk <span class="hljs-keyword">or</span> <span class="hljs-keyword">posedge</span> rst_async) <span class="hljs-keyword">begin</span><br>    <span class="hljs-keyword">if</span> (rst_async) <br>        q &lt;= <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">else</span><br>        q &lt;= d;<br><span class="hljs-keyword">end</span><br></code></pre></td></tr></table></figure>
+<h3 id="1-3-复位极性与方向">1.3 复位极性与方向</h3>
+<p><strong>极性</strong>：高电平有效（Active-High）或低电平有效（Active-Low）。</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs verilog"><span class="hljs-comment">// 同步复位示例（高电平有效）</span><br><span class="hljs-keyword">always</span> @(<span class="hljs-keyword">posedge</span> clk) <span class="hljs-keyword">begin</span><br>    <span class="hljs-keyword">if</span> (rst) <br>        q &lt;= <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">else</span><br>        q &lt;= d;<br><span class="hljs-keyword">end</span><br><br><span class="hljs-comment">// 同步复位示例（低电平有效）</span><br><span class="hljs-keyword">always</span> @(<span class="hljs-keyword">posedge</span> clk) <span class="hljs-keyword">begin</span><br>    <span class="hljs-keyword">if</span> (!rstn) <br>        q &lt;= <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">else</span><br>        q &lt;= d;<br><span class="hljs-keyword">end</span><br></code></pre></td></tr></table></figure>
+<h3 id="1-4-复位极性与方向">1.4 复位极性与方向</h3>
+<p><strong>方向</strong>：置零（Reset/Clear）或置位（Set/Preload）。</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs verilog"><span class="hljs-comment">// 置零</span><br><span class="hljs-keyword">always</span> @(<span class="hljs-keyword">posedge</span> clk) <span class="hljs-keyword">begin</span><br>    <span class="hljs-keyword">if</span> (rst) <br>        q &lt;= <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">else</span><br>        q &lt;= d;<br><span class="hljs-keyword">end</span><br><br><span class="hljs-comment">// 置位</span><br><span class="hljs-keyword">always</span> @(<span class="hljs-keyword">posedge</span> clk) <span class="hljs-keyword">begin</span><br>    <span class="hljs-keyword">if</span> (rst) <br>        q &lt;= <span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">else</span><br>        q &lt;= d;<br><span class="hljs-keyword">end</span><br></code></pre></td></tr></table></figure>
+<hr>
+<h2 id="2-FPGA-复位实现">2 FPGA 复位实现</h2>
+<p>FPGA 的复位直接依赖 <strong>触发器原语（DFF）</strong>，不同系列略有差异。以 Xilinx 系列为例：</p>
+<table>
+<thead>
+<tr>
+<th>FPGA 系列</th>
+<th>每 SLICE DFF 数量</th>
+<th>支持 DFF 类型</th>
+<th>时钟采样极性</th>
+<th>SR有效极性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7 Series</td>
+<td>8</td>
+<td>FDRE/FDSE/FDCE/FDPE</td>
+<td>上升沿/下降沿</td>
+<td>高电平</td>
+</tr>
+<tr>
+<td>UltraScale / UltraScale+</td>
+<td>16</td>
+<td>FDRE/FDSE/FDCE/FDPE</td>
+<td>上升沿/下降沿</td>
+<td>高电平/低电平</td>
+</tr>
+<tr>
+<td>Versal</td>
+<td>16</td>
+<td>FDRE/FDSE/FDCE/FDPE</td>
+<td>上升沿/下降沿</td>
+<td>高电平/低电平</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-1-DFF-原语与复位类型对应">2.1 DFF 原语与复位类型对应</h3>
+<table>
+<thead>
+<tr>
+<th>原语</th>
+<th>类型</th>
+<th>同步/异步</th>
+<th>SR 默认极性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FDRE</td>
+<td>复位</td>
+<td>同步</td>
+<td>高电平有效</td>
+</tr>
+<tr>
+<td>FDSE</td>
+<td>置位</td>
+<td>同步</td>
+<td>高电平有效</td>
+</tr>
+<tr>
+<td>FDCE</td>
+<td>复位</td>
+<td>异步</td>
+<td>高电平有效</td>
+</tr>
+<tr>
+<td>FDPE</td>
+<td>置位</td>
+<td>异步</td>
+<td>高电平有效</td>
+</tr>
+</tbody>
+</table>
+<p><strong>说明（字母含义与常用端口）</strong>：</p>
+<ul>
+<li>首字母 <code>F</code>：Flip‑flop（触发器原语）。<code>D</code> 表示 D 型输入（data）。</li>
+<li>其他字母含义：
+<ul>
+<li><code>R</code> / <code>S</code>：同步 Reset（复位）/Set（置位），在时钟边沿生效；</li>
+<li><code>C</code> / <code>P</code>：异步 Clear（清零）/Preset（置位），立即生效（异步）；</li>
+<li><code>E</code>：带 Clock Enable（时钟使能，<code>CE</code>）端口。</li>
+</ul>
+</li>
+<li>常见端口名：<code>C</code>（Clock）、<code>CE</code>（Clock Enable）、<code>D</code>、<code>Q</code>，以及 <code>R</code>/<code>S</code>（同步复位/置位）或 <code>CLR</code>/<code>PRE</code>（异步清除/置位）。</li>
+</ul>
+<p>示例解释：</p>
+<ul>
+<li><code>FDRE</code>：F D R E → 带同步复位 <code>R</code> 与使能 <code>CE</code> 的 DFF；常用端口 <code>C, CE, D, Q, R</code>（<code>R</code> 多为高电平有效）。</li>
+<li><code>FDSE</code>：F D S E → 带同步置位 <code>S</code> 与使能 <code>CE</code> 的 DFF；端口 <code>C, CE, D, Q, S</code>（<code>S</code> 多为高电平有效）。</li>
+<li><code>FDCE</code>：F D C E → 带异步清除 <code>CLR</code>（Clear）与 <code>CE</code> 的 DFF；端口 <code>C, CE, D, Q, CLR</code>（<code>CLR</code> 常为高电平有效）。</li>
+<li><code>FDPE</code>：F D P E → 带异步预置 <code>PRE</code>（Preset）与 <code>CE</code> 的 DFF；端口 <code>C, CE, D, Q, PRE</code>（<code>PRE</code> 常为高电平有效）。</li>
+</ul>
+<p>备注：不同器件族或工具链在端口命名与极性上可能有差异，发布或综合前请以目标器件的数据手册（如 Vivado 文档）为准；使用异步复位时应采用“异步复位 + 同步释放”的模式以避免亚稳态。</p>
+<h3 id="2-2-FPGA-复位设计要点">2.2 FPGA 复位设计要点</h3>
+<ul>
+<li><strong>同步复位</strong>：FPGA 中经常采用同步复位，时序简单，有利于时序收敛。</li>
+<li><strong>SR 极性</strong>：需与原语匹配，7 Series仅支持高电平有效，如低电平有效，需插入反相逻辑，会增加逻辑开销。</li>
+</ul>
+<hr>
+<h2 id="3-ASIC-复位实现">3 ASIC 复位实现</h2>
+<p>ASIC 标准单元库大多数都提供异步复位 DFF，保证上电初始化可靠，一般也会提供 同步复位 DFF，但数量相对少。</p>
+<h3 id="3-1-ASIC-复位设计要点">3.1 ASIC 复位设计要点</h3>
+<ol>
+<li><strong>上电立即复位</strong>
+<ul>
+<li>在芯片上电时，无需时钟即可将寄存器置于已知状态，保证系统初始化可靠。</li>
+</ul>
+</li>
+<li><strong>全局复位方便</strong>
+<ul>
+<li>单条异步复位信号即可驱动整个芯片的大量寄存器，快速清零或置位。</li>
+</ul>
+</li>
+<li><strong>与上电复位电路匹配</strong>
+<ul>
+<li>ASIC 中常用低电平复位（rstn），低电平有效复位在上电时天然处于有效状态，可确保电路在电源尚未稳定前自动保持复位。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="4-复位设计最佳实践">4 复位设计最佳实践</h2>
+<h3 id="4-1-复位设计建议与检查清单">4.1 复位设计建议与检查清单</h3>
+<ol>
+<li>
+<p><strong>选择复位类型</strong>：</p>
+<ul>
+<li>数据路径 / 时序敏感 → 同步复位</li>
+<li>上电初始化 / 全局复位 → 异步复位 + 同步释放</li>
+</ul>
+</li>
+<li>
+<p><strong>复位极性检查</strong>：</p>
+<ul>
+<li>确保与 DFF 或库单元 SR 端口匹配，避免反相器开销</li>
+</ul>
+</li>
+<li>
+<p><strong>同步释放</strong>：</p>
+<ul>
+<li>异步复位释放时使用两级或多级同步器</li>
+</ul>
+</li>
+<li>
+<p><strong>多位寄存器复位偏斜</strong>：</p>
+<ul>
+<li>尽量放在同一 SLICE 或靠近时钟路径布局，减少偏斜</li>
+</ul>
+</li>
+</ol>
+<h3 id="4-2-黄金实践：异步复位-同步释放">4.2 黄金实践：异步复位 + 同步释放</h3>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs verilog"><span class="hljs-keyword">reg</span> rst_sync_0, rst_sync_1;<br><span class="hljs-keyword">always</span> @(<span class="hljs-keyword">posedge</span> clk <span class="hljs-keyword">or</span> <span class="hljs-keyword">posedge</span> rst_async) <span class="hljs-keyword">begin</span><br>  <span class="hljs-keyword">if</span> (rst_async) <span class="hljs-keyword">begin</span><br>    rst_sync_0 &lt;= <span class="hljs-number">1&#x27;b1</span>;<br>    rst_sync_1 &lt;= <span class="hljs-number">1&#x27;b1</span>;<br>  <span class="hljs-keyword">end</span> <span class="hljs-keyword">else</span> <span class="hljs-keyword">begin</span><br>    rst_sync_0 &lt;= <span class="hljs-number">1&#x27;b0</span>;<br>    rst_sync_1 &lt;= rst_sync_0;<br>  <span class="hljs-keyword">end</span><br><span class="hljs-keyword">end</span><br><span class="hljs-comment">// 使用 rst_sync_1 作为时钟域内同步复位</span><br></code></pre></td></tr></table></figure>
+<ul>
+<li>异步复位保证上电立即清零</li>
+<li>级联同步器消除亚稳态，保证时序稳定</li>
+</ul>
+<hr>
+<h2 id="5-结论">5 结论</h2>
+<ul>
+<li>
+<p>FPGA 与 ASIC 都支持同步与异步复位，但实现方式不同：</p>
+<ul>
+<li>FPGA 依赖 DFF 原语，异步复位需同步释放</li>
+<li>ASIC 依赖库单元，可灵活选择</li>
+</ul>
+</li>
+<li>
+<p>上电安全 → 异步复位；数据路径稳定 → 同步复位；释放同步 → 消除亚稳态</p>
+</li>
+<li>
+<p><strong>异步复位 + 同步释放</strong> 是 FPGA 设计的黄金实践，也是 ASIC 上电复位的常见策略</p>
+</li>
+</ul>
+<hr>
 
-              
+                
+              </div>
             
             <hr/>
             <div>
@@ -597,23 +792,6 @@
     });
   });
 </script>
-
-
-  
-  <script defer>
-    if (document.getElementById('hbePass') || document.querySelector('hbe-prefix')) {
-      Fluid.utils.waitElementLoaded('hbe-prefix', function() {
-        var hbePrefix = document.querySelector('hbe-prefix');
-        hbePrefix.parentElement.classList.add('markdown-body');
-        Fluid.utils.retry(function() {
-          if (Fluid.boot && Fluid.boot.refresh) {
-            Fluid.boot.refresh();
-            return true;
-          }
-        }, 100, 10);
-      })
-    }
-  </script>
 
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>

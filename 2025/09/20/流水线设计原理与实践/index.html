@@ -19,16 +19,16 @@
   <meta name="author" content="CanShine">
   <meta name="keywords" content="">
   
-    <meta name="description" content="流水线设计原理与实践">
+    <meta name="description" content="流水线设计原理与实践 1. 流水线原理 1.1 直观理解 在数字电路和计算机体系结构中，流水线（Pipeline）是一种 通过分工合作提高效率 的思想。 为了更好地理解，我们可以从一个生活化的例子出发。 假设一件产品需要经过 采购 → 制作 → 打包 → 配送 四个步骤，每个步骤耗时 1 分钟。 单个人完成一件产品的整个流程需要 4 分钟。 1.2 并行与流水线对比 1.2.1 并行方式（全能工人">
 <meta property="og:type" content="article">
 <meta property="og:title" content="流水线设计原理与实践">
 <meta property="og:url" content="https://canshine.github.io/2025/09/20/%E6%B5%81%E6%B0%B4%E7%BA%BF%E8%AE%BE%E8%AE%A1%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E8%B7%B5/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="流水线设计原理与实践">
+<meta property="og:description" content="流水线设计原理与实践 1. 流水线原理 1.1 直观理解 在数字电路和计算机体系结构中，流水线（Pipeline）是一种 通过分工合作提高效率 的思想。 为了更好地理解，我们可以从一个生活化的例子出发。 假设一件产品需要经过 采购 → 制作 → 打包 → 配送 四个步骤，每个步骤耗时 1 分钟。 单个人完成一件产品的整个流程需要 4 分钟。 1.2 并行与流水线对比 1.2.1 并行方式（全能工人">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://canshine.github.io/img/%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0.png">
 <meta property="article:published_time" content="2025-09-20T08:26:00.000Z">
-<meta property="article:modified_time" content="2026-04-28T04:50:30.377Z">
+<meta property="article:modified_time" content="2026-07-21T05:26:50.474Z">
 <meta property="article:author" content="CanShine">
 <meta property="article:tag" content="流水线设计原理与实践">
 <meta name="twitter:card" content="summary_large_image">
@@ -173,18 +173,6 @@
             </li>
           
         
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/academic/" target="_self">
-                <i class="iconfont icon-book"></i>
-                <span>学术</span>
-              </a>
-            </li>
-          
-        
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
@@ -301,22 +289,125 @@
             <h1 id="seo-header">流水线设计原理与实践</h1>
             
             
-              
-              <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误，请重试。" data-whm="博客解密失败，但仍可访问解密后的内容。">
-  <script id="hbeData" type="hbeData" data-hmacdigest="c6a82a28ec2c3ca6503b087ecd896ce8011c88cfcadfcd73c3542cb44333be47">9ad6c89fad563ff050d22f26b96bab8247e60dc09b5218acee9a57e453230d054642e46970b03e09c117a744e97ee0350423f9cc281187e698bfd2bb93f463aad25654b6f5d8c5a92fda8bf99031d15a9e0d308f34b5be5e9255cb861906a2645ac2bbfc208f2c5768f3a67a8f61db45fd25fc17d4f8308967bffe732b76f7b09e883a3343bad43794468aaed773975e5215f7467691713c6d4a9d0121968c63350bc3f8fe8f181f019705d2ca92c030d7ed450ebbc6419cac6cbd6600fdf3d0e65efaaf23845c2ace056ca9fcb941f7443620cacb7ce556b530d472df4789b496619cf417d2c1b1e2e0449a9b79c17a4d20a741b048c9b246c7b43e836ac429512aaea6bf4edc065bf8cecb811408a530ad97eb1663e9cb9386c65c482f943eaeb1c662c587a9a5fa91ebc0ca947feb360836e80fd27c82515bcd0339fb43e196c2f6da1596de065f18e5a0e2c33f11f45e87e3de3946f742a6c2730af2d35da2a20dc7cd7df0f15d00cb0d37055e40f6191fb697cff6bbb1e9fa90a68fab8407ead0b0118ae3c7f4ea0ac56423c6000b7a6a83fe19d01097544cbdf2a631b7315db0e1f188245f2546b240421ec0fa527a6984c2a17423a49d83802e3f33642c2e3faaaab3832e5b5585f7ca6237ab7251c237578e73bb6744b3492c005904cbd6e8a540e9a86bbb2a77f4440b12e99fde4ba718dd839d794616446aa417095fc98af6361b79019d0b6c1b4b8e932fc712813025cf080910be6a29c9f7250c3c1ee938c19f2ea25267efe6677487d1671f2e6e85f2ee15ef8092483c00ae4811b7634be17637b6c23d33b66c6cb8e1c04cdf99075816a5cfabfa279de8a17b51571b81c82b5218004832832a14a32bb9270cf9bf19953caf8542c127d3054f1192d3684d3cba9f89db16045814abdc1517615c05d83c9c1f081a1afcedfdb2198d09a57013ab44151deb89bdbd64f97929238c89edd59a052c92d97e09f65bc88c160a11cf8302e0541985ac3b5c2745028bb90b5054a1b58a6e44579bd12cbdad7d91e546a6077cbd9c1533615b53c2274dcef35184c3202f7d117bf314929878cb2acea9318d847ac8cc0f2b61562d340b2a6571e36df8286226c5417f93efab8b46f683ad61d94735bd1d27d43748289d9cc60927010980ff0379670485c3aacab288ea79df67163ea260275826ec90e40f15f0cd26d84ef596a890344114c3b8d3acd45e6f113f2ce1ea89ce3f10066bf1d78f4e6f8feb5c9259eeff2d434ac39fd08372a47a6e0700f3de42351ce1a1c0b6df6a3e372f2d9f989876ac67b9ef6efeaffc3dc78904297abddf715c290842a3f35eaa0ada1c39294343ed5fde2fac4880016c26f93d9e10d5332237d69485f189e531db4ac64eebf8539a9f3554dac2bcf61f96c0036f9c9dc339928b39f1d50b42b2615aefeca10bf6b8c4a1d810a6c924c1fd7b58ef2e947e038182c70bda441fa23ec5db19d0243ff1ee122f13408e8829ab2cdb5213b10b67b30393e3c754a515430a77ba1ac7a404dfd89240a2c0aaa44ebddfce63ff5c13e18f6e971fb0287d7b2ff7e95c64e0debef251da7c013f151e6630aead4ad1e528a19f970eb324d4071e8d809555b9a2bb3c0002f47b2df8576d7123910c7c104efc1aab70cd9141f0f721e544f2b1863ef5f6feb72fe35576494b51c1574555487805aaafc52ec0ed05721d553002b2a190a97c127483c732c923c2e922bf0e956e14f4f92897171a17c5272210f35570674e26e52d61fb0347ea27699249f452c3232af341d7e6ab0f166ddfce0c4808a81d0f5ad3dd4fa0804ee69c0f6e9a20f8d6c034a258c90f65e82422d2efc8991bd52243426460fa55d6cfbf88839074f5c0d1d925fe28276f3787e1e58a68efe2230676ad262eebf3557629905bb07e850f1df27e9ba7003db9731bdec67f7858c8f030eee3ebefeb97cc6a53a11da07b15ff8e986eb57f58c2a01b8f90d1715bc31ea3af3a47caea9c5dd62f6b47931a26e239bf9097a2041854d39421d4d7cb2d716eac47598e945b65ef18a6bc1729862af232c3341abcc5e5acd87d4a1ab75706cf857388659ce3e9babea31e0aa81347cb44764695b1eb4ef7e77405f31b16c7c5f6ee8007cca06d1daf7432b260d8df7fc193bfe6b3cadaca08a5bbf66e3a12880d38a0a4d6790f672d4778cd992f1e5427c3bd2b0335c88777fcbb4639300c29ea29c6ecb728c9221adf59b4f31bb6813b86b276ff6c14307a122263cb8a8dc4284b232e1524f9b16c85186f9826966a76fe52b2b023e25599f8ec409a798768b0f1b2e146b829bc52e75ef35f63f55944be9fc49b5e8233d619845e22392db07fa638e06cc5e85957c75ebb37c27557c1101ac0338955dc81b29e92c4ce206f43f49cf43fb3995d0bbf9485e05d391155f83dc2ac06d7856dcf689e9db79a525986ca9710b656a190eaba53be0b5909e62f86b4e27a5796d22d034f37e3f265158f8b8c5547f9278a21e5da73c0db9c1d04c923bf0c231eb44d60035fb4d4d69b3e7c95ff6684d69b4c24892c4e293b92f4f979505613f208cbff5ea5ff42b0fe95e0de225252f6a2e5df9b4abd4df8f43b6f14a3d05e74de1b575b589a29cebd033376ae34b12f39ea739cf212e0fa386b23e3b5cf6238d3dedb0754c93bfa7760a255a2955b2ec713b7a929a8f49e2ca31d0a149477e437b5ff1348af4b443e7a8847303a3346938ac6c5fc6dc5e2bf4ccbb1b942cfacaae74b754432da89fc7ab67d84c56221e4ac87617e4592527f2f22aa67d03e39f79cc98319ad96f218785a0ed28fccdef83ccc027d4d5778b8bbbe6c64da4e05b954f4ad7152543ee1d10cd31d6abe745f7d3a3dffd3b43898f9dae422b113577307d5b0a15acff23ff94d84349d6e827d745edf23e5625b38258e90683b3f5711a7293b71ecc16d1a61f0c2931ddef598e4a3058be7133f4733a9ccbf4eedeb7e2ecc2989802b2e4bccda457e25090e7cbb3dd2288b8c650f8c71e952def55dff1b476bdc5ffa1366cb7d49a21c28de9a00d22b18c5de1422669ecf0992cf2838a7e72b4fb6d2b48a4eca5e92eab60a49db7b0b9bfb3404ecf561be7e1851bf9cf9ffe1ad3ce7c629febcb080fe349054d48409e5c9d38b4242b23bc8deeb97db9bf91f5a07205acbbf70ac0a0da8fef31dc5e87c3691c27446c3371da57025b109bc25d03230cadeba94f4876ddfb36d0cf4307f9045097998613d969ab62e002cf28a4d151dc2e388eecc011c48b46104eb49deeda27542f8288cd3104cdf860d9173c58d038e01c93108b02450037326f4d4aac577b6febdad68ee17bee5ed6da197cbf277d6b3b8594a52fab8a5afd92d0c526d51f37dfe2e1405b31ffc7b6cae78651a072266da6ad3f49583d54c0c68d76b1e3b52daf673cf4722842de6c8a9fc977fc2cef9f47eaf83a468e660c64d7a6ed540fcbf1ef82b29383ba3f55e2d7e77f486550dd8675d1e0573ab40b6e56a544c1f1ec933a3afd2b615f3f6635b6685f59b7a86d0c038f1edbfc6790cee5f3c87db7489d4807cf06770716bd3cb958629647c82e1a72b903924610e8c1acd9b7c997ce3e452d24bbe5099a4e3da261bbeeb41fd85872f9d44005566e1d56551440baa6e2d5e939c53a6f0e917dcf04fbae61ae08df8212b7d2255f71b8840fb36dfa84de9a3605da37744af3bc3e3cacaf08190fa81e9dcbd3c17833a4d4903a4fb40dc165931ae5c73949746f3c910efe640ed8901309e8ac3f81575339617949aa31bb540d8fa7dfaef7595e15a06e0fea596cef33a5dad8b34fc7ab2f3e9f1179bd6c9a9b4d4ef092ed28a886f03a99c0e09eb5b3fd6f66ee5fc2b250a502a7d320c4c9feed671d886eacc31eb3909af7ba485cf8a375f2e97111078cfe0601092c7abc8e6efb8d1ab64a1a20a2cf2f755471ac84d3ca7b3e3c8cd51ec2d0015beba827e3c123cd48b9a430e551f42c80ba4a7f401fa93422c361d164f085020d6ec3de11caf40a5055a5723f30d1c68c77dd10235ad420879848e344a4ec285d0f8b43f7b1d25caec4433b0f83d5497e4b4c8fb7239c18c51aab570a9a11523df3ec9f44592547feee300e68f8569d601b27fd6332a1cec4eb168b2f946448df44f23770dae7c62994a3f15eeb3ccee402af6b8acd193613da3132d2337418c4ae1d195c1da4aa8cb95e95963c2c07a8f3120ac88b8c38e89cd3cf95d7339a1db1b1000345dbda333786ac19a931919f5bbcb8d695ec987c151f42fcf4a69a943284558260b9f11ea7172229f7a9c4a664c93b7ea5c6bc5dfe6ae893d6680fe9ac2bbd0ba38d6a01d669ef4501709299be372af2d07d01d74cf68d37357ea011c06a5955b874b28aa9c18bcc0be73ca03b092f185cf60248ea6faaa6db175d5a266cff604589e0ad9c266cd86df65fe8b03970dffe8078402faf9ccae83f34f596cc2803c1a068aa7fc9e1a62710c8c33a922c9069dcbb2e0a635006ca2ece3586e02e0e44f601a3319c5f0a45f92a4f19f0be5e96c6feb019289fedfc18cf3596bb1c7a0c9f9af14ca3be9a11273794c0a6f3efc7cbdb49cb55e8401d6cc0485c177e7eba226db59a3fd647861b75c0567cb3ad2d32bbd7932b66b07e14cd398cfcab2cb15ad5b511167c18555d1e79e46cefe426360cc3571c8be7be5f8dd6a91deac57a222c9dbe5a9d7eecb36576379be28fe3afc7cece508fe073e8485db777d24df9b11f0b5c3521aa2351c9b3cc142c37da6a2d96d1baa098cfbc6ade14fc3117fff6a2fb1f7ba6e691350592caec19aede45503801d7cbd7fdd18ca23851d4072e2b5f4a8bf98a9c0f22fbb162bc8fa22c225fe8802493853f4a1a3ec367d746242700d5e54a921a2683735bad825796c84732831c8ef4516f8b94b2f03db16055c19b616a8479150afe9ca6796009a6955d7c191337e23c23d626d311d4e530bed256a21f62f10cff5ea2fcfe6a513aee7b56e26ea89a55ef7695a9834b83fd67f1c68bd6856a77d33906606055aeeb2386611776cd88cd18d8f51cb912505de0a13c3ee0e4b69f1f8b0acb3e36956b4405b1d83353d07a60f762ad0793ef9f62a3c2fcef2bae63cf4c2f38b07c509a8283c27c64773fa1613077678efaa48c1afcfd1fdf13a9f9a1b0a63db1adc1f1a245a1ec111526ac9ffe286f593d77411ebc5faa6955ca73b35b7c97d930fa793906110ce711ab33ac187ea02b7e8c0e04d57e18c9248c1911d996bbea0aa1395e48f32bb9c637d671c7e6d35b92afed54636df313a289c52fcb2b45bae9e72c2affad9c391e6915b2e2606d74fa02772469c2dcb99edd7a7b9c6defa22d0e494973581366d5f673f64f37b66a916d3def7d29dd22e413f6eeb1544f760afa5d6dab926c737a6956f4824dea049a675efcf1fa63b173e10f21b709d7b5238d941b36f5a081fc5a3d0aefebc1245d12b365e16df17c4239f01a34a5da098f3ac5061127f81465838a3de180074649a43038aaf50dbd7fcbe7455a9e606b6944b5c99fbfc95d54cf8a6b9f93a12290b2c118464a4143279ad9acdaa18a44cae41db59b4cce2363149dd561258d5887ba52302355472c47712f65357985b25690b5808c545f695a547899df79608208bbcb4c4082a8197fd62af268433112ad3f8e3e52851a73adf996a6ae507005d68795f91a828e8184e757e9edadcdcbf3c5d08fa727e8df15ddc9a6e417e63880b602659745d3961a6221dc41cd2a89090f5d51a4006020c25aeb6a32fe8ad63031da6ad9e1434729dd7f37ac0cb0862282a51dd040851f32bcb4ef8ac862acfa0f463b52ea1f89072abdd38d62e3c04bdbb85c2510458d4d42f6979d92420588442e6c42002435a8104e471d62bebce2e918dc0774f3dcd1daf54cc5ae9d039b386e05e173f2b7199684f7e81e2a5b710b231764d8736cbc8c97b04e1d7683465253c244d658198622b59d14a313571199e898aa42b67f573cf7292ccb58d76236a91ad40868ad7f0cf3845bfa8f859bfc8bdcb192b3737e9f4ab9116c81b5a8eaa26aac26aeaaa4145620d45539cbb9e84e20345f2012f3d9fe8d9c16f1a28271a1253c47a29d7c489c9669e13f553ec6d443e686ec6adee0d2a79da4e5ae1baab98c926609907b8cbd642844d60d98e42c6d6b8c3e9b2d97b1972380d92dbca9e387a07d59b8f5c5b4b8f27e4bd55cb2a22e798028175a97a8e82e045ef117b217314c2fb4ee08f6ad724c08d2c9e388a389f5e57786cf4eb68349eb52cd970954e242ee2e703e3e9d1dfdb0d3da5abe84c9b5cb3935597def0b3010d9c7a0b302e203190bfa300c310b544ece6c63a5023fb7322f1e93c9de23567d822130c567abda88fac3942f95dd0fadaf8e28f1a0a788ae851d6d342cb39396c9f7f8b4977780d4fd2f1ca7f033c5abce6589a892564d9e36b05b5463bc98983582b6eb758946d11280afe38b99fbb5ad09ea9d69067912231dbe9c8525af2504ff3a1c20d9390fe4ddd5ee0fbb93b42b6c6fae8006ac6fc30f0ddf4ece640d9fb8b67d3c9de799fcce916a991732857770908f5b6e71d03cf36c66012f57c8b3be9f70b0ea807ec188320a7c7ffae8ea126a0ac27b392d788dae4e1fdc7452d67db540637b2f50072fb2ddf4719c1643b1b28a4adfeb1f726c83f4824f72beeee09660c6988be0596489c975fa20293b185a274460faa600c11cf8fc66711c57d38589604103750a3d004a6417295d851ea93ec070854f92375b94d30fb8fbe1f5555939aaa972cb409c64108dfcb84eece0290912c88163ded7df5aeb5ae4565e904bd1933c0b79d041138a82d51bf7f9b94cc42568da26a1b6eb8eb3690b6d60f149b350169cc4089ffe1b8f548e7a8d27708efcc513745218fae3d2bbf33f3cbbb494600a875d4de4eeb057bd13d918c2b1e4839ed28d4aacb4ba0f4295352abb6be01b8ed8b02c617708787c2cc4943932e862b31dee653ab45e7ae7f0ce0fa1623b37d9fec1c406e34722018cd5db7d25ba58d8101fac760b01b35e8ab7bb220162a3980728435df22eecafa862eafe6b15931e80ac42163d871b0d7c114d118eef1ecee05da1f1e879151cda1924e506bdcd2b258b75172e6bbafe1ba2e50b0fe4f3518c0b603e2be34b757870df368f9de81814b1b891f37fedc11d6b57b4eb11993552c18115ea964ed62163d0c1a75a4d128993bb90a3eafd81d74b7432a4a73192ad74884633338431ae322989c24a9fa16f6c60eaf4674aa369fe2bb2ccaf063457613ac9d8d73e9f41e57399d4251ba1e9544417c3375d0a93dc76f0daf1047d355462b612dd9e211b9c4fe58f1bf6753cfbd51136f5d739a0a03c8046e36b56cc0c2e0fef25e9cbfd3f8f33ebb4958d2f63b419fb1b3b117482c1df23d4cfaab2e4e3f71bdb5a1152cc2c80278a752c74b87e5ee26df4362473d4f968a521b2604c7738426f4f2ec4e2304d0b8ba396d09f1a4afaaf745a2c90d60c5a61a46a8e3450423967f5addde62a0096ba1c10347606e1fdfe86c753d6e427f070c1ee537a639e20c7799573a0a91d1c1f77f8c230271337b6ef61ca00bfddc81b05d10e4c446c80a064ffc34da6eb1a05c10100cc8dc8cfb1f1f60b880986de62c644360e2d4ab6ee98df875f79259d2d208d3e52718ecf691b44595fefd007991369a18382a83174cd8bfcc9e8d8b234bcaeb215313ad8dd2fde3b2671f90910defb0a049bb9e548a810e9a235879cc764d30b0906ed86c92473db5c05224dea4ea20e570c709e80f22609dac5f084f69739efdb438ed44bc8f4590260a647edb2988c404ceb5a2a18f4f3e4c2234395ea0aa2de0dadcddd2c7833974bbca006151f04cee9f255200f7a6fcac4130f74cd5ac2a290d8babb5637b6f41390be633b4b802aa17c100a92b46ac88d256372ab93b6461d34950a552dd309658f4b4437385708751e4f95b912d8bc6a690376d61b84d1c21746bb39f9b7cac0f4b356a9a8dda44e28cc1a12577994eadd06745dc1bd83e4697f72f69877842d310eb42e9260216daafe129ee0c94ddb160296b4dafe5640b00d458950a4a6a951dd3ca1eb8b4aee88047871cf731b9d3ca59e902c9c8d38dd76e086e0ec99680b6db5090833e50e3987d2a7d37459926af4df3049bee93d9776c28f6a1f7f410851b97535312a320f3e18cd2d6b8f6be6423e659ae6ef83d03e9fc060d18e71ccbff8511a1acaf2cfc94391ee88c312aa878fcbabf5d97cc12a576da1bd7cdd37646c3bf4b77780871394593c1cd6ce8db182ba736ed65cfc80dedaf48a5d5739e36e654fa1b14674df0a6bd6844463084df3feae1466dfc1eac63d705fa9bf3676f0b9df28e76c836cedbff633ab83b74959a929904790bcac3f387ed1aa2dbb7b758547341af2c7b787e81c7df44dd0d31e3d7efa04fa711aa15baf53e3f0e8da03a7e82e64da7206eb4735a09f2dc4fc86b3dece79c753c1053759799952394f6f1f37f873ec22b3dbdd8c72056c1337325dd7969897f341a111ee33c237b85f2f61920d427a944c289ff9a49c27356bf42b89f66e3a21b855136f8a5a654fdf88949fe2bf960fbf7e2b4487d465a12aaf07cca18ba6aeaa7f53f7fb52c431751ee6b08b626ca0983f5f5262fb7656e4a70d1f8979e9c2df2234b65cfaca015690eac9a09d75c21fb047738cee1fa2a6c1c293099f432283b999b9c08a3f0c301c88c5ded97ab275434b1e4bd5361826078c7e2cb6d5d3d16c350e1c0ba7476000b7144211c69fe48543607d095747c7595f836f6e606dacf75dc445a22600540f279525e932905940287008f69ad283e473c6f3a14fb0efe81b38d8d2a12019a500d4869b1eb8704d9c5b9c390c3735259c1ce650d6264ab73cb2e8957d45639d337b077f3811a29d0450cc5edadf0907df33c2f6e2a5d88ba13e7b083da14ace7d9f40c0c1c689adc7dbc3dedd4b9b756c41ef411c491c3751e731662683f8a2ada04ce3560bd1b6a865804918832aeef76ab499c8f0185a7f63daaaa378500fa6d8884cfcd68f0f95802da6270789f4f8174a35db9079bf4e3f88ff20fadd0d09929c2c7200b62886a79547aec5fbfe2bd45e4fcf5ad7f038148bd0fe3459f4181447e7c1a0e80fc7121f9f6d86acdef57a7f79977f347206a8af1c4acdb0b0cb5887e236a0fd922b941b86366ae8efaf1bc8c2a8a6a48297b8b2cbf9b882b3d3d33b38ede5cd3db5474105050cc92ae017e8353e8ac743127493b161165d125d8ebe496b0aad623be4ce5dee496fb50f089675495deac264d94c117a346fc47f71fa5cf820f762e0fa171ed216b755f5ab5c64d7bf3a9ee7db522d41deedf5ce9ab3c43e91f981794e5473ffd94c173b05857e5ba5291e6d34a85b0ce13bee2f5a8882bc8b766aa51a3b65fd1e51c329fb64898b31c8314464b240714894950cee3bee2662ad1cd49db30c974a2527a90d613061e98c196bc8f633b034d8fce79379eb115b73a10a23b35dbe1b26f13a2f993daf6fdffd11e8b93de22b01ddf43ea39e1c2c778c94c6d0dab6477d6ae616fff264822612f8bbb05b376112186c4eee7f7fa77039dd7eb6ac0f1e31ad66dad49398be130a942fd52fca8cd28995caebd65c12d8f6288f4b6f33973c83d71c149af8004ed1698485c83963cb66b8bf3c2f2792f3cafb4ccf89dbf99f64c561b60f1f15085f788d5a78d4fd29a97be1f5a85b32cc2848b49b862c2bdbf609dbcb960604ebe00d62a412a68377e12724eba0d2d0dd0799aa93a1b6965c08f7fc125c4780ce7f81ff53e4af2bc412b8f86b476d25bf37d700722f4b83e53535cdbf45c85b1a931d3884ade6b63e8d425c32cd3404085683a828213a4377baad04fcb915090a61ab8a4db6b8a82f63fe0f89d3e65b249e0cd0ea029815ca4fd9bfbcb999611ec8ab5f1929a1d43051ac5bd7a7f672631578b571ccff083d947053f0f18ca912b95364d36ab163110a08247a0118acb4a2ed14e9ee6cb8091786671f4f69ce84ad84cf3a1a5fe2664204bca335befcd41c27da3e2856e07c3480365acfc44d9ddf576c7cc92e9088c49c8a87d619caa0ba3041f0e6ecce4316eb0488d4a19a84c9ca17a99f8049ccbe9540c2f46205502d546161f50286eb99138478f0c5b7d4cccf8de4c9364fc97c31c6475204783ab</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入密码：</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
-              
+              <div class="markdown-body">
+                
+                <h1>流水线设计原理与实践</h1>
+<h2 id="1-流水线原理">1. 流水线原理</h2>
+<h3 id="1-1-直观理解">1.1 直观理解</h3>
+<p>在数字电路和计算机体系结构中，流水线（Pipeline）是一种 <strong>通过分工合作提高效率</strong> 的思想。<br>
+为了更好地理解，我们可以从一个生活化的例子出发。</p>
+<p>假设一件产品需要经过 <strong>采购 → 制作 → 打包 → 配送</strong> 四个步骤，每个步骤耗时 <strong>1 分钟</strong>。<br>
+单个人完成一件产品的整个流程需要 <strong>4 分钟</strong>。</p>
+<h3 id="1-2-并行与流水线对比">1.2 并行与流水线对比</h3>
+<h4 id="1-2-1-并行方式（全能工人）">1.2.1 并行方式（全能工人）</h4>
+<p>如果只靠一个人，在 10 分钟内最多能完成 <code>10 ÷ 4 = 2.5</code> 个流程，向下取整只能得到 <strong>2 个完整产品</strong>。<br>
+每人有效工作时长为 8 分钟，剩余 2 分钟浪费在等待上。</p>
+<p>为了在 10 分钟内完成 <strong>5 个产品</strong>，老板只能雇 <strong>3 个全能工人</strong>，每个人都能做采购、制作、打包、配送。<br>
+这样三个人一共能完成 <code>3 × 2 = 6</code> 个完整产品。</p>
+<p>但这种方式存在两个问题：</p>
+<ol>
+<li>每个人都要掌握四个步骤，对人力资源要求高；</li>
+<li>每个人都有“0.5 次未完成的流程”，导致浪费。</li>
+</ol>
+<h4 id="1-2-2-流水线方式（分工协作）">1.2.2 流水线方式（分工协作）</h4>
+<p>老板换了一种思路：把流程拆开，分别雇 4 个工人，每人只负责一个步骤。</p>
+<ul>
+<li>A：专职采购</li>
+<li>B：专职制作</li>
+<li>C：专职打包</li>
+<li>D：专职配送</li>
+</ul>
+<p>时间安排如下：</p>
+<ul>
+<li>第 1 分钟：A 在采购</li>
+<li>第 2 分钟：A 采购第二件，B 制作第一件</li>
+<li>第 3 分钟：A 采购第三件，B 制作第二件，C 打包第一件</li>
+<li>第 4 分钟：四个人同时开工，D 开始配送第一件</li>
+</ul>
+<p>从第 4 分钟起，每过 1 分钟就有一件产品完成。到第 10 分钟，流水线一共完成了 <strong>7 件产品</strong>。</p>
+<h4 id="1-2-3-对比总结">1.2.3 对比总结</h4>
+<ul>
+<li><strong>并行方式（全能工人）</strong>：3 个人 10 分钟只能完成 6 件，还存在浪费（最后无法完成一件完整的产品）；</li>
+<li><strong>流水线方式（分工工人）</strong>：4 个人 10 分钟能完成 7 件，且每个人只需掌握一道工序，招聘和培训更容易，但也存在浪费（前期工序的人后期不用工作，后期工序的人前期不用工作）。</li>
+</ul>
+<hr>
+<h2 id="2-更复杂的场景分析">2 更复杂的场景分析</h2>
+<h3 id="2-1-工序数与时间浪费">2.1 工序数与时间浪费</h3>
+<p>假设一项任务需要 <strong>40 个工序</strong>，每个工序 1 分钟，单人需 40 分钟完成。现在总工作时间为 150 分钟。全能工人每分钟工资 2 元，流水线工人每分钟工资 1 元。</p>
+<ul>
+<li><strong>并行方式</strong>：40 个全能工人，120 分钟完成 120 件（150 分钟内也是 120 件），共花费 <code>120 × 2 = 240 元</code>。</li>
+<li><strong>流水线方式</strong>：<br>
+40 个流水线工人，第一个人工作 1-111 分钟，第二个人 2-112 分钟，……，第 40 个人 40-150 分钟，<br>
+一共完成 111 件，共花费 <code>111 × 1 = 111 元</code>。</li>
+</ul>
+<p>如果工序为 <strong>10</strong>：</p>
+<ul>
+<li><strong>并行方式</strong>：10 个全能工人，150 分钟完成 400 件，共花费 <code>10 × 150 × 2 = 3000 元</code>。</li>
+<li><strong>流水线方式</strong>：<br>
+10 个流水线工人，150 分钟完成 141 件，共花费 <code>10 × 150 × 1 = 1500 元</code>。</li>
+</ul>
+<p>对比可见：</p>
+<ul>
+<li>并行方式的时间浪费最小为 0，最大为工序数减 1；</li>
+<li>流水线方式的时间浪费固定为工序数减 1。</li>
+</ul>
+<hr>
+<h3 id="2-2-效率差异">2.2 效率差异</h3>
+<p>上面的分析假设 <strong>同一道工序下，全能工人和流水线工人的效率相同</strong>。<br>
+实际上，全能工人因频繁切换工序、需要上下文切换，效率往往更低。<br>
+这也是为什么在现实和硬件中，流水线往往能进一步体现出优势。</p>
+<h4 id="2-2-1-工人效率加成的场景">2.2.1 工人效率加成的场景</h4>
+<p>如果流水线工人的效率是全能工人的 <strong>2 倍</strong>：</p>
+<ul>
+<li><strong>并行方式</strong>：10 个全能工人，150 分钟完成 400 件，共 3000 元。</li>
+<li><strong>流水线方式</strong>：<br>
+10 个流水线工人，150 分钟完成 <code>141 × 2 = 282 件</code>，共 1500 元。</li>
+</ul>
+<p>如果预算相同（3000 元）：</p>
+<ul>
+<li>全能工人能完成 400 件；</li>
+<li>流水线工人能完成 <code>282 × (3000 ÷ 1500) = 562 件</code>。</li>
+</ul>
+<p>这里 <code>(3000 ÷ 1500) = 2</code> 表示可以翻倍雇佣流水线工人，本质上也是一种并行方案。</p>
+<h4 id="2-2-2-长时间运行下的对比">2.2.2 长时间运行下的对比</h4>
+<p>当运行时间远大于工序数时，流水线方式的优势更明显。<br>
+因为 <strong>装填（Filling）与排空（Draining）时间可以忽略不计</strong>，整体吞吐率接近并行方式。</p>
+<p>例如：</p>
+<ul>
+<li>工序数 = 10</li>
+<li>工作时间 = 10000 分钟</li>
+<li>工人数量 = 10</li>
+</ul>
+<p>结果：</p>
+<ul>
+<li><strong>流水线</strong>：产品数 = <code>10000 - (10 - 1) = 9991 件</code></li>
+<li><strong>并行</strong>：产品数 = <code>10000 ÷ 10 × 10 = 10000 件</code></li>
+</ul>
+<p>两者几乎一样。</p>
+<hr>
+<h2 id="3-流水线的应用">3 流水线的应用</h2>
+<h3 id="3-1-流水线的局限性">3.1 流水线的局限性</h3>
+<ol>
+<li><strong>瓶颈限制</strong>：工序无法完全均衡，耗时最长的工序决定流水线频率。</li>
+<li><strong>装填与排空开销</strong>：在短任务中，流水线前期的填充和后期的排空会导致效率降低。</li>
+<li><strong>切换灵活性差</strong>：流水线适合重复性强、固定步骤的任务，不适合频繁变动的流程。</li>
+</ol>
+<h3 id="3-2-对应到数字电路">3.2 对应到数字电路</h3>
+<ul>
+<li><strong>并行模式</strong>：复杂的组合逻辑一次性完成所有功能，但路径长，延时大，频率难以提升。</li>
+<li><strong>流水线模式</strong>：将逻辑拆分，用寄存器隔断，缩短关键路径，时序更好，可以跑更高频率。</li>
+</ul>
+<h3 id="3-3-流水线的本质">3.3 流水线的本质</h3>
+<ul>
+<li>通过拆分逻辑，优化时序，使电路能跑更高的频率，速度更快。</li>
+<li>对于具体步骤，任务单一，逻辑简单，对硬件要求低，成本降低。</li>
+<li>节省的成本可以用于流水线复制，提高吐吞量。</li>
+</ul>
+<p>因此，在芯片设计中，流水线不仅是 <strong>提高吞吐率</strong> 的方式，更是 <strong>保证时序与频率</strong> 的核心手段。</p>
+<hr>
 
-              
+                
+              </div>
             
             <hr/>
             <div>
@@ -597,23 +688,6 @@
     });
   });
 </script>
-
-
-  
-  <script defer>
-    if (document.getElementById('hbePass') || document.querySelector('hbe-prefix')) {
-      Fluid.utils.waitElementLoaded('hbe-prefix', function() {
-        var hbePrefix = document.querySelector('hbe-prefix');
-        hbePrefix.parentElement.classList.add('markdown-body');
-        Fluid.utils.retry(function() {
-          if (Fluid.boot && Fluid.boot.refresh) {
-            Fluid.boot.refresh();
-            return true;
-          }
-        }, 100, 10);
-      })
-    }
-  </script>
 
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>

@@ -19,16 +19,16 @@
   <meta name="author" content="CanShine">
   <meta name="keywords" content="">
   
-    <meta name="description" content="ZYNQ缓存更新">
+    <meta name="description" content="ZYNQ 缓存更新 1 函数列表    函数 作用 使用场景     Xil_DCacheInvalidate() 失效缓存，不写回 DDR DMA 写完后 CPU 读取   Xil_DCacheFlush() 写回 DDR，保持缓存有效 CPU 写完后 PL 读取   Xil_DCacheEnable() 启用 D-Cache 系统初始化   Xil_DCacheDisable() 禁用 D-C">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ZYNQ缓存更新">
 <meta property="og:url" content="https://canshine.github.io/2025/09/19/ZYNQ%E7%BC%93%E5%AD%98%E6%9B%B4%E6%96%B0/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="ZYNQ缓存更新">
+<meta property="og:description" content="ZYNQ 缓存更新 1 函数列表    函数 作用 使用场景     Xil_DCacheInvalidate() 失效缓存，不写回 DDR DMA 写完后 CPU 读取   Xil_DCacheFlush() 写回 DDR，保持缓存有效 CPU 写完后 PL 读取   Xil_DCacheEnable() 启用 D-Cache 系统初始化   Xil_DCacheDisable() 禁用 D-C">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://canshine.github.io/img/%E6%93%8D%E4%BD%9C%E7%AC%94%E8%AE%B0.png">
 <meta property="article:published_time" content="2025-09-19T12:17:00.000Z">
-<meta property="article:modified_time" content="2026-04-28T04:50:30.365Z">
+<meta property="article:modified_time" content="2026-07-21T05:34:48.171Z">
 <meta property="article:author" content="CanShine">
 <meta property="article:tag" content="ZYNQ缓存更新">
 <meta name="twitter:card" content="summary_large_image">
@@ -173,18 +173,6 @@
             </li>
           
         
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/academic/" target="_self">
-                <i class="iconfont icon-book"></i>
-                <span>学术</span>
-              </a>
-            </li>
-          
-        
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
@@ -301,22 +289,80 @@
             <h1 id="seo-header">ZYNQ缓存更新</h1>
             
             
-              
-              <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误，请重试。" data-whm="博客解密失败，但仍可访问解密后的内容。">
-  <script id="hbeData" type="hbeData" data-hmacdigest="dc3483f97f5ae57e721e588943abd16ace3a4e63998c4912bf6faa20fbbd04a5">9ad6c89fad563ff050d22f26b96bab82d8c2a2f57468dc1adaa5d741c447041d4cba81de1fc5bca4375664329ef023998e30cefd5ab475cf165cbc36187cb4ca324f3ba0a841518c24eb10122dfdb04ea278f1f6597562f9200e2be334b8f65068725cd9574354d857b75c1a596cf3994f654c2a748266037bb003ea47ca0bf99a6aca28a09ef4c51b8723076e1bbfa2208b50d9ef38554f95271ceec65b0da80aca7c6288d1ab8803a2df8294cefdf3665d5a23e28df3f0c4668c45cb7dc5037db378b1bfd498e159fc0075e1cd13d4951598b41eb9b9644257a32ac76945f477a4f2bcdfff80a17fc04639951ceba20e841b52e8a20862118c76fa8d36ade6551aa4ab985537b0e5e70ea2cad79189aecc920b6fd2f4840739c01f62b6468f66cd25bddaf4fd31380f4255fa83580e4abe7a49508bcc3032fd67d2fe43425243a87d7f98269baafafbd3c0996696572bad278a55763db17949af9b270933ec7b8f7850737733103aedd61517c7765db52c72ee70d5b1de6b5d84db43bea9f67fa708f1d95761a859f2c06c82068fdccbb97f96e79e0fe8106b3d3a91a2d7182364a503c86ff2890a8c56c1de70ed9b1c89db0c02cbe32479f8df49a76fb9b287a3646e527c49b9445eb207d4f41442fc282657bd98cc2fd0988bc55a8f2463c0ca9f2059790d60daf2d89b26d9401dc59c1e49e7a9c03fdd539d6174faafd89507f5284ce6ea1a7273b0a64e56c62332213d29f27fb417587001207dd54354dc5f5f32bb4ec2e8e8b76b6ece7fca94a671d07b736da3200bc5217b44cea8411851f8adfd8a7aaed85b3c6264b616a784bfa20b3b89247193397b7a20f49e76a074d95162cc62bf4a596cea85c81f3abfd0d1bf25c011b4d33a6009d436bff3162d2f7c7cf1092c06f3c534ad6ad12d55c6363cda5810a9a705335d3cdd21ba1317203f364551440b23c72578c544b87d74a3521336be97e1057685599d758a0b8b3c64c308032f8924d8cf5fde7d2eeafb6973700d5f6a33503e1c54c6f41857dd41ba9902cb7a70e4394a49c662bde8a815e8f69f33b14dde7533f50264a8e16459167a62df516a3ab961ce26b1d9ac79945f8b814df61f48fe09219fb96516fa021a779411f4964d944f0fa6c733baa4685e2950a04c60a5dfcd248b200cd82e5917eda7a9180e5ca66d4f513278bc19b0a973b0b350039b18cccb1799defa9c1acda12bcd349406a9190e1e51c1ac6c93ec12d6c0d3d6598c6953a8650bcdf8f4d438e0b6b755d7b1b710a0713dd37fa20da7a88f4e9559021e928b363ccf2a234120134e76a389b1f2d1373fbb02d57aaede10273c77df3714837c6e0907413ec1de733928b628c92863c8fd2f5ce7701ff319f570271d7f3badc5d97624da246053f80a20c1a0e1075bc5190e9319d011bd234f712b51e6d7305177eca4ed9a42a7ebb8f7987ad6fdc28d7725d9285a777391bbd2eae983f534b6181ebe2a66cc467e9ca3af95ca5200c9022c0a7a5bd77e50a95427ed3b7254f1c33045acc3e14c8eb9c3c302b21f556cf5a40afaea5ce7e5555c76cf562b88e7239eb8cea053d9c9102609237e41fe0404dbdb2a5b68222e8b78ad6a144249e4d40efde4170acfe80cec839d6c448108cec588b9c2b2ecfd3e0ca5b2b5b6bf5ee73322f953dbd3e574de5777c50dce9e5b14823c0c3cd26ce9056173ea106b27c4efa2676548c92fd6cad37796275d8b3a0f5f8b6add184b7426630f7dc7fe7fc671bf742c96e4095a80135424fe1b0800a9e7e8539711258f9f9461642608782f4b1f188caec65998ac7b9f9dd92c870dacd95a4fef84d409f5966f2ca8e015591bf15c18463e8047e49bd29a6f79c60bbdedfa699afd6fee94729bbfc68871d0add2f30286584360454189d52ea0dcd13bbdd03b5942248ead94843bcbf0c8b465bb6a4a00d0faad4cbf3bf3cac5e951c9a0fe3b3e29fe024e882b44aaf45ad036fd458d5aae0c8c1b201290d7783418244d68779e4d448a7b534fa990044f1898193ae055ad3f290a8c4d6f6915e78974f8de50294339d8737feaaa65ac85be0dec66b960b5d4bb67ad37a419176cb0441370763391eaddf3e2b755bc9cc6ecc091a07786b90bccd47031b38d525a9dfc1a6658eff60609717f5d4207b7a0ef707bcd21a4c72d31ec475f6e67c240e5a10220d06e43285d063c5a3816e3474f06cc77a310605d7d20cb5292c91d142ff12863bdd8fc7b78150da0a97c77f3521a0c5cc08c8315b87cf91e6f9dcc3f98fa063203697af7845cc74ebbc835be79f2cdf44c33e0b412dae6b8632daebe0997f306af7c8a7c6adef89eaf755313cfa1c7a5765dab59df1c4e85c71fbc709c5d7bae3ede7761a018ff40492b3f1832adc6a6918447b619c1ad72202f70a1a1d809f0ff5582b0328c5b54ef8f3603c5b34229f26ddc28e53f829b993e9e107cd140c26ded5c556ce58344cb8d8066a4b0420e61940f5b805c7b2f2f2609d50e2284e57b9e81c51a58a997e643d5fc2477644f02a46a6dd16763f06a8b523086cadfbb66fa510d74b307e0f773f31162ffc6aac647e12b0b8af1b9a6b073e6df2a4f6ee55ae2462567f046011ec73b81f9bcaeab6695830d6a92c87874eb1858c9a1fd4c6cb29988bf1a20192d662f1237f55859bfe2ef97cc9fbf804917b8fc38430ad250e13087369cbdd3c22f499bafbccc6dd2ad88237179719f198747be392895f4d0458853e120e273910a9f2d20bf87fc016938b7506a15c088301cf596ffcc183338d0591e1a5bdd71a54e3ac3ad17850767bc05a7606cef8f89ef8f46096c02b5b3020051bd09a49922f14bf1b142cc06e713c37ab8fbebc795ece29d3b050e9cd82979e528a1b031b30d4fcc4f06d2c031f7e04af5be81be67914b36785d43ecc60e40a814cf8e535b313e28300e02d094baba5282ddfadd0753509032b6f93be943150d36ccbbccb894665ebfc9d0f88cdec46bcadc90eb158caca589d5a8268977787002d1d7ab641625bd76ec049ead84931cf1ff3fc79aa5f78b3f7abd644b163286568f9690e21feb6f90397f6d7370ecd9a236af19c46c3a5ab34341d50d871dfaa0f5488559aeba2553349bf84f948b57e5b258f8c365a273347be29087a50ce6645b0f5fe41b75933dd9ec77f831046a0d39617672fa9e6f999943cd739f45787759691ebad0eb268f970759344d0ec258fe67eddfeb7cbcedf894f95e630ab2dd52f94af19b2d936238cd7da54a68816dee57c6d1cca097d4f251daa0c3b2b849d09e77e8fbdd059595404d44929cc1624716113274c40732f21a8ea97d4b53b69b1348deb294406ead8938c0931e3437d113d74c7f2c8caaa06ac649716d778d46148b0c593e2004ccb335e658d882236b5b42b003a6a60f0e78c146c95c7d5221414df2118f7bece36c9a3fcb81911619cb013f29301cef2c3fa6de9d31ede96254b96dec5ec56ba42de2ffe8805b7f0b8e455d0cab9876457ad8cbf2423a78da5620fd41dad00ffd7f8de137c048687ce0cfe140f19d69685eabc49810d409fd0b59bb0b9a9aed08c82700a8110ec7fd236f60bb50d44141087efef3679a52e99824278fcd3c195098097d83e024b7651e97a22a87940bd647dc9b6282782a92f5e5b5e69590e3ac0c519f64879b6f33fac0bb2bded71feadca94ecad85fda5f03762e275bc8dfb7bcd539e50c86f2a6e2733fa1dd3c880cb3fe5c00c8df4ceb5e71babaec2119df6fb5c5d3124b0bc471a1de8ef4110dff849d89fb57b06fc00524872e3c2ce633165362dc91ab171b2623dbc0aef0784090c772244d5b0922b32c34b30b174d255cf3c0d5eeb3b0fae21f5c4143c8c04b0ebe2db756a3ec5ed3a0a34064043d6909956053de85ca4e1fe129473ee4765082983c6d6cb8d9c978fdd20bb9db4c5734363e3c5ada50830875a877c0d2e096577d02ec215faa57742c564422e2049e61fedd43428894442c430e65d0923f735cb9d9344fab6f0ca86ba73c682851a149f871c899d1085e7bf84f1ff7cf90307cf6fac54b3709c77b544ee86e1b4e93a46608c1f9c62e835195c497451e46f454891ddffa8d1d74e40e44b835950aefb4850ed9fa87a75b729b16bab9fac2184a33fe67557f3bea11f0ca5551902d6e89b552553d6c90de67a4df71d45bfedb1f5ec0ff0f81f206863b86c08d19e0fdac5d27a8041a3daa3587d35cc744fe6467a18b1f21d427579ad029308bf05e1f978feafed7acd1961f6faf3613ac503b0711fbf95fd5c8d01fd4cab80d5e025fee2f54d8c72572a205d15091f602aa538d34d4b4841c8ab318a3999035157193b6e645fc85aa63ad3fdf5c13af424eaab1b94a253d514bc34257865d17cba2e62201cf47552e7546ae575854e7c77ce6f35bc2f1b20e46afb8573d6b064a8eaa738c5ebfcfda18dfd53aec985969e1449cfcc913a17a02bdd40a332dca2a2a636414e26d5849f3196695575e181d456ab78f84587e9338b9c8c3a9db0132a7550b629b8251910168b286851c35d0bafba886e5c00c91548360c7482d1d9e1fdd8196d95f286a534b664f1468e10356e636a70b852f79e6925674a83f99ef02335a63fed15c5640247c3844e76956c305e68cd2ff76f2f0dcb96778a352999573aea6701de0abd22202548bcc7ec0f0d4acc3194029addd2e1deee00683ae39ca221514e5f9d18046947781c66e5e200cf67a2330c66f99e6bbc20e321c2e6b13dedd4c9f63f44bdec9fc18f32091f582188c7f9fce6ea184223c9eda3ffdc860abf7998b9a75c8999c4dbcf9035189f7e80908bc4bbac49b0518830f7f14f52128aa0a753676436bc9f3f8e853a46d7a0c59bd8f4a8c26a4ed22eca8bc2597a4c34f4f2ba71ec3861826e3a297795c91b499829f4fb7d4e93c9d6c01baf8b09288bc9dc3e29a56d0b2396b1203e344c30e58d22720a5204d7f1b8795b3391703132e06c4ea28ddd96b4d669729949123269564cb4c4447f6acf0ffdaa71344832ba6a85961e91abe1750f08b25d5226b6d8295884c088a3273d25f6d93634640669c01193d1a0d37420e33af1b02e44f93f7cb345ae986ba44d3ea70690e4b95f64d5fbf6d51ed67340c38ec32657e035f029e01456277ea4acbc58aa3914fdf703b1ca792e90330d344a84c43a822cd541d60a354a0bbc6bfab2835a6ff9805ab7f1ce65df0f864dcb0025fd82069847a4381c5ec7a2a956d43715f33eab4b2b3eefcd39e1c9684ead04275c0b685ba4f14cd0b20f36e5b14b01f69095b57dac0bce159a717acd35982aabc753a43d61791f428b254cc233f25996871fbc77abbcb39ee79e230200f304cf3debea343437f8ab8860c7e94228bfde02758de77da29fe17340901dc462b088cecc9415648d4dda5979ae696e6027637e12cfdc280e9397b2de1c7ada6daa3768c8cfc6a00590c694e6115dfa82f825791b26b09fd707ade6a5ce1088b5670c799afa21eabe8ec6183df8da413e816a0048e8a60ea7ee40aa3e29dbc15f1d2820894e5c4714532538c468ff7157d6ee8fe84f0d01429a4c35d98e25f03a522aa761279b034493e88efedcc3dfd93471e2add754881be4bc4fd70c1a0ef9937707fbe35a1eda31fa290a0c24fe8c5d09b0a0452a178d4b20831bd85dda1198a4aafd117ebad5b009c3217b3cf78203536f0d732f5e3ebd77744aebef2ddec5a9c38039ae4457c49f0866566388eb18489984a96a2760806d127cc93ead0b58bb51503e9faa7ac2c8b53ec16481acfd53ff2f6f6efb5088da75d1d517ee800b66102d30f1ebebd6f4e580229a1146e1baa5e4d93f41f869ba140de1019bd7ca14d348257f15f02d33745dbc1ad54d4e45589694532f43e340c67d255876cf0a87a63192c965af0519dee609c3504e668b468e1fc34f991c917a6f1408d69d9dd6213f64b907bf1454dd6e77e3731c2dfe7a59e754517a29c80b96ee19feb147b3922f0911c90651fd3213528659b5bec712ed1af03f1b522be81a5e4d02942bb612964de15b206bf6635c6fd2d2020e22b0e5d5e57306e4751e574db9019bc7908a9e46e1d4471936ba1db5db122f74612666a1e05cd07cc091cd243eec55f4e6dcd5d0b7664c6856f80b009b233665e262ffd56c359eb5b1553d45f998495acb1b031ca2c1975844ea214b24a3e5711583a037b88f622e0aa97b2ee16ffadd59e89cb2e82e3ad6755ed08ed023312fc1c88b3e68f32718ca4f62b6b54f06c4daa3912398c9ab5ba114cd5d9bbfd667e2e246e87b26de0e9283635be4059eff504a32d09f3a1fd0b10ae0da3cc7e29bdbf57b11b04023cc89975b3b038523d849d1d63720d5298332b9d05fc598342a3ed654bc3aa3ea6857d2e0ffc70d737ef52385d36210822123d7280731f72e813596b349fa5d3280723d0cfc7cc283a5d61f5bf73d089f11960242f696cdaad1cee44122ee88a58d6ba8ff59755d401ef599055b0cdc43f09ea22694ecaf63a9c6df035b8ac2881f7440ffd6872e985b46d23ffb9247ef78b82ce2dc3c6eac010947935b82a770f05b2cdf834e4229125242f29037e2e1ff7fd4ebe3a433e6fc3d89abc855df64fabf7a94d915755d2340dde75dd2a004a159e96f4b5b37729fde51bdad62c946e0955710f7d91d3bb21cf85a25b397eb9d9a35a7f6d63e151808ed22e1fc01df7a36ba188df42913a974ee0b946724505875a23082e6707c11ffbf44dc5c6b1b44ab0252e8e1dad83a53a18fef6da5926ff542ffac695fc30da6873f0c15ba9afb648981547354839445ee10ba21c3f803e50c579887364e3a691cb184bfa2db68f6974ca20b6c6aaf4a897f7f8ba77a31fb1ef7498aebf7d5da35863f4b10ee5fe9c1f38b938b9d7384764626b6a05a705cddcb533bdcbbf2ddee9d7b8f0c97025162f1df38f8ad8ae02639ae2b46d642505077dcda8b1cb78a09eef1910760b6926636b42a1fc4729e81e80ed77cfa4e925d4474f5e11b6e34627935cba6f0a1df6a593b29bf7f5e1540c1aa991ab2905895a52b657d8faa960e0e93a7a3bdae1f568f274594a83efcaae77bae1a9f15e1bc373a165369bf3f1282bb47f2a132f525ebfa8ac284bd65da9f2be10c244b3dbaa1cd98f8078efab8824ada09faeb777139cc38a72d59904fae63d90c60429d77ff6d8329ecf6de80cbea75e07b23e243765b26e6063f0b30bcb3caa7bbc267fd7653e2f66059e79b935fe36a534b8690c872903dfb2d666a6572da761d72769d19aeb34d872cfb80ac7a482394750b071a55c115adb4248906ecca6054dbeec3bafae448bac905104e3848c59e51ebec8fb62f91a4db777e56653307ac855829d40c98624a223e72c9a2e5fd823e4a6f672bd3c4a1642832d6320060c6095d12af7f0ba6add366332ac77a82ab489e26cd29af52ea51ae06c8ac3d0da981c99ea617fba463cba9bc1e0e4d9b7baf81dbe045e4d7117b35690c72d7b4a39979d0a93800aeedaf85580dfe017aad4cac61b413a870d1897c42da9899435477a3da135886558b1341f5472a11882054d71904856fb04656b33ab66065591a7127d165ae8309900d99fc4cf7f9a871ef4752123bf24b1a79cd36522e671a3b56af492387c77afcaa79c771ed98d8deb6cc537114512e2aa013dc742d8d46bf1c4e8ef32821cfab9ac49db85989e4fdd33c6386cbde394b975560e110257d391446f41ddffc299fbe8789080992fa6c5001ae3a83f54ebdc663f16afe69cdb9f423fa627fc3f2b0b44ae0fc6a6d91f9c762e8fe9b017d3c9dfe5fa38</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入密码：</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
-              
+              <div class="markdown-body">
+                
+                <h1>ZYNQ 缓存更新</h1>
+<h2 id="1-函数列表">1 函数列表</h2>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>作用</th>
+<th>使用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Xil_DCacheInvalidate()</code></td>
+<td>失效缓存，不写回 DDR</td>
+<td>DMA 写完后 CPU 读取</td>
+</tr>
+<tr>
+<td><code>Xil_DCacheFlush()</code></td>
+<td>写回 DDR，保持缓存有效</td>
+<td>CPU 写完后 PL 读取</td>
+</tr>
+<tr>
+<td><code>Xil_DCacheEnable()</code></td>
+<td>启用 D-Cache</td>
+<td>系统初始化</td>
+</tr>
+<tr>
+<td><code>Xil_DCacheDisable()</code></td>
+<td>禁用 D-Cache</td>
+<td>调试或 DMA 访问</td>
+</tr>
+<tr>
+<td><code>Xil_ICacheInvalidate()</code></td>
+<td>失效指令缓存</td>
+<td>修改 DDR 代码后</td>
+</tr>
+<tr>
+<td><code>Xil_ICacheEnable()</code></td>
+<td>启用 I-Cache</td>
+<td>系统初始化</td>
+</tr>
+<tr>
+<td><code>Xil_ICacheDisable()</code></td>
+<td>禁用 I-Cache</td>
+<td>调试或修改代码</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-使用场景">2 使用场景</h2>
+<h3 id="场景-1：PL-DMA-写-DDR，CPU-读取">场景 1：PL/DMA 写 DDR，CPU 读取</h3>
+<ul>
+<li>PL 或 DMA 写完数据到 DDR 后，数据已经在 DDR，但 CPU 的 D-Cache 里可能还是旧值。</li>
+<li>CPU 读取前，需要失效缓存，保证读取到 DDR 的最新数据。</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">define</span> BUF_SIZE 1024</span><br><span class="hljs-type">uint8_t</span> *buf = (<span class="hljs-type">uint8_t</span> *)DDR_ADDR;<br><br><span class="hljs-comment">// DMA 或 PL 写完数据</span><br><span class="hljs-comment">// 让 CPU 缓存失效，保证读取到 DDR 最新数据</span><br>Xil_DCacheInvalidate(buf, BUF_SIZE);<br><br><span class="hljs-comment">// 现在 CPU 可以安全访问 buf</span><br><span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; BUF_SIZE; i++)<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%02X &quot;</span>, buf[i]);<br></code></pre></td></tr></table></figure>
+<p>✅ 函数用法： Xil_DCacheInvalidate()</p>
+<p>适用场景：外设/PL/DMA 写 DDR → CPU 读</p>
+<h3 id="场景-2：CPU-写-DDR，PL-DMA-读取">场景 2：CPU 写 DDR，PL/DMA 读取</h3>
+<p>CPU 往 DDR 写数据（通过 buf[]），但数据可能只在 D-Cache，DDR 内存未更新。<br>
+PL 或 DMA 读取 DDR 前，需要写回缓存，确保 DDR 中有最新数据。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">define</span> BUF_SIZE 1024</span><br><span class="hljs-type">uint8_t</span> *buf = (<span class="hljs-type">uint8_t</span> *)DDR_ADDR;<br><br><span class="hljs-comment">// CPU 写数据</span><br><span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; BUF_SIZE; i++)<br>    buf[i] = i;<br><br><span class="hljs-comment">// Flush 缓存，把 CPU D-Cache 写回 DDR</span><br>Xil_DCacheFlush(buf, BUF_SIZE);<br><br><span class="hljs-comment">// PL 或 DMA 可以读取 DDR 中的数据了</span><br></code></pre></td></tr></table></figure>
+<p>✅ 函数用法： Xil_DCacheFlush()</p>
+<p>适用场景：CPU 写 DDR → 外设/PL/DMA 读</p>
+<h3 id="场景-3：CPU-自修改代码或加载代码到-DDR（I-Cache）">场景 3：CPU 自修改代码或加载代码到 DDR（I-Cache）</h3>
+<p>CPU 或 DMA 把代码写到 DDR 后，CPU 执行前需要失效 I-Cache，保证执行到 DDR 中最新的代码。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">uint32_t</span> *code_addr = (<span class="hljs-type">uint32_t</span> *)DDR_CODE_ADDR;<br><span class="hljs-type">size_t</span> code_size = <span class="hljs-number">1024</span>;<br><br><span class="hljs-comment">// DMA 或 CPU 写入 DDR 代码</span><br><span class="hljs-comment">// ...</span><br><br><span class="hljs-comment">// CPU 执行前失效 I-Cache</span><br>Xil_ICacheInvalidate(code_addr, code_size);<br><br><span class="hljs-comment">// 现在 CPU 执行 DDR 中最新代码</span><br></code></pre></td></tr></table></figure>
+<p>✅ 函数用法： Xil_ICacheInvalidate()</p>
+<p>适用场景：修改 DDR 中的指令 → CPU 执行</p>
+<hr>
 
-              
+                
+              </div>
             
             <hr/>
             <div>
@@ -597,23 +643,6 @@
     });
   });
 </script>
-
-
-  
-  <script defer>
-    if (document.getElementById('hbePass') || document.querySelector('hbe-prefix')) {
-      Fluid.utils.waitElementLoaded('hbe-prefix', function() {
-        var hbePrefix = document.querySelector('hbe-prefix');
-        hbePrefix.parentElement.classList.add('markdown-body');
-        Fluid.utils.retry(function() {
-          if (Fluid.boot && Fluid.boot.refresh) {
-            Fluid.boot.refresh();
-            return true;
-          }
-        }, 100, 10);
-      })
-    }
-  </script>
 
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>

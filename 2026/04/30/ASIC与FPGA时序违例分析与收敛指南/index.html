@@ -19,16 +19,16 @@
   <meta name="author" content="CanShine">
   <meta name="keywords" content="">
   
-    <meta name="description" content="FPGA&#x2F;ASIC 时序违例分析与收敛指南">
+    <meta name="description" content="FPGA&#x2F;ASIC 时序违例分析与收敛指南 在数字 IC 和 FPGA 设计中，**时序收敛（Timing Closure）**是决定系统能否在目标频率下稳定运行的关键环节。本文档全面总结了建立时间（Setup）与保持时间（Hold）违例的核心区别、产生原因、源头预防机制以及行之有效的修复策略。 一、 建立时间 (Setup) 与 保持时间 (Hold) 的核心差异 在理解具体违例之前，必须清楚这">
 <meta property="og:type" content="article">
 <meta property="og:title" content="FPGA&#x2F;ASIC 时序违例分析与收敛指南">
 <meta property="og:url" content="https://canshine.github.io/2026/04/30/ASIC%E4%B8%8EFPGA%E6%97%B6%E5%BA%8F%E8%BF%9D%E4%BE%8B%E5%88%86%E6%9E%90%E4%B8%8E%E6%94%B6%E6%95%9B%E6%8C%87%E5%8D%97/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="FPGA&#x2F;ASIC 时序违例分析与收敛指南">
+<meta property="og:description" content="FPGA&#x2F;ASIC 时序违例分析与收敛指南 在数字 IC 和 FPGA 设计中，**时序收敛（Timing Closure）**是决定系统能否在目标频率下稳定运行的关键环节。本文档全面总结了建立时间（Setup）与保持时间（Hold）违例的核心区别、产生原因、源头预防机制以及行之有效的修复策略。 一、 建立时间 (Setup) 与 保持时间 (Hold) 的核心差异 在理解具体违例之前，必须清楚这">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://canshine.github.io/img/%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0.png">
 <meta property="article:published_time" content="2026-04-30T10:26:00.000Z">
-<meta property="article:modified_time" content="2026-04-30T10:27:11.304Z">
+<meta property="article:modified_time" content="2026-07-21T05:27:14.284Z">
 <meta property="article:author" content="CanShine">
 <meta property="article:tag" content="时序">
 <meta property="article:tag" content="FPGA">
@@ -175,18 +175,6 @@
             </li>
           
         
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/academic/" target="_self">
-                <i class="iconfont icon-book"></i>
-                <span>学术</span>
-              </a>
-            </li>
-          
-        
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
@@ -303,22 +291,92 @@
             <h1 id="seo-header">FPGA/ASIC 时序违例分析与收敛指南</h1>
             
             
-              
-              <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误，请重试。" data-whm="博客解密失败，但仍可访问解密后的内容。">
-  <script id="hbeData" type="hbeData" data-hmacdigest="1cfa407e705beb94d8552be65e37d74e088b4253ea6df2e186b190ffb1e17a10">9ad6c89fad563ff050d22f26b96bab827a0cf1d20f12c213b1043d71b2a3a1eba92a977331e279bd4416b48029a3ea29b006a49fd350f34d1cdd5f1754793aa2705ffa63302d8adf2b2adb56ac5d7370e4122fd604769a6e83ecd01cfadedb5e11a0b291bd2d53c53a46c7082cb19ba12fe12068c1e4c0ffea1159813de420985bce661673e3f4cb2c65194038e78a851594617c9e08ef4a51792c8c570bc1c379d494a2141e506fae93ecf2536dcaf95e800e001a09226541fed21c9d89f1b4afaa4660fbd82a04dcb1fee2ab766192364ee6549222976424540de4cb737e3eb94d7015d15afa0df8bff6ed4a88543593c09bf7d4b78c0201686b5288febd3c1a1e308a87f1614ffe08f03b643ab31c718324f31b318d59af5c9a7567a41190440126d98887de0f6ec1642eacde1917c3d00fe422cc995b037f1ba66d5b77ff111cc656f9b90560495246214d10329fc8aefe046f361ea17bc9b74feeac0ca9d5ed2489cab5a0fa7a5f7871b7ffcbd394eb427f5862b5c0d4e56d40d0a70317ecbf090cb42ac54d602453d90f9a1fdce71ed25fcd20bc14ce0f6cdcdbd0d7afddda2534f93b0e60292638736e6642d630b4ec39b1bdd169b69fa1c186dd368018f96ae46fae70f0ee5905b25a598eccffd6a5d3cc2c0815de28a9aec5aac63801db554a416cf5989c563294e08c6cccbd2856c3f0333d1f88a3a3855e2c29f6706f3515d0f5547cdbd3fe7da758b7be72f9ce698486c6ee32d235328a853cb6e4cfb49de7099af1fa4ae72a8209cb156eb46b5042ccdd73ae84b18d37bee0f09c05f642e15508918edf471de63fdaa158fe555ed12897f8cc30082957c54c221be7b6610fe1af0e3c92ea45d4c3cf69c8571ff0d5c7a3ec5d00cf56fccfab6b3af6c517b66a47cd3fb0400688bd871e1c46bac509766233c71ba557b5c5fb3124e066bb7bdc194a049ea0082cd0d1dbd4dfbf5d0f976651eab3212c5720461b3642df0170e21d9f66575b950a93b147d6d2bd8d6c28ff995660a06fdc1a9910c93a89afd8c5d2b6bbbe2a6bfcad06543c21095f48a85625e6abbe00c69b32f55baf3ed0e270bee41334f502fce0ca5488b851147666a20b391776d4ce179a0b6c978f3fe89ba1ddfd3791fed501330c803302be83341259709481a72417c3ec45371efa2985738b57215d6552acb7b7dae577868cdddbc226960994a0f2a96d6095aacfd2167d7a39f9d9b6e64051cd6bf3a81ad951158220d63262cb521fbfda19be1c17d6ce89a03908be10299eab0f32a8e0264fbc0060d17d5e540481fd1df2ea5e2de1b100c9a2d8025bf8819b5d03ee62bbf11958e95cb7c20dd3e5fe5a7f77c8155e022a8ea0d0ee5310e9c99da742aee2c2d8deccfb2e52b422c9f79353ba40de32bf3eeaebd3b5731bd4a6a7737c855770408dcb3e8ecff957ee0d9bb7a84499ea9fd7217d088a4d2db9e45b14db2b5012cb57453358f79cde02e067f594e6a9ab638dd61567ec288d70c219ae3786ca7adec43c03e9af43e859b1baa085dabb4d0f7b30bd882ace10e8a0d0b22c2a6d2ab2984262fd6a6ae65c83b68e3c935a690132baf16622e4fe53478033a964167c2d5e06d26ca380f3d59e0e71416f5787e22c47967997990a4160e2b20627aec875e8464aaa47432b848a5096cfdefcc4c2caeee3b07dbc8cd0d3f7dad135d84831fc64662f11c0197a9e2bfdfe5707b6f6286eb3b2cc40647879c051d04561884ca4d9c35c7ed8b19dac62a6b56a9831b112467e9c2dd60b48bf7f8ddf3f0384dcaf889b10a5a90decc937f0fad7db078c968a9e827426337a48aca36a90edd72ce77897ec009f24c6e62cb63bb00a43ddca71d3b94345ea10aa0fca2c5588892a22d0d618f3322b799b8e5e68700a8015fd0840485300038c5c2cfbf5c02963156dc2054b9a56b21e5a297a6c5a1ed4be46845644b6fc557275c2036c5b359df8a1b74515ae07dd071a5fa8e925f1d55f7836f15dae83510c95987fbafb4dd96d334dc629a8a8ec0e9f9e96c30a0bc92269a10a888053a3c6f9ec7ad2357f208c23c268859c4d7200da5f4005090e5f30579ea6f719faeb00d95802d33c60de12c0fdf7989a9b8e3301183829775beffe76bd2560c0ab18bc32bd0bdc9a7d95fe389fd6c75f823141d0d95e31c8231f1d9b306e3aeb8fd94b0518bcc91e930c031217a043810f4e95cc2e99cf7477f5c638e0c81a535a6c2bbc19266b1bf3dc830678824b8dee8298fdd8cdad32af1726c392770f99fd848f537505fce5129e1f5c13a08b976957b09822a40f4df02975643aad6d7cbfc817b2519afedf12193317aee113f6461623fce527c1da8aae2585edbdc1bbe2e1559c79862b3130beeff7498e0e9d9a3e9f911c8b347de2802a3f82b88a1a531224e6ecb153174970d6b20d8855882b6647ee0a5807d6f37d71f7a95d50972050d5225e25304441a1f0ed7f22622631cd09ea33969d539e4da34b917c839daff2b457e41767ca39dc30aede757ff15b1d43573db11ae94794d6b9e60cfcc240c30e1ddcb4d17553408055e2e45c5d32d4d663e76524baf6d47eba11e5be4162d04d83429ff6bbfde7474bb77bee8f970aab2c5eeebab1232e334417c65656ae635477b1642be9c4b18fba48de9e907198d31b3be229d006c1a868fdb629a785c0f28f5046f40c617a3baa484100cc832a1beeade162775eb4290b408146135d9911e703f8f91dd4f028fbd1b0ff7015e932e83748fcc91f5e8dc63e07c23df61e8157ecfc7d7f85b4aad607dbc76b9159f557049aa1e7f53d36fdcba2f7e47a35cc29e0a3210d1b48d487d72e50e910cc8f5835bb509db7e3056bf40763e5d171dada1f98899dc76149dbfa4572c3c98248465c622cc42066eb5a4f13f6a0819ea6f806ced059c42f5606df9a93cac508a2402ddf04436b0ef0d645dd7a7bf56d9b70c513675c6c54318c95677d8b829a28e79f848a434cbbe0865a732107ba83ee02993590b8c4111806870f814ed5b2dfebc06731785b2cb184445817c6c000846df6c0ca9037f039bbd6e9a48ddd19895bfb31271a018409f32289fe2877132479c110748f52aefc385b197067e28564b97101ba54b21f05bf47f18d68ebfe376a13f83ebf75611a28c8ecb5cfca723b0df42dc5bf1cca7f8770c9a04f13953057c54d509e3ea4992818763a46ceda5a85a2ae5befddc4c6fe3d3c174b35753308a924b7b39e3e6ada162054008f77ccf31abcb1737c1ece082da9ca0bd0ffa5e32b82490929628c9d62c7276d70fe8c5fe073d99c59b3867878086d7fea51d5d1747971c69f201030b8f26b340f8d8050cfb5256a689b82eb5cff6811f8986ee0908aeb99096f6c74fdcc8eb0b7b7bd8d79a5935672ccddb47cbec7fa5a8c8f4ce6b07adddfee18b66134187e90c450e3e728fafd1717dbdc6abf2aa303c64a4e15f8cfcd095d221e3d297894cad1dbfd53b193d5ec316ca1e348f066c922cf5b24ce5e55807459ea9c2597855a972614c214b27290da2ab321740ea2d05ca4212103a15ee736bc8ff28d43de5843fe35fe5619ec172519bf4f8f82ff76b2ec3ee99896d14f0b002d981d8ae9f0d04db9977170c1e3ee4c86431b452803d8e8032e8ab67233af05e097fa91a16536f56fc52c33492b43ad666d2c4884cf0478e6b45a23d4e9b43cfb71a7af8ee93291276e590d5d08c6a9f4520449d579f9a00d10a8aeba66c89a06d59c3b92946eed3ea81f0e31bde4ab25b3ab7fcdc94d64357b47fb928b56141964f8529bd58c778d2f09666ffd8d64318a7e52678d0c496f66c10360870a19fee055a3b1d7281f238526f1e02fc2f41c02058587f568c335b83d3bd7307c8e69f7799bdd18c0d115276c0afd2c8f224a938b5f9123dc3907c27417db6a87862f9354e7f5e9e001863858d9e1108d6e6722ff7a7abfb4ef91ca40ad562ba457734a026e55930baa896634da482043bfb706d32696cd71d20d6a94898860f0a6b5aebf91e0e93a7256c2213dc2abb3a8e951f97f7e63afae854adfc12d4ef64ccb34bd15b8b02ab6887d3fc468febff0c3be6fe5d606df6d22f5f4f19dfc7a25ef875fb9b952aaf3a027f0449765ad37c8704515cf5682e8a88e8cada2bf1f2ae85422f2c917033d9afdd96560a94825dc9870ae068f6c77c3335dc4f313ec94dcfc30b4b62365b9670d54b991648692090c6540d9884c7829bacb67137660bb5b8ed56b257922c9709d8d95172bb5bd33a6f749b689714ba2d1432cf508e808476a142a4d58eedd806f974ad48fdc4c111f92e15bd1f2c4a9e2031a109cb9341f57bc4f239400b27f87fed4fd56778d59c4bec106fa7df1355a70f85cc53907f79bdd58ad53035eece24ac6c54bc5ddec99fd04a2c1d9f94db16627f4a47d69141a851d01ab2a43ce02e4e1798ce653426c0767448f7a5ee735d80315d8d560b5cdb9128203cedd86a7606654b9e7299300ec5cdf71d2040820fb62c695d5693d936a4b64b6283f0eb6eac77dcd2eaf762f2378314225cf2b2ae70d8e1e4a3eb0c29a57843642c54ed3bb088a9f46d0228bad4a0c5eada2f4c8981e9815c1cc9f0faffb286a078e12ff01e96b6bae3ffa66a1bc97423fe98c1049d47cf70b2f3e39acfe90d62cd5addcda6e32e8b546d29dd83bb0823698fe7b93d7994b487fc15449ce914e02ceb9f5bd7b6c94e9348954aea4c54738df11eed0c6fcfc075af6a5b90415ae23afd231a2c456d7c9139b6f7c79aeee0ee50620739ecaa1bd6c669ba514b5e7ee984ca70e703ba7df515554a17d0323b4df14eb39060f8861872b28bfe577f5b4968897aece4472e6c953c66a5ecc581a4e5c2b0961dc8819f4a51a72ba9e36342efc3823781d4962d899d25673c975e232a51901aa597261ce43d9243a3160baff641a53d5fecb4f123bf407c2333f79170c34d90c739f4c3f8aa87edb1fc07b082bda80c391ec44fc7fb7d44392d92e6596b5b1a6d82536d5efa16ca10d4f43a0f0ebf9869af104c195d77dba88d7de20df9044472a9177994672e1bbd0ff5ca320e6b0856819ad2bdaa78e07a8c4d788b2b8e806499a48314b3c5d399ab9ed43e503c00ba7766912500dbdff4dbd59c66fe36186096a274c42594a37eb041682aea5a9e0cb5ca5f7a8bd808c9b91b942dd1530f78727716e34954580357df44b7ddfadf39022f82ffc37461f243910548f6a0db83ac64bf95c140f9e866810c30afdf0ba920e83a053d18a683ab133149a4b4b73b8f5edf8f6f539c4022061379587aeaddb85cbcf4ee3af28763e701345340118b76b4e3a3aa00a6588e795b564fc6b35f929e443be6cd46bd4ceea8c561cc329a621ce266d79911be57e6c6455d806677f3faeb38d379e9ab8ca3f8ff67a14ef4b4dcb14b2914d3a58db0a19d888aab363c0e6d4ea94b4fed99f3ffe0642d373b50f5683cba60861c59b9568797bd20c005cd3ad89ec1f7d8bdc3d320d02bf70dce78e5d55b84f0d6b5a69663ce769a4fc3d6c2d30d5ba300f1ad0f19d9fda8eacf3df259cd55d9d7de3e4c4fb80a16a357bf1d976f4109b7616b2a9ef167a56aea43258fcaff3681376339017ae8fdd19a8ae72bc05a43cff1355560f018fdb6c6b314fb95208fc8ee0e61255bc54065ba04cc87a93290d33f18601df8cc35d2e9340d21b0da9f334c1b865748681c2a3ce9d43afc5cce3b3435f45e0d78ff5ebb12d9f62727d1e2b619825f88ec426ecbd77618df332c525ce9efad7bea9ebde4877d44e5c936c73c6ffeff61e17a1f47a3fc1f4b3c6e611db163c232e32ecbaf6097f1ccb917c7d7fdbf37613d46705723ec2af8576fb2f7e9d55fe5a767900590e3b851dcf78fac750ec4828d4ec23239c1331713471f90df77c85c09362446d1204c1fc9c75cb25069401e94a12c5fb0c5a991627f6b0eefeef24fb8b1c95c46079e65f2e7a6aa520d7b9ff3a7adc637c409ba97f0ea3093b0a1f8284f8f4a58256b969807331f060635ebd7285241480440a8ba9ff7870cffb23e08f16648e5a5c8aec1e3af90f684a8660abb6834f28db4aa68216da578dd1ba5de879dcb4f9942e54f65a1b7845ac94ecded88a0cb8dbfb7d6294a7b5803234e41c67d90e7ecf1e452ea3faea0e3a6a647a8c4ab3caf2905819dcbf23b5b9c6c7475d5132d695e8feb225d4f668682e1cd421745080d799a845debcfde6b1bf6236d45589ef261713e9f46336614f32647c88c238d7ad2a2e7a7943675d5c81ca64b1f42ef619ebdd33a2543711fe7cbaad407a34e3e25f1e11b075657e65d9b1db303f35f17207182d0c448d5f0cd7be98d9306816c929413af8a14f6982045040841e888115bb175947577f2b9e488c856654a36bf520ca29f8903ebf0c2705942b47f31c297102c431e671b235040073d67794c32f295e79a806008182c81fa4c74c73be0014c120cf60fde129a157ae40c0ae7304c78b2edf851c6a24c0d5e5d88edf7b282f3135f645f6fc8aa0d9ace9634dbdd67a56ed85f41f0db8328cf5ac128bc9248c91077a1e8e80f2fe3fcbaf4466228cdd2329e465e0138f2fa9b43158bf536fbb1733b116b474afc4a351fee84927f0ba6204b65cc022b71777102050081ff8b425ffb6069bb49ad2d8716ccaba687c931eb4dd15b02bd7d688f355a51ee99ef8b253dec0d22bb61337294717438d6124bf6b5b915d8b45cfb4e51d728fdd6e5b6c78b55ce8a1bbb03a9bb437ec15c4545d223bad8542b2bf6f9d5d11e3e778e341cee3e9e88b6481d0e9c5a1700d6fde3578ffba0ca7a31d9b28886db8e18ee691ee84510dd907ecce196b9e3455f5415111d5b94cfddd5bc13e9a30c46a9f73906ff8e14763ae408b911945f98da2d561b4aaf830ac1b390b838cb69c105529d675025738b5788321a58b7b4963726dfef59e6d5241a64d8cf47819dabc7e79f1a4aeded7e4e1f42ca976fcfcf7a99911dd67615db6ee7b6b61434bdb692cfcae86db2f68e1ea878497b19c75226a8f768b7283462aec77c548dd26987edf11ba8cbab74ebac263500ba8bd14cbee433d1e5166e75de9b35abb479c8022efebd50ad644858d859a8a916307f30d51311bd7a64a541cfcc1f028d3c779793ef0db98b8b91705d6744dd3249853e1ebcb0b8f7fa7c8f107365deea837f097fce6923a760888630567299eabcf21c16091f1facd5258306a282395c50c9149c00964e364c379996c08a5259343ddc6cfab8068a0898c15dc5efbb4a2348ac7f3cf78a6a1d860fc4e84cec8a5e5d2b167bc3c87bbe536833437d5791a12ec1397b891451be34baf7c210cd2e0552593637dcc1bf449e0a5d45fba44c049faff4e07c205faa3f4e25badf46936f56c57714c8705e4da22d1a1c1db3ac2d4df91773656f6933699adb4194b01c77c8df61ed6a96dc88627ebc8ea36c1951480020b3d04801a7876063d4b114cdd6117056b3d22533887294306a3e40e3c1d9ce130d04b81db6f96b75d29063cdfccf25459df2a00ee50b9bcc105c3b7856a37a4ccd06163f7dc7361ce140e23688eba4c251f25c77306241461eb15557a7c188423b9d056cabb10d0110d108c8e708e7d5388560d267bf368ee8b04d8cdc24859dbc8bfa820df8d41360f8544beefdb49299d0e12c9b7a37da2c8800959f99931ecc56af4cbd4780dbd514ba7b8d8ced325f6fb0195d1ce6d8f8f8568fcf1653f72b5c0c236b1b5c01b29ba0bec9a8b361bc14f2779854bb16b8dbc119e86144c3d425842b226aa4b6012ed54b8abdb9ea7251fad58f223384fefdc3e4aa1c5c239679f0f5ffc625fd4d6a114f9e19f0aa688586e759b921ac01c7565c6eec2f7c9458b924076363f0a22ce0d1d032b81b9b86e87afc6d2589e05135363eee8fd0b90864a4a74193d15111ad5f82b49f45941b26af074378f4446f706a9a1786d481a84e4af18e4a96b85e57f5143369df2b4a01e606fc98bb94bfa115f3d2460fd16cd1769f4fd1644b51dd2686d32bfdec2246901bd5f046576452d120ced9dbe7047917d6ceff644b5b05af17d94104e69cd8b5fc589e1610e336942cdd38ac6bf4ae791dbfa7ad70ed95454eb5b524943afcc5ea58d2a8543344f0c2e98ca78ca68b42540a40407aa087ce0ccb4f27a03ff4766fc4e1141d3261da77e055f24fd2b12af5179e11acf0b0879795d8f7e4ce2f1264db297258bac8474d98f9a20ac79ce9c0e5a6a6c1827c7bc471d37bdcae5839cbc373b7305542b8036297104a2f4ce52271e1db039d27ed7a822b26a9d62710678c9f9b8d72983c89e0dc2e3ce8e4cbd8d637d8aeeb16e9c648a670bde6207d4106be232c0ddf6f6b176fd3825aa38582d79636e45f9a2023e33e8e91b4030215d36b8bdf0a518436d73f65bf6fe94ab0964fe3b4070cc05281d29ca32c4383c0d8ad5bb8fa158f35aaad95d6da4e9735f269cb5850adbe89c1320b8bc87c7cb1ad4e5078fed2afadc90ac47e93a72ee772f072fb5dfb1f123b5549b67014418165b9bc881e104dbb8537baeec6e4570cb254ead39dc7c576cda8175024392fb2364f756eff3c56bbd993c8f8ac2b1a2bde449ce18a1ac5cb0e0ed68acae0668473e04ff9140093632bc519714a0d5cf5893ad416b6ead6f6d5b56ca1aec174c142ac4d2947973b9021bc9b15626a055adb03e41174a12a6020b98efdda1523d117720d2f3bb09d0be2a8af470ba4553901a03708a853c614e7eb6f46e8e6f767b01b0ba46b2a6c5d3263c5fba7c1977ffede67b4d23f07d2c3de22d928819abd8e01d09ed853eaa47b3e242899211e5109080f45c84be47656b1820a2a70b7490f308a00ab8d8f8b7a2c516356c6a289727b4f7131ac04d1bf07ad08a96775882c19af4682e37a89bea948cbd157f636fe2b4eaebb9d7b0c4108bbe67f1563c88287077bb88ade6a53a82e6d799c6aea343f31685f8e1e24b63765fa8efa6c88609f442ee09618aa5b5807a95232b02f7ffad31fc65f4cbd4d343462dc73ca898331116558cb8afd8016779c60c47e2ab52e307bc527e32221b6527d8503e56475e3c39eec3871022f9ecb595cb4973eca9bae6d94b2216581e55e1926c0c8bc86fb933189336eb464c6f5844b067c333dc3e05898be3638068adbf2c9e398762524fd1636dac51df296708bd09c76e795f220bc25b5ddeba942503c4b473b871828b29f12bfd780955023006c92f843df2bad1d2736939f012b501681290b393baa5477165b560b27829408704fdd12e9995f3a487a5c5af40d94175bbcbf100073f58eeb9808d582b0ce52bbed8a083b7daa4c3e4627ddb6b9274a75a6f9c902018f41d383d6a945188004dc108a0a58db4f7f38ecf8d511ef60bb94331aaf4c6b3e38b28cec1f41b522efe6a6b64abbb9482c7d9a0f215c9ae628b7dee158703caada775fcf75215c0c66661768da2a786aced016de13ff29a24d3899b3708ae6bd4cb6e2c58e195235f4f20e90eeffb51c13a41670394a7645aef0c104d22a3bb82ec032f683dd9be151db54352df5539d639372b7b70d841cf6ddd0a604ce2d9888c22dc1d33378f28e4ab16375ada597f0f721fd09e83d120e387820220101e734900d962f47ce6f3196d0325858a4b688e4e90b697dd0ab8c2ea5755aff915c03b441207249d7d9d6904ae407605cf9e20bd5b71f857709ee098f6fd1887b7844b91a9ca25bbd4731cc89cf4be93277c0abc0a8b9d2914ccd91117a17fbfca2996e490ab251a6ec033c19a38a27f6685db97ed204b1ff889eab4d9c57257985a50ae81d4027e3550dcff7691b4d341d1b31ba74b2959c7511654308463b89af6aa3d47b54a4f90fa36a8541aa164d20240624373efeb769b82a40aed3f4130c96e6da84f3eb720892825d5986c1abd4ddfd355c8b0aebc7fb294a5e7497a307af34529a5643c706f30d24306ad5183c95cd645d84e1e97f839ca40d2c71189e37e7763ca1d5b6aace9e6b1e1a3ec825ae7fd4e782452d06fd9c3da7751987a1eb05e9be2c3db153a4904561b0543001d5063d5e5ea0550b45d3bac8b3f3e58f184091055aa2956bacde03bb56e8c81ac81fa16b9fdeaba9f1598180f4fedbc16256d6949417340677f87e228f583b91269c330a9a1d023367edc0f4aa80e8d3ea311c6b3be408e8b97cd90f62f21554ffc1531dac08ff6a8ba021f80b596df9855b7a9eb268cb8902e86ee0366643f855866d742f24eba7d18ae53ead601475889cc44edb7a928f0306fc3b90995470be67c8340893bf4066edd6c6232d8acc840f71379cedeb31f38d32e7c8cf2cf9324d27d7883e6aeed0b2f60a00b799b84459a36801e88f6cd3d2d9904f3901d71e6ab8c0336145f80b224903f9a6aa00a3414184aebea88e624b12b50f795d25b311b4cee41a7868d862c6fcb85902f79f726937eb059f120d8b4e91e51752b45899b72da85e03730238e6ecda0b03333877f25be33615b4a1356d8796bcd7fba8df4933326025c1fc2f3570131f4872d985ba4db308cdc8625094df6d034ed9ad4daba729f17e95eab086329bd9b8cfbff9235c4bf163c8c84e02daf4d4477668aafac330638095496fa197b6af1f2d5bdeb557a21d1de380da532630b83c8cf19034199e3b091ee33c58bed8ebf41b5c89e889e13cc3c4f1154d6ee3dd62ec92002ae68f68c7331e73d0fa7fd77292237719f62651773bf6fd9b701d609917eb2ecdd992f7b4ee3b6ebee40caf417e7470b800a26e11b0dea14bbb839e9748afd93f482440d5e0ad0871c480769b4471948794a46d93c66492f87fa7591741963a57a8d6fac27e1d9d930daf5d4091295d6d4fcd6bc47770653f69cadef08d3a670d0329464b58c1c4846756af79e00bacca9a02c004938299b29d91825e1256babf78a4ab4d418bf5b1574681380fea72ff7351882f1b4466513969d0705f9bb3e5d8c05e327129393d09f367343f683e00e1d124a6a6ffeaa54d63d41e5f1e59544d9830150695a1d879439f26620e67fdc63017fa3218fdcae47f78682ffa6bc81448db8ad9dbb4f84b9681670663bedde7fc3ae920a023f7892474581747c48f9c903efd09178530a7a43531ba77e9cf8c7dc489fabeff2b250bba847100e6706240697df886c912c5d8b61a410e731a8196413adb14b1bbf0a20c035a0282c5e2e53c12fffce94c1a4db1824a01c257bcdd88cf89a8fe84ea3ba8181b7fa242628278ca5bd03b66569e92b82165ae087e8ac695669df97eb267a17288293e38c0b9fa9db2b87933ee00e0fe2269c96cd3f4a855c052832cd677a3f672a51f121475312cbd2822ff826a62a8fb361ab7e25989524a9eddebbc4dbfdd9f99bb9a8c0507accbda90f00384adf7e79142004baefb73f322454a7613756a70c48d3cceddb5da35de09f120763f7cb93e4c9022160058121784e5d17ba67bd7eca6eacd68c91df145a99706791192f0d66019d7b54d93e3179a8a14aadee7179d3badc36ad26efcc70604947b77833e6dd601b90e1cf89831c69c22d02a0846375a5ad16480fac8c2a1e5c9dd6563cdfbf6339442615901480f3ecaa954770d266bbc9cbdfc5c63e85770b9c6cf462e16038795b7b1dbec78efb7446b159bec8e7f6b89919f05e89fa5492cccf31ccdf0fa035340a8b2cab208f4bb7cefc222dc7dcee0773b604a822886543908a250d480ab5447b7e4aa4df72ba4f4618896a4a541101d51b2f61a228ae1c92c5d554377c1726db666b54ad7920acbac65f487558cf6cabd6b2dc9804472d6306ac176b743125ff2583f9fb3c6881207d0a30a4004765bcccef68f0b7745d7e67e319464761939d7efa4c0776874231c42c493dd98f506eefc244ddb15db0de823090e5d11d310a0bda537b52ad91d796ce88570049a77e4ec64750c7aad0e839362622127a8e3ceb5abf86f1dda0c36f731981bac77ecbced91cc6dab50f099875bbf5dfd866ce93e2e3eb2fac53348e7fb4e9247e2f223576dd99760073727cace951bcc0f2ee88c2b3187edc269aa674d7427fba6f87d3c3346e8e4d07e8778bc1494a11c8dd9927ac699e8228d5c4821f062c1f5f37d21668b8354220470114e0ac51eed445058984934c22fefe0f1d89aeaac713f1ec0296a415efa18e77cd60b7902789f7390ef11bce61620d7962de38</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入密码：</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
-              
+              <div class="markdown-body">
+                
+                <h1>FPGA/ASIC 时序违例分析与收敛指南</h1>
+<p>在数字 IC 和 FPGA 设计中，**时序收敛（Timing Closure）**是决定系统能否在目标频率下稳定运行的关键环节。本文档全面总结了建立时间（Setup）与保持时间（Hold）违例的核心区别、产生原因、源头预防机制以及行之有效的修复策略。</p>
+<h2 id="一、-建立时间-Setup-与-保持时间-Hold-的核心差异">一、 建立时间 (Setup) 与 保持时间 (Hold) 的核心差异</h2>
+<p>在理解具体违例之前，必须清楚这两种时序要求的物理意义：</p>
+<ul>
+<li><strong>建立时间 (Setup Time)：</strong> 触发器在时钟上升沿到来<strong>之前</strong>，数据必须保持稳定的最短时间。
+<ul>
+<li><strong>通俗理解：</strong> 数据必须准时“赶到”并在门前站稳，不能<strong>迟到</strong>。</li>
+<li><strong>违例本质：</strong> 数据路径（Data Path）太慢，或者时钟频率太快。</li>
+<li><strong>频率敏感性：</strong> <strong>敏感。</strong> 降低时钟频率可以解决大部分建立时间违例（用于降频测试）。</li>
+<li><strong>指标：</strong> WNS (Worst Negative Slack, 最差负裕量), TNS (Total Negative Slack)。</li>
+</ul>
+</li>
+<li><strong>保持时间 (Hold Time)：</strong> 触发器在时钟上升沿到来<strong>之后</strong>，数据必须继续保持稳定的最短时间。
+<ul>
+<li><strong>通俗理解：</strong> 时钟打入后，数据不能立刻“溜走”，必须<strong>多留一会儿</strong>以免被下一个数据冲刷掉。</li>
+<li><strong>违例本质：</strong> 数据路径（Data Path）太快（比如两个寄存器挨得太近），或者时钟偏移（Clock Skew）太大（目标寄存器的时钟晚到了）。</li>
+<li><strong>频率敏感性：</strong> <strong>不敏感。</strong> 保持时间违例与时钟周期长短无关，如果流片/烧写后存在 Hold 违例，<strong>芯片在任何频率下都无法正常工作（致命错误）</strong>。</li>
+<li><strong>指标：</strong> WHS (Worst Hold Slack), THS (Total Hold Slack)。</li>
+</ul>
+</li>
+</ul>
+<h2 id="二、-建立时间-Setup-违例分析与修复">二、 建立时间 (Setup) 违例分析与修复</h2>
+<p>当我们看到 WNS 为负数时，通常是由以下“元凶”导致的：</p>
+<h3 id="1-核心原因">1. 核心原因</h3>
+<ul>
+<li><strong>组合逻辑层级过深 (High Logic Levels)：</strong> 两个寄存器之间串联了过多的加法器、乘法器或深层嵌套的多路选择器（Mux Tree），导致 Logic Delay 过大。</li>
+<li><strong>高扇出路径 (High Fanout)：</strong> 全局控制信号直接驱动了成百上千个下游寄存器，导致布线拥堵，Net Delay 极高。</li>
+<li><strong>未合理利用硬核资源 (Suboptimal IP Usage)：</strong> 使用普通的 Slice/LUT 逻辑去拼凑 DSP 或 RAM，未使能其内部专用的流水线寄存器。</li>
+</ul>
+<h3 id="2-修复实战-对症下药">2. 修复实战 (对症下药)</h3>
+<p>建立时间违例通常需要通过修改 RTL 代码来解决。针对最棘手的<strong>高扇出问题</strong>，分为以下两阶修复策略：</p>
+<ul>
+<li><strong>策略 A：逻辑层级过深的修复</strong>
+<ul>
+<li><strong>插入流水线（Pipelining）：</strong> 在冗长的组合逻辑中间切断，插入一级寄存器（打一拍）。</li>
+<li><strong>提前计算与结构展平：</strong> 将复杂的 <code>case</code> 内部运算移到外部并行处理，让 <code>case</code> 仅作为干净的纯数据选择。</li>
+</ul>
+</li>
+<li><strong>策略 B：高扇出与长走线的分阶修复 (高阶核心)</strong>
+<ul>
+<li><strong>场景 1（局部高扇出，不增加周期）：依赖工具物理优化</strong> 如果架构不允许增加时钟周期（Latency 不变），可以在 RTL 源码对高扇出源寄存器添加属性 <code>(* max_fanout = &quot;32&quot; *)</code>，并在 Vivado 开启物理优化 (<code>phys_opt_design</code>)。工具会在布局后根据物理位置自动复制寄存器并布线。</li>
+<li><strong>场景 2（全局高扇出或跨 die 走线，允许增加周期）：手动流水线分发树 (Pipelined Tree)</strong> 如果扇出极大且物理跨度极长，0 Latency 的自动复制将无济于事。此时必须手动构建 1-N-M 的<strong>多级流水线寄存器树</strong>（每级打一拍）。
+<ul>
+<li><strong>⚠️ 致命陷阱（等效合并）：</strong> 即使你写了多拍的分发树，综合工具默认会将<strong>同一流水级</strong>内输入相同的寄存器（比如第 2 拍的 8 个分发器）强行合并为一个！</li>
+<li><strong>必加约束：</strong> 在构建这类寄存器树时，必须为同级分发的寄存器添加防合并属性： <code>(* equiv_register_removal = &quot;no&quot; *) reg [7:0] pipeline_stage2;</code> 这样既能利用多拍周期争取走线时间，又能保证物理树形结构不被优化抹平。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="三、-保持时间-Hold-违例分析与修复">三、 保持时间 (Hold) 违例分析与修复</h2>
+<p>当我们看到 WHS 为负数时，需要警惕，这通常意味着<strong>时钟网络设计存在缺陷</strong>或者<strong>跨时钟域问题</strong>。</p>
+<h3 id="1-核心原因-2">1. 核心原因</h3>
+<ul>
+<li><strong>时钟偏移过大 (Excessive Clock Skew)：</strong> 这是 Hold 违例最常见的原因。如果目标寄存器的时钟信号比源寄存器的时钟信号晚到很久，源寄存器发出的新数据跑得太快，冲刷掉了目标寄存器本该采集的旧数据。</li>
+<li><strong>糟糕的时钟树设计：</strong> 使用了纯组合逻辑（LUT）去生成时钟，未走专用全局时钟网络 (BUFG)，导致时钟到达各个触发器的时间极其混乱。</li>
+<li><strong>数据路径过短 (Short Path)：</strong> 比如两个寄存器直接相连，中间没有任何逻辑，数据传播极快。</li>
+<li><strong>跨时钟域未约束：</strong> 异步时钟域之间的数据直接交互，工具强行进行时序分析。</li>
+</ul>
+<h3 id="2-修复实战-对症下药-2">2. 修复实战 (对症下药)</h3>
+<p>与 Setup 违例不同，<strong>普通的逻辑层面的 Hold 违例通常由综合/布线工具自动修复</strong>（通过插入 Buffer 延时单元）。如果存在巨大的 Hold 违例，重点排查以下：</p>
+<ul>
+<li><strong>检查跨时钟域 (CDC) 约束：</strong> 确认 WHS 违例路径是否分属异步时钟。如果是，立即添加 <code>set_false_path</code> 或 <code>set_clock_groups -asynchronous</code> 约束。</li>
+<li><strong>严禁使用逻辑产生时钟：</strong> 绝对不要用逻辑翻转直接去驱动 Clock 端。应通过 PLL/MMCM 生成并走专用全局时钟网络 (BUFG)。</li>
+<li><strong>让工具自己修复：</strong> 保证时钟树健康、CDC 约束正确的前提下，信任工具布线器（Router）在后期自动插入延时单元（Delay Buffers）来消除小范围的 Hold 违例。</li>
+</ul>
+<h2 id="四、-预防机制：如何从源头避免？">四、 预防机制：如何从源头避免？</h2>
+<p>优秀的架构可以消灭 80% 的时序隐患：</p>
+<ol>
+<li><strong>控制组合逻辑层级：</strong> 高速设计（&gt;200MHz）组合逻辑控制在 5 ~ 8 级；低速设计不超过 15 级。</li>
+<li><strong>贯彻 Flop-in / Flop-out 模块边界法则：</strong> 复杂业务模块的所有输入信号进入后立即寄存一拍；所有输出信号必须是寄存器的直接输出。这能完美实现模块间的<strong>时序隔离</strong>。</li>
+<li><strong>采用握手协议隔离延迟 (Handshake Protocols)：</strong> 模块间通信应采用 Valid-Ready 握手协议（如 AXI-Stream），避免硬编码固定周期延迟。</li>
+<li><strong>慎用“全组合逻辑”模块：</strong> 复杂的业务逻辑、状态机引擎，绝不允许设计成全组合逻辑，否则会导致跨模块的超长关键路径。</li>
+</ol>
+<h2 id="五、-结语">五、 结语</h2>
+<p>时序收敛是一场系统工程，<strong>“七分靠设计，三分靠约束”</strong>。</p>
+<ul>
+<li>**建立时间（Setup）**考验的是对数据流、流水线（Pipeline）深度的架构驾驭能力。</li>
+<li>**保持时间（Hold）**考验的是对时钟树（Clock Tree）、跨时钟域同步（CDC）的严谨性。 将时序意识“左移”到架构规划阶段，养成良好的 RTL 编码习惯，是彻底摆脱时序梦魇的终极之道。</li>
+</ul>
 
-              
+                
+              </div>
             
             <hr/>
             <div>
@@ -597,23 +655,6 @@
     });
   });
 </script>
-
-
-  
-  <script defer>
-    if (document.getElementById('hbePass') || document.querySelector('hbe-prefix')) {
-      Fluid.utils.waitElementLoaded('hbe-prefix', function() {
-        var hbePrefix = document.querySelector('hbe-prefix');
-        hbePrefix.parentElement.classList.add('markdown-body');
-        Fluid.utils.retry(function() {
-          if (Fluid.boot && Fluid.boot.refresh) {
-            Fluid.boot.refresh();
-            return true;
-          }
-        }, 100, 10);
-      })
-    }
-  </script>
 
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>

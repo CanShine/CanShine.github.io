@@ -19,16 +19,16 @@
   <meta name="author" content="CanShine">
   <meta name="keywords" content="">
   
-    <meta name="description" content="DDR与MIG">
+    <meta name="description" content="DDR与MIG笔记 1 DDR4 SDRAM（MIG）简介 MIG(Memory Interface Generator)是Xilinx提供的一种用于生成内存接口的IP核，支持多种类型的内存，包括DDR、DDR2、DDR3、DDR4等。MIG可以帮助设计者快速配置和集成内存接口，简化设计流程，提高系统性能。 2 MIG基本配置 MIG的基本配置包括以下几个方面：   Clocking  Memor">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DDR与MIG笔记">
 <meta property="og:url" content="https://canshine.github.io/2025/10/16/DDR%E4%B8%8EMIG%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="DDR与MIG">
+<meta property="og:description" content="DDR与MIG笔记 1 DDR4 SDRAM（MIG）简介 MIG(Memory Interface Generator)是Xilinx提供的一种用于生成内存接口的IP核，支持多种类型的内存，包括DDR、DDR2、DDR3、DDR4等。MIG可以帮助设计者快速配置和集成内存接口，简化设计流程，提高系统性能。 2 MIG基本配置 MIG的基本配置包括以下几个方面：   Clocking  Memor">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://canshine.github.io/img/%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0.png">
 <meta property="article:published_time" content="2025-10-16T12:41:00.000Z">
-<meta property="article:modified_time" content="2026-04-28T04:50:30.133Z">
+<meta property="article:modified_time" content="2026-07-21T05:34:39.198Z">
 <meta property="article:author" content="CanShine">
 <meta property="article:tag" content="DDR">
 <meta property="article:tag" content="MIG">
@@ -174,18 +174,6 @@
             </li>
           
         
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/academic/" target="_self">
-                <i class="iconfont icon-book"></i>
-                <span>学术</span>
-              </a>
-            </li>
-          
-        
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
@@ -302,22 +290,39 @@
             <h1 id="seo-header">DDR与MIG笔记</h1>
             
             
-              
-              <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误，请重试。" data-whm="博客解密失败，但仍可访问解密后的内容。">
-  <script id="hbeData" type="hbeData" data-hmacdigest="5d8d909991fbe5a79c549a854b84ece88a2a2a9d6efd18002e59c5a889e4fc59">9ad6c89fad563ff050d22f26b96bab82eaaff770e743c0925d682f387e814a9369d6f63b68cee27e8c2872aca58767b74dbcbc2a9781b235bf1adbf4aa1f03cac4fa0c0ba10d90448b6dbf676c4b20a7ef14bb32ebb7f4dfacc007a4689c29a5143b19de48c312467878855460a2cfff4a7a21e1aec447e2908bc00c754e5e010112517e31d38affed64f8c004148b6047ddc6ac6693d72b57c904051f021a4dec6ad91626e303d48a657d29efb4a22772bc179a27235f670813ebd7a535cd0199f4aa85e22645258324a22808ec2a82f83cc5e902520b2cee40b675fcc8500c7ca326da78e73b6942193779eed2605ed705e29848f7cbd4acb39dccb3a6770766c9dece9355c8fbef5f110b0074ce15e07180c0d668899c6abf5b3fe04bb4f5289639f757a4d2253412e429899cbb451970090f317d1ec711381d91f253e15f2eabc805a5a4723b4441cdcec9109ca6b5fc9722ac9fd0c71229dacf0603bc8f344e0f816c37a7c657b9cfc9ebf418bf24d91f15bc3360b61bd30c1e32adb7d648af3c754e7ecc84bb8f55dc68b7376ee7bb8d964053001e15f30b93a1db9106a77e5727efbeb5cd3a4aeb83d10adc37cd20c8fee95a578e0ca78f4a320f6ca7699d52570c9d1f7b814d08509112f3db93aa52b2af0fed787c15433c027193cd32e6cdc41d58d89689efc205f0d0b8428be22c551753c5bbaa66cf700539a44b2208508d5c243d39a7d509a02b3bb4c2c66a40c33db22c048b9a0f02ca2c8bb3edc7a3245aef0a6e9576fe28839846ee336d10da97be81e8972afcd0d6496a74282c6b27eee108a947b8e98c531a1b23fb8a4c53da856c0497ac7a320ea4f302167e30d30239883c638c5e4e76afa8a22d8e22598f4f45c36867c8d024901c91dc49342ed39d44d7b740fd36b3c2b41df2b6927e05cf548acf071c95340c4cd7c22eb147f1ab00bef70ee70b552a3784746a044c762ae991294bda487f1136775332d8528b32cad6f9b6fb4194b66be7e4bb50538c9aa9926929538ebbaa13373ef41fcf0a17d840feeb13a4deae7c06bf57bedbed5fefd52b04c296783164bdd794ae26dd699ddcabbbdbd371803dbebe85edc9d92f716f6a80713a29f317041538875651d08e661e2595877af7ecd45bd67360dbeb4a41b5c4a95514c99b37ee9687e7c1e6957fbedc086f643c62ecfab0bc722f93ba2d9f91847de2492aea9319b7ccf92201275aba6d03ae55f3ff0f301fe59d097094872d7441059642a7a2edfab4e1d7d66add6df203e52ec194fb9a4475f5ae05d805e406d2d2780645f7179832d4d6675671deb647165de40b67f3f08177debcfe4722f89417236f5a16b4425826ebc4035c5a475e319356e78e7bc5b0b109a332e8e80483af82d03235b930749af3101b60746fcf329aff0eb9fe6095cdc70177379185150b3800ec54f515a1fa5ccb8c70a2aaf82664fbd5bfe6a445cf88f37188107d8908dc14c8faa22457059acb062d747898b1c2edd509c14c5c4eb4c17edb7a4042fa611bfad5542c0d3599a3e4359a233a829fae6b649a0e8ed6119b491e02013b7b6da243f8f4704637a877e91633724a1e748b73c715ebae151e4ad17ef398e553b7511a407bbeb49a16b4c07d1813ddf4790dfa40ee87e8342b0a331a317168fb86d2e689d46299dca8603f550587c0d691024d479c0e5cac0f456917fb5b7ba971254f39dcf570d76b88733ca7e74bd3ac6feca8c112b95ebe4f21cb9d6c73b5c418854422f145f94fde5b46fae3bfae8976fcf0dbc94ac60cc2d50def4cbfbea9d25cbfe490ab780a8b5cf048ba3b851a08ed95b118b88aeb9e179a3595ff979cb66ccc18fb1b50c52e539cebdbd0117437334df432d2040b91ce245dc1a3f1e98b84cde28f5f29e9c8c8b09e5f95fd507317fb4e8d533815c8b778dd4c0ac016a75645d89f2a9e74384b30c288ede44e038a09975c89e74efbe5c3f966973cb549b399a61207db6fe88311fdab695287ac42b53a10fc2a9e24d44e039198df1b93b2901fab943133091ff0513143d1ad2cc43824c48561546873529f83e9ea03d70946c4455f9ef6916cda6a53b0b7b7c1480b9471f39c040a8c84c42de37e4e3f164b3736ce149cf4c26330304e5a154dd33ffdaa9e271f9f3fedb49fd0d430ffeaea18144dad66dc1f2aa9a03ddc4d863896c63f6711bf523d175d492a06208987cac57aacc8a3bc8327c193c96c13afc7f0e2416b7d49a39b18364cd2f85b61441d7450834c4aeb97c018c84ae037831087954bcdd4a9c59d59cff0566ec9499a96461307682807b1159a5d3e7f23d981098ba540f02e7f93d1737e4ee0c40ce3c4d4446bca7a1e1618dfe012e8d6bea8cc326af74d5d2f7a441e8c19517990be7e9a087302c0255769986718373d0282c7704416e175fcc53bc60d838bf9162a442348b1e074603ab1018a9a5638d50bfa9cdb25087177c2f82d839d7819b097e34ebf8f7ffa9f3cfcf4f30a86a731d10924c320212f9dd3c94b1765757a1bdb363b14a67985513f9f4f9770a74384e8a9567fb89b996291aaf5635762fff5f9b38ba58cb57e38df017122f46d60001cbf17a5e05ac2b8eaf25dece69df474898919c7eb84cf2f7ae9917248d30dce5a541c9c98b6bb41b2c43531037075a509649d6fbd9b4d67f263a7b69aca29155a0f3b3f79322117f9b875285193535d1a8172b4148b1c439dcdd512ec8ae6b68b5a37a8456ded832fba6bd4dc210f20e85c853280ed49589908da83e091ae9cf7391e85f366be9bdb77e7c65dbb5731c2927cad896e3f05e74d006a0f8b054dfef74658a031f354a6d70c7b437f50ebb38f2cc665778de8bb944dbd0421120bfe3c57ad9bfab8e99c6dac5a293651732528ea42c58502dc9f94fd9d65453896234cf4e2cd8ef7742aeb524ce85ad0b63e8f8053266e9a178aa06b9ccf10869c6abb1a55a968c450c2b89be66b486500e2ef2e295b381564d41230290e69a52f0aaef0a92f88ded27e6058ba30e61ad02db74558ab73a3ce780d2234affe4b3de50c39371c7c575aa181453f7c1f2b055be295a3275df470ce0ea3083a27d287fcfaeab73739a77fb8985a948a2e18f70c04beeb04e1f09e29513401f226a5ea3d1b9393309c09c27858f44878532c3a1285c038d195202c62d49eb7ccf4b9567d3c9ee2e26b7e0225be3352a4deb51e2e99ead0a3dee83997064f5a7c9b214e4274b7708834cc36a7ccbc7f1a0d906c288a705baead045695fb307ffec4b244c4a7ccf8b7078cbcfc563443b8aa81ce9710a0344434db9dbbbe1e91497534b129</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入密码：</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
-              
+              <div class="markdown-body">
+                
+                <h1>DDR与MIG笔记</h1>
+<h2 id="1-DDR4-SDRAM（MIG）简介">1 DDR4 SDRAM（MIG）简介</h2>
+<p>MIG(Memory Interface Generator)是Xilinx提供的一种用于生成内存接口的IP核，支持多种类型的内存，包括DDR、DDR2、DDR3、DDR4等。MIG可以帮助设计者快速配置和集成内存接口，简化设计流程，提高系统性能。</p>
+<h2 id="2-MIG基本配置">2 MIG基本配置</h2>
+<p>MIG的基本配置包括以下几个方面：<br>
+<img src="/2025/10/16/DDR%E4%B8%8EMIG%E7%AC%94%E8%AE%B0/MIG%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE.png" srcset="/img/loading.gif" lazyload alt="MIG基本配置"></p>
+<ul>
+<li>Clocking
+<ul>
+<li>Memory Device Interface Speed(ps)：指DDR的工作频率，单位为皮秒(ps)，例如1000ps表示DDR工作频率为1000MHz。</li>
+<li>PHY to controller clock frequency ratio：指MIG内部PHY与控制器之间的时钟频率比率，例如4:1表示PHY的时钟频率是控制器的4倍。由于DDR采用双边沿采样，所以数据频率比率为8:1。</li>
+<li>Reference Input Clock Speed(ps)：指MIG参考时钟的频率，单位为皮秒(ps)，例如3334ps表示参考时钟频率为300MHz。如果工作频率&gt;666MHz ，参考时钟固定为300MHz/400MHz，其他工作频率固定为200MHz，MIG内部会分频和倍频至工作时钟</li>
+</ul>
+</li>
+<li>Controller Options
+<ul>
+<li>Memory Part：指所使用的DDR芯片型号，例如MT40A1G16RC-062E表示使用Micron公司的DDR4芯片，容量为1GB，数据宽度为16bit。</li>
+<li>Data Width(bits)：指MIG与DDR之间的数据位宽，例如64bits表示MIG与DDR之间的数据宽度为64位，4片16bits位宽的DDR组成64bits位宽，与硬件平台有关。</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-MIG相关AXI配置">3 MIG相关AXI配置</h2>
+<p>AXI相关配置包括以下几个方面：<br>
+<img src="/2025/10/16/DDR%E4%B8%8EMIG%E7%AC%94%E8%AE%B0/MIG%E7%9B%B8%E5%85%B3AXI%E9%85%8D%E7%BD%AE.png" srcset="/img/loading.gif" lazyload alt="MIG相关AXI配置"></p>
+<p>Data Width(bits)：指AXI接口的数据位宽，例如512bits表示AXI接口的数据宽度为512位。<br>
+Address Width(bits)：指AXI接口的地址位宽，例如32bits表示AXI接口的地址宽度为32位。</p>
+<h2 id="4-DDR型号说明">4 DDR型号说明</h2>
+<p><img src="/2025/10/16/DDR%E4%B8%8EMIG%E7%AC%94%E8%AE%B0/DDR%E5%9E%8B%E5%8F%B7%E8%AF%B4%E6%98%8E.png" srcset="/img/loading.gif" lazyload alt="DDR型号说明"></p>
 
-              
+                
+              </div>
             
             <hr/>
             <div>
@@ -607,23 +612,6 @@
     });
   });
 </script>
-
-
-  
-  <script defer>
-    if (document.getElementById('hbePass') || document.querySelector('hbe-prefix')) {
-      Fluid.utils.waitElementLoaded('hbe-prefix', function() {
-        var hbePrefix = document.querySelector('hbe-prefix');
-        hbePrefix.parentElement.classList.add('markdown-body');
-        Fluid.utils.retry(function() {
-          if (Fluid.boot && Fluid.boot.refresh) {
-            Fluid.boot.refresh();
-            return true;
-          }
-        }, 100, 10);
-      })
-    }
-  </script>
 
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>

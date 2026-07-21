@@ -19,16 +19,16 @@
   <meta name="author" content="CanShine">
   <meta name="keywords" content="">
   
-    <meta name="description" content="时序与延迟">
+    <meta name="description" content="Xilinx各系列时序与延迟  注：下列数值为“典型&#x2F;工程估计范围”，用于快速预算与对比。精确分析请参照目标器件的 Data Sheet（DS）与相关 User Guide（UG），并以 Vivado 生成的 Timing Report 为准。(docs.amd.com)   一、触发器（CLB FF）建立时间（Tsu）与保持时间（Th）  说明：Tsu&#x2F;Th 与器件家族、速度等级、温度&#x2F;电压及触">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Xilinx各系列时序与延迟">
 <meta property="og:url" content="https://canshine.github.io/2025/11/20/Xilinx%E5%90%84%E7%B3%BB%E5%88%97%E6%97%B6%E5%BA%8F%E4%B8%8E%E5%BB%B6%E8%BF%9F/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="时序与延迟">
+<meta property="og:description" content="Xilinx各系列时序与延迟  注：下列数值为“典型&#x2F;工程估计范围”，用于快速预算与对比。精确分析请参照目标器件的 Data Sheet（DS）与相关 User Guide（UG），并以 Vivado 生成的 Timing Report 为准。(docs.amd.com)   一、触发器（CLB FF）建立时间（Tsu）与保持时间（Th）  说明：Tsu&#x2F;Th 与器件家族、速度等级、温度&#x2F;电压及触">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://canshine.github.io/img/%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0.png">
 <meta property="article:published_time" content="2025-11-20T02:30:00.000Z">
-<meta property="article:modified_time" content="2026-04-28T04:50:30.239Z">
+<meta property="article:modified_time" content="2026-07-21T05:34:45.336Z">
 <meta property="article:author" content="CanShine">
 <meta property="article:tag" content="时序">
 <meta property="article:tag" content="延迟">
@@ -174,18 +174,6 @@
             </li>
           
         
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/academic/" target="_self">
-                <i class="iconfont icon-book"></i>
-                <span>学术</span>
-              </a>
-            </li>
-          
-        
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
@@ -302,22 +290,115 @@
             <h1 id="seo-header">Xilinx各系列时序与延迟</h1>
             
             
-              
-              <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误，请重试。" data-whm="博客解密失败，但仍可访问解密后的内容。">
-  <script id="hbeData" type="hbeData" data-hmacdigest="15912428782125068c061c4d2cfb14a46c0adc306346b1fd2c7c5fd0ea35fdb8">9ad6c89fad563ff050d22f26b96bab82dc7bc82f43e3d4609a08cfb88480264e6b1a5af076e704e3af34ced59b5b7793808525de68f18d8d5a1636c17f86f97770569c699f7d81c17a13feffb9894fddf834fb37e03ac1c1512ac9440f304433a3ffd8e2a179a674fface6bcd26e14b6aafa92de848ba1e8a81bc4a071ccddd5ca084e65d22d98e62f4547ddf55d6bd5fe99b6de4837062918331c9b9b23bb36935f903e8a429ed8eedd2b2ae269d237eee64063e166b1584e1d30a2336851a5510457dce6cec3dacf55b45a42e31f6e4713d415641b05c4c79a9fc9936a329ff5526eee18ee0782d201ad2343ba49806c5c29ce7c6fc0c01490e08830036339ec7bba88efd07915eeb901db3eb415688b485ec4139e9c59f4f65229dabe653ee8773f454a0ea883feaa9efe446fdb64e51684a6501da0c02b85609171eec53a12f8edb299682e96b865aea1b3e933cb79f5e744744996a3b6374b4b0e54133bd929ca5ae92446f563061249fe8c1fb3b965289c5395a695e238dff5cda5fcfe949b6dbab26dfdc49448620c225b577ad96a931c933c080ac0d2c9d6011de9f3f82bac8f6149576b41257614fe1cba57cb856f3827dbd60fe019c671070a4cffef5410d0b21e97279343a61bf3a4935b637751571058d4a9493c024657afa3eef8cad1aa111a15b9beb582c20cce88a4250e1ea876abc3c5476bb98019dd35b231d6865e6d63275903e9a0b3a8102ac5959408149c4a6a51c685e86f627c171a284758f11d8fcec86247f3fa9f5e3f750be031cc3ae4f0794507d5077fa3d61844099b296c8035ac5cd5a8c0e3e33e74cb4235c24bc3e18f9c0680a1255593fc3f4961267cef19e5b1a358d10f4c164f0e224ab5f59e53562d16f3251c4be853d08fbf53eb7e207742474a993b1e3271d75c3d6dcb6b91e400ce58d66605be4c08f8cfd7659eb6ddb06e51d9ec69c4f556e1f8c1f45be36e8b753a5e09a631b0fb450c237261fc531ad23eec9c7568fccb3ee1adc8fd5b0ac3300170158bfecae92ce6c1c6d5da5e62f2e69bb7a0224f530e1e885883514193f8d36213228ddfb9e1b3db836a4e72f1ff1d5a25081d48fd778c7af588e1150f998c206f9d0e40b5b7d96ae7abeec94c7e8b01e0a3e862222409ebf4a1dd4c8ec6feb3915c1e84b5b893c1476137928cca453e376b5023af1ee3946c2331072b50e1f3f466e5753bc79351bd2259a94805b128f570c423b82c675e647b3fb1f51954d2d08422b452330f529571cba16eedef1be4ff9a1a1738c2bb4092cc8c15bf23844c4e463e76722cc87d6f33a4c3f0f6f210f30ecc5fb47b84283fab5fc9a7677e3e3abfeefd1990145b077960a52dc4cc7e57ecc74e86fac808e60e4478df0290d5a760e7a400442d6dfdd88cba35a9d3d9b2438c6999a4d339505ea6feb0cc6e8d328caf03202c37a8496a23b83f16f0f20e465c1f0f2556b37c0511089fe390ddaed9363e851a7c77516a1a24b507817a67d5568d92a4ee4c035d0b137cf73411a1c061289a6cc902770057141885b992aa6764014be1cab5a936045454948e6e0d76ac17a3fc5a0ce694a554d7d5157a36272c7152cb35502ea5d22f5a578e52f50582a388fa8f38d77ca3af328d7731d4a7b30e6e6245df40688388c0d30a192fef9db0b6b3a9e2229a927deb8c94f3e20b76add0d5c3a78eb1922344c992ca8d80f42118c88ef34bf368d46cdc799b8795c45030c1347ef790d4a69c5c188be3db361eafb54312a7a4e6519184d1d123321439f96a818708297748b5e30b1957252836367b0a1a3132613052a9017522a7d3fc15dcdfa7d1a1da0e222b09c0e759c7c27af74b4fc71179756676f9d7cf0f0ab68a0ce2948d57a2e02a9be3b420ae911fccee0ddc6d997597b05690e3bc3ec3c846e645d63ccfe6f48a43aba6a45edd4001fe6c081c9ab531cf3df037756e0e51cb5c7780f8fd5a984c4dbdc59db9de2d1cf4925d8a1a8e3ed3443e84dd47b64929183f10152863dd48e0608d92d33c71dd2d1769dc6f50847c6062df46b820de129bb2ff4b249a751376ba6a804cf3bb30729492c62ce474399b2f380eb4d238794527a75a97b8eee213c5e1f34b500c463de4fc6b730cd7e68dacac3d56f94f945faff35d33f778a9c6f657393ab548bd0e7050a6f75862805eda4b5c0eea72cec1403796ffbcc222dc1c2d2ced81c70d86795a33b95eda0ff482edb41512b074db457ed38a5ed92007e49ec912df43d7e33a8a52cd5cb6e84efabfea7ad45c4f69ce809d85fc86c30fbe782b81537996733b054fa255a67ff289d9254eeb244b704347df5e41e27688c4f9aca65f620f9316efd408605da963eec67534550c8e61121a52d5299a0246cc564ba2e016ab5ce88c2dcc2d7c28eb53d3e7f18ce1f079dc3aa054a283a4137f274f0022a985b1f3aaa100e1257b50041479f8e4fbe87aadf61f656a99fb153a3310f98471792a355d5d7f0e8e9c324f2291c233e3bbd014b4fd276e2948d2a7b51ebeb56159696cac43fd81cea498a504ad846a12411a9a1cbdebcc7b9e15c425eb6a8b5964c44e3d9a438c69a2eb9b9ebf6695a60b2e02d2b1fc2c6fcb2984864d8b8df584a94844913c081aa8105177af39af98ba7a4cd312f332305e10f781aa9071313819a83c4855f727491e254195b143ccf013e9f094dd673734c134d04616065215f765528dcb803891dca4632a14641e8d1bcf552d086318227bc69d9113fbd209124601b286b7a07edb0e0a2cd094e51e1ea4e0f54b58b3b435ed305274ab40a912996c835970f697971a17ff0a6f8291431e37a903772426959cde7ddc13603032d3a5ff857a7120aff7bf505bcb8729afd7363ce8194b66cb03f4b6d6ed1537c1d3562c87bed2864f4b198df0fa7866b37442f3cc6b2c12156e0dbda68bc6740deb47d0b45cf91a0cb2dfa84353dda13dba89bd370493a45f68ec55c2253a1cd6fe367ca00031af04d69877b6fd1ad5c517153e7117090f05fdbd1a4c93522ec59290bbb592917ef12fd8ad34bc0375aacbf5f20f5ac72de94e504f754c97bc23b18ffb6525492bf5b6f7096b0875b9bc673968bfc7e7e5bde8c5f217887228c5be4df6be152dbfebbd40bcc63f478996ccea7b20f40f9b483f8e82b8805cc98e450797628aa1838fdfaed34582e6eaa608976f395d621a996f8761aad09fdab3160eaf0af495d144638fad03127eb6c7968cb055b93721db86c4ff1219efd0419452f44d5a5837ebe9d4cae9fa296705c03f5d8cdb3132b1db16e9b4e969df1b21ac85426f1551ebbaf37d819c76bc6671c6ca247fc41b96d78a8dc8ed0ac16882f9bd0cb33a1d7fa37bd6cfb9c0cb1f8bf1adb1d6acb29f76e03cbf7f87e30f8c1a2434a0b281775a9df26bc934cd6b8a22a643e768bde5b425da566effb2a70fedf17c6d68ddf650461559fd66b2717cda28049fb3b757d11ca2a97c1b9462a80df235c7d1b1289e6b4fe63f6fdad2878fd01fc930b49a049fb0ebbcadb332fedcd0aa2e727ae63d5678ca8547cf7c740fff52a4374f4ae5127c1ba8ad0035eac745519ece4eb8125fdc31b495d810a1d0a15a2ddc4ba2516215220f21556945cfc52f73d1563bd459213c55362c44638114ab8c09048153cb4eb2b5dbd2c435ca1a2438c0b3a6863da4727adb4d4539d4b0e2967197c5f9fd79768654453421e8f5a454b009a13e28cbe24e762c9524afa65c101f35b0840a4bb49b5bf917ab7b9b4e5c179246931efdafd51b159f4a930fe4db9127f73e07632e150c60205fc77da0b7862eafbb0a0e979ced9f91da691f10daaaf29beeefd62a2563ca10db5201b9f9eef3e0e76c0b824737911124952fdf6d9523a2d118e80b67eb9e7cf9ba60bae65f5fd8090f4464e8aa8d1567af759c0836f8e6274a68f08e7cc7cc4a8edae5a5b62e4b3dbcb18999ad3e578936ed9b016e1c552d1911d3029d892addbc38dbe61a41b4ee48e390a46a79e30da2b055759beb3491a20c7f7d17bb8d35c52feff7b62167976c8343ca6b4cbe9511528c21a2129213a954bcfd7fad5f16ff34e0cb2c34b2f6a5bdd8b99d645574ce75eaa21d881634c851445eee686f1c2f63551ba0b75b87745414561ed533d794b6c7656a110880fc2fb31c4c4e7d34c3347ac0a2f3327a79dec6457d0fa719adf9e578bcee7d119e11a60d4c9bc0df29d2f6e0aeb034f1494863f31e6a7f199e00714ceb18cf152a744c40140881f4cb03e655f9f7a1429e65d937b6ca6273145a56dbd1ce2b06e78630ef26be8fba4bb136fda6959201e3246729f456d8f73c58966b550e1a11b556a83328fe0314e028abf245dd785bee0afd64fc8f23254aef58ba7b96e9ccd111d06f9b53c36015a3de900cd24c837eeee3e557d0070e80ffca7830882a13c53d76369dd7f6ccfbed48e5bbd973be45bcc45626f88e5d24b958245510b2856e49e34e500410f1d34c7cc447fd37044d271623373315463aaa9d76a8513295b490964cad98242fdd506eb62cf712d6c682769be2da9480abaccfc2cba66fa36babfb43a5393051f8e4cffdb3d4eefd43166431fa01a0871ac32cfd52a4055487e59081a68029bb793e07fea52e46151f501eeeafcc58d67a91076bb720d92a3104fdd3d557fcbf2ada5a4661a16e832c70a5a4e97631c7d32c291a3599e5383e4d0af6f484511be716a45f4d8988d58f111d31d23d664d90f5fae083fa4898fee31c84f864ee6c9cc629044f7ed24f07cf13e9a9919a0d2531ff93e2153d93314fbd5fd38f8525bcc48d7a2a8562cf2149f9f85807104d211a5a0245118b3fb2ed86e6b2ece7cfcb8b7b4be132fac6ef0ff48d9548c6cf38c341dc96dea7d8ee9fbe4b8ba2ce9ed5af5b625fd1b7ad64790b5abe0596b509a679f9cbd3a3bf6ce6f82dd0ab5dda482858e43b97cade0dd564a1c7d409340f7a2828410e79d18488e0c728cae9ae5ec8541a3fb38d189bdb0ffec2cf5013ba586da7b89978f805d3669cf3827b88baa0f2581ae0c0c8ed0fe88689ecbb3cc4c9a303afe8eb92c2c2c69d8981653c79b28b4bd54f63292e694f7938732d3cff333655df5048ff113d2222f09c721aba31058e7a93154063380e06352a6802d47940c6cdbd142001afb469fb561dda531446c86c19c74a6b964463fcdc5bb3e01f72e48a7d43b597311b01ee5382db128d877ba1eced0d893f88a5e9dab54a67960590ec09975c8f5f4ccc4d0b0f6e3efc91aa78ea9c16f289de397c8c44dca1ff9efdfb8fb2d4486a6613054d99e5cd071844cee576059fe5098b5b8f4eed8511adce2519a48460d96dc58dff3471d36a573921a153b7f0a94df56b396ed67acc302d4372e61e611df2e1c7a64f56246959c64669d9780739b1a091bda4d522147ce8678e5d6bc6fee20192404d1403578d3e7235ea5e41231932d2418c6c47989a9020b8972faecb6548c904575dccc7050791846ba7cc3c7b0d4ab449186798c9f5b06cf25af4912ab93150300954c362955812df0a804ceb1b6df8269851aba74c8954f3696871067bec68a91060456ad922c10dbe9b9fbc5bbe4d9188e571b2962fb9b668f9846d0451b879f006c35b0fe3f404e0bfd2549092e01da670cf8af3cc40e07e4df918f9797b1b8a3ba901052f062825fde5e040a22da27823a8aafa98e65889e594a8cacc0c55653635be3c69ffd880bd3d6b4b6ece00fbdf37d8dce50976a319733db52443e227c8306f8d508bd9222f776b85f7a23d386ab8cdb6889ab210f05305680dff35504353688f9fc90663c5bb3c04b9a838a6856ef52c882d5104bed5410a28841f4390a2bf8d1711650ed5d2a386935e3d16ccf1d457429b9a474817a9d0b6c7f037d65a60871776ffd58f48e1ad7200c4743b3ed246f06bac1ff5f100747951f2a1d86b262672e88cd2fded53dbc5e43f86d24a78ff8c2b5f9ed68eb0dfc03530cf7568a80153d8438a0ccbd543e52c2057372e459568757ff131a78ea09f09d574ee4ea0bc89b75a4a74dbcf8721b41bda4d399198106451675607d13971ffcd8631abe15782ee46584735d74efd34fe3feff560a34228f58adf1797dba0a574d76147c3874dc9544fe87788b8cf91224de2af0ac2263ed026b1745b23e242b8d4be204de7904744d897eb39fe64430861264f309851fbcbf21f1999d5fd4d7b275c7270c9393e021e1bd4510897ebc418ce1f8a7a54878d29cb213fa807d5240e654b0dac4fce8247bac63195bf86b9b81bd94c06a2223493f4a44bc65e7bd4f2c886d77e18555f08921589204d5ee595b0945b45bb620a75080c8e48afb26c2b4b206f93803ba8c10223970fb7e915036feb2a5bb0dcd7480969944adab208c97b01a63428e510472dda09685837c32c254c026587d3e1b065268aa3a87ab5911af1bf71061238a1b3635f715424ad226bb1dfd5f2dafd41c43a240ea03404c711d20e89e7e61fc3a7eb99a7658534e1645fd735ef6356e747fe66de724686deb52188f9423e56dc5bb0e0b31c44859a0e8d784ded6ddb19d54475e143ad7384cd9c36bc17abbdce534bcdb3a5cfb7dd5404d7520db456e03b68e5d68e80e5490d5140628fd9a6e85c32794a57a24b8c7eb1ebe118f692948783aedc8afc9f352fe1f5ab5bda3971bbd9f95aada8ef05307ae65d47304bc4756d8bf8c6651772015fe60f66388ca28b4b52f2f1371dc5571905ac392625cc52beecefc0e55de67c2014f9e5f13a3d329a8a2e1683589ffbd235f5e4955ac6296c01418fde6a807a683f7444d3aefe597e74a5f17d09fabd3e6cb55cb5e83123724883eca738ed10d8123d8ecf1d792be3d9a63018028275c62c641c0a2a9b251be22d2c2d5bdd4b4fc3648fda9ca7f4e51130d442cbeb317d630842a611ca24269c3361c941bf3f99fc1e9d48c6050bbec6ceaa63e6f539c86d7b44a59dac87ba8e2d6f93ecdf41dea4965a4558da665976320efc3b430f2390ac794cfe699747539d7479e14b8a4f9a7da03bb9caad0ee3ced024cf87cf2e5f382f6fdfc171b11e0fbda1c6409a489ede6d3242cdd111c51f113e3a42b902767531b44917127f4f36f4f63d786b4c84f1ec49b80a28816b0ec155c4725b2d1550c577e0cef71efd6bd48ec63b9f693ffe1944d5c3585758620517fb487a07edb452b22784dde7c6316269555d8070c723d4364f83df006b4363d281c5ae751a5b154b1f034d5e35368ed814bdc9aa13373752cf656a15e3eeb09592d9fd8b01de55536ca5f476c74289ab497470e8a77c899368eea0b5f27af818137a0ceae42f802164703b88e07df93721546e2e65e36fd12b62671b815303519b9f20b7e02ff77fcfeacb42ac4ca16e6c7ef3b48ca52d87753d8faf8b8d4655c28c5ad56391dd358e74abd7d13c41d68b0042b0a57a18a4991688feb8e8a27c7b3d2db1cd7ec1159638d1857b7822f40df6622b8bb5e8133e55f00a8efc253acbeaf70d01fa39dcdd7180a0830dc773e49290068671faef972a78529ed561365b0cbdd0774598964236637b4b578bb8e687bd885e13ee945800470465dd7920138d8f45f80f71ea7e56588e3f722df8248fb856f48c923ff7f16fef8a92ca88ba8625d5c3a3e8eea60a4cc344ccb823f992ca01ab72ba5bcb94b690e1e1529a75f570d882852d0148374448b72dbdccb18432b00a253ce83e474c852ac7ddf1570a95a29ac04a25e128462a365d26613f46f6aedd270658b1ff761d2fd621bf98863362833db50a67eef7a55572195ee17e9a21e1e8593ee67e8b31664a8436f48901e08ea000a0bccaaaf5bba024da5c2e62f19eacc5e1a180c86bdf97e6a97f17ac7be32339d78bc78fc603cccc8c6a6c8c8b346b28b19056abb91ef77845912d5dafe6c3ed52c2a61bc15a354f9fc41517eb3b2c684da3bc5a270620f852b11e99c79db20d22f9ce257b604b44a857ebc936a52d951d25e575042044b1fe6addab0ea02dc18fe266371c113cedb921979393af3fbe630912d70271a22f5c4d2949ecd61a1e983ff9c97d87316ec2f17c1e69f080018934869e4f3cdb0dd105b48f3e91cb3d516123b6de715c6cc7779419fd3f5c7b6abf052ed15f29983ad6bbc8e474285ebd3f651151033f836b90cae11f4e736dba8a80669fe82204fad22808b49b530a8e99bb045f17e76c386e2aca6ec81df0693bd104587c9ea9632feb6befb51b7eeae86c5ee8e2675fe4c3bb169a67fa4b88a141c5d98e20a7bd4a5c45bfafc2451c7e0806d9f5227e5bde45410029a3f7f6c67616b42d425b46f7f0a14d4cdfc111689398374d645052a9e02a66b14b51f647ead9cf3e12ffb4f5678640ad844f1aa460abfea5ba5b262e6d1c149f85d41bc602c4c47db430c8137e98b50ddbcf3dd938a3aee15e7542dbd475561a4a9bcb9578d1a2ee64cc4fdfa922f0778e5d6152655667e65b79c940b5a41f6d7b796a6f4e93cba7b033ac69ffc039ec7fde3a8a455ac794a4f24680dbba2c6bdbcb03a4b148e46387b68e0466c8554e6bd559e2ec05964860f60f3801433c547e93ba92a1989a27f3811cfb94b3816979c5f1cf1fd053ad772beb2c0bf0bae5eb07235a5c901f66c74689f7ade805abaea849ec18ed9c7247dcdad087fe63fa7d80a570f1ec08d2a493ec362066626c7705bd44433d01a42c86f21cff5555735b5abd6315bb1f5882321294a282654fafc2ac426697e8b7aa8cd43345a49c28543db2724d0e75cc3677ff7139ce0fc4f4332510c50a7a8caf1eee93e10f70cda7a6cdebfece25706e8b12018fd24101ec1cce4e02c47cee678bd439f63f3b4ba53a8e0eeeb9c61fccf743fc3e26ebd790d9771563ce79c1daa905df4143c737db76b1d95a96d2ea0cdb05dd48a594a569b9c327a1dde63db23c044fabe57b5f2192b68f9988761146d4382f55cc5be0e97f97f3eec1660d2c8c92c12f489b172739b61dee0f8280b99ef8ae85c1ac7a818fec6eaaf2d839e0e935f63dd524ae04f14bd441d49b43f35f3d391f8e5ab5c8a4581c8603afe99ebb6bf7d7548c505ddf44b9bf4252c7305e6d1283b7b3a1094bdbfa49fd5294151039522afc3a8668c0646b267317ad49a86a63873f5f1c58f19adbc9a0c37839001c3b41021406b2d24305fc476bcfa461c81ee36ac7a86550b1f61748325b80f12d35114bc0b5fcc30019efcb431c034b6999b37fb3adab3db978208e97e4ea7f32261fc3de9fb025a9552a88c1a54091cb132d8d899c17625fe90eff6efb1b7faba16c20c2f064306d29c8f0eb64c17c2da2f21aef6bc72350f9946ab39473b71fe15bebf4f1d3d0c4c63ff90de831e91066a8113afc11e0fe40e0a5466bc47a375ba757f12fe02404b8c85ab7bb42705b8bc6a11ba3af041be7caabaf62a13e75509c76fe08145c7320b0353f041e12170aa72f8fbcfac4701a7d584f6f211ab4817aa0a4f603c8039621d9beb9d50d9b820c7438ea7907f2d4259892c648c26266cc0069882b75f099d234c814a28b74ad1523b55dcd16eaf6fff3945651318b2a2924f543f36e8634559e29c8aff995e7cd072ce610a0f2bb32d0b2387822f92d65d49cd64fdabb543c3814a43e45a652d506c1213224718b455c32e40b458a86a8f0f78f99e78e6a970050d213a93174bf1bdb7ac02f45e8407637945054b3a002c1ec121947a9b71776f6c1be38acb9d31924434cedfb0d0799abecb7940a280f6235e6b2387e39916a83b822a58028d4f29a9c50dcdc6eb34ce8a73a87c688e5a9af8615ecaba8221711d725df263a3b50e800c710ffee5e104949091b81373ab23a21e0cbfcddd336ab7406b992a04c4d57a446c377f9348750272e36c346ed1f26515ebde9e29f2c99bf6d22b93641c5d07039b0704e5e3fbba3c43fcbbd57de5daf49f71c8607f5855e779926b7c351e5f3f9641a9d40abe818a01f2ad565c690bbe76df4786fb25daab847ad8a3f8ab33689b025506c7754088408400c3f3918a7c7248d03ae5443a250040858a6312111a76df23f4e46185656e9c4a269b79e9b535eb07ec7d36df0c527de54ffa32f2ca983a8a148379d983f21d1093d1527a66fe220211b28f8c4a86883e7f689f8dddd0c917104eea67a8aea5a2f12e7e24d72e403d6f392420e914f7443d63f79d7dd28ddcc97640635fe5f6576ea4a17e4a1d7fa9dc44a928435cf3b53ba2f1c5fdb8a7599120beb8593c34665aaf166dadc376e4f48a6c6f1736c43d4eeb840770c066ae252ca851482f33e37b97d3ad522c31124287c10d9ad95635aacd859bf37510cfbbaf7dbc4f71ba86227543333e464d3bd48fd18b787b362b41f77b938b8c0237f6c9e1158eb72703b5c1132a7cc0bb42a909809b8f644ee37eea99b3248c208491968bc0e20cfe1925a163fbffc98cd2baac8085c3453d028960f8610198662b6ea723994a56553910411480acdf0c7be3dfe45954f9e70560c75b5ee68de943b9d890a9be5592c0d213790288a79c26edf4236304c92a3329d0ee074828c9bfc7db55467e4d29bf0c260185fe3f55ed81a0fa35f2231a44bffc52643210660e0cae231aaaaaa8335ab24df7f4814c6f4a5a0d81cb44b725bab9ff3991db3df98fffd6e537419917a5b1d3fe66eec434ad7d2b1129389e2f5abaf9904561184955eeb778c5eab71380ce306b4377546b60a02508d36ac11687910b8502028b373884f9506da94b5fe4eace6aa953c027b86fb72a590b6a1061a99013aea4eb395133e135dd73bb7fae6409970f52ce7db06c070ae776aac0d4dcc103b1af1710f34dee362074328b801192619cb50336ce135bb539c7f5bddd5961e72bfd5339d3e66ba9bf5f38274c0a81ae5d8463a449925f3283a68562015b9169e3494cdf6f1b642d4d9921d180afc8c56f70ccf034996d6f5e3275c6fe7f3fa8af9f2be89794356592eda70c5f0b2b6a105921690551b9c98315e57966ceeee7079f6d5ba67936ffef1981aa194a426ed511ece324af7e4156599ebceca6c565d2f1cd62db79450d594f6d49a70e07ebba1b8e1213697dff0f280faa00939315e2af97474dfed6555b148656667442eb19a84300ab651311adeb3236eba8311b7a27b261d376ea9bda470336c46b7ca7e9dc8449e020e5ea388b1f22b4fd09713c5142ffab91e3a09f3b69e5e0b1c6dd6038fa7e14de2bc216a9df4901d5d876b17a912d4612b90e484ae43da5d4b3f52ed129c37bd386c3060a88965d1318d8c7e79d071711af79d0d60aabfc4650f30759164b7a2f371effe16ab25dae56e6e793e19955391abe9f26f77c9ee7294556770f0023a5314f765fb5a1c2497f58edd8297b8cbda709876ce90270d2bbcc7759f01a91de5fc724d60758c8c4c253d42391dd628aa822bb271a31f59f913b7f7f9862fb243bd2cf3896f39c2f577459845e7c9b9b7b98f3ffa38988e9e8fa977ae62eb9b002f713179d0400c755659894f064e9c2c406a20a3b45bbdc04d0e65c0eec9d9dfde7ece7bfcb5d61eb9b3a8740572d9ecc6e4488cc2dc23d7c50f58a53a9d225f808db9633be1a10f60436d9e8009cf14374b4d7538eedca1a19951021f7768047395c32a1389427494ea7f3e12114e21edd8b4d8b85aa39f610e9ef55004b90c04cbe4ec8994c75df3c767230c3322b23171ccaead7311fdf70e38526509636eed075f1f9db60421a388f08233eeffd320390e2c6b892dcf6a58638b34a71f1cde7d40c48de841a540b1f8f9c036cf8ffa954a3dd42aadee73e624780471b8014168271ccaaeb9ef26f83cf7a025282fcc7ca8df278a72d71dd052e07fb9e18251ecd444a3fc78694d3f0b5558a398f94ed5d92284172d5b113a55201ac726cddaf5a0ec02084dcba0969bcf99b599899867151d7f2f076bd8014e5075d556c38a85a62636fbd70f7e79d463238f45867177403658a1e4cbf26397c805500ffa8dbeafebb7ad5f808043e907e8d06778122ac3476b11739edaa0e18bea832360ea3df9ab2ccbcfe2d3762d3f54c225c2a3821c746b5e6e79bc5c2f7bff4ca507ea57da19dc2c650bbc02dbfe2950ace34bd3b02c6387c43daa02bba039627a64b9c6c64a5131c5bd9bc3359433f5f28f6b5c91500d66c7010927ecff39f44a0165facdbcc67093bd8f51bd8cdce558f558b9a67bf7809eea85856cb7cad30ab6693480d1fed7f9fd0597013bb63726a78e56294e72f48eb4e1f5566daf3d714e8eacd21a0b6729915ecb8277baaff305311ab7c97bc4913ff199ef4fd616e95803ae4ab7405c5f036d002902e311cc8502f08a952923cc1c33d7e75771d508907938486ee950112b598b07a77134341027349023a45ecc6b4d44b5a28e4d4bc366719c6f7e182fa3a1b4ebfa2da4fed6aca0e1538dd7b049915b8d43dc2328c7bc13c4b2eb30609d3076a306edf9176b7cd7700aee233695393b0c34c52b2a1995abb3c76ee8239ec3f673ffbf456418934fa34c3d71fee4e0d4a9a966114d0dc4501c42b5f7e3dc67bca84a4354812291ad77ed8bbc63812c4e0efd9236e299186f86adebb79b8f58d60ed2cdac1b1b9532c6a91b79aa560b2bb067c6a48ee8765ab9bc7931ab71469c0d9ca624f2de8068068ebfd1cd89cfd353f096e7944f8a93d0104b255120fa518bdfbf93f5060bb6632e5d3c5a894fb55b6fa31579a054628ebe8a8c09f30a4c70d9c2ba623759db4db8aa93371098a132463ae257a12b1bbe1a944719db9324a9167b87dc1e5e626679e808e312a8141f1735d0e1e8a3ef20440570dfdc4f4f2edb645f8de1c2199743ed6e775318525d4b2b1f6a1399f5426c9112725e5d42d70de059aec4c9a074f6e8a1391f5c906f8b133ce9ee61a5b619162e3b70b303d6bfe820e304a352d3d71481be78ced346cf7f505c984334e089aeb71f2026c0ca7ff9761913f2dc18fcf73aa2880da7c1622cd0e0cd93eab3fd0953ab6d2238239c043d076191ca4e015700567fe31c81e0202b52243a79eaa31b60199994704d7c81a7a49972e7ba84efd1a54f5c108c008722f0abdb3d23dd7e17ab20a7ea978ee86b5dab41dd97c519f33ec8fd6a18335275334f8c9ff8766fb2e6ecbd4255ecf3f4bf489743b8234cf1731279b9ec9c48c3dd90e91b635df086974fc69ee17a9a48a4cb9e832a8f4cffbb5c3cabff1c3b03af62fb6e25f9901cb8ff66d5ba4b32b7bfb509c96478388893d0247313cd1025dea7bc045a5bf2510288cef3704c2ebf055939ee23ff60f8dcf2f6b866b0130ffa74bdce7ed41cfee773959d6216547d3e6665c5b82422f5138a868fa2f58b68ae7e5d40181fb0d9d6e30ca1b3a2091604b8294d475431cdef0de8ceb246466713802e9551893185af3433dc4b8f34c997aefa2a938ded25d4f262099b90365e8ec9a33af36d70d3ed9f6dc58fb7caa3524f8d7c6271cab82eef3ae3766d960750465554d256e587aee34b2cce7dfd8c9d52f51feec4f180d37c518130be35fb9d3fc7c9efc9a50673143c15497f94aeefd7be0ad10b9165c1e5a0e08ad92a215bc3933aa8742a67a49b30cd899e404af7bcb3c28c4fb9aada4e6458ee18e4c0aaae0dfa989a640cc4f825702d1e9941efede7e06bb67c5ee27c35fa7b63730fce18c9df1ea6a20af4b05e10934562d85cfa5562e98ed819820d33d1ed5d2b52074baa74688d9e1156c4f02cf6dd26afd626a9ebe57c844fc24036be946677ee9d1b32a55cc6da5bb6099e87d564e87d6aa0f924f601681d8862e55a22135bebd376a9aa1eb4426c19f838adf289bb2e45bbc46801a47bf30b2839d3efa21d69cf1071b53dd6752332ba55b16327bff13b1f5d52b82c494e6e6e0c30090f6d1fcfa82ce378563b45590cabe3abaacc786ec42b5da5250d4059102a996203d36c57e35783ef38992090ccd9c63eaf95900a9eb91e0be838a415e9a63ff35da88df6e112f7d9935e7fec7379b25cef0ea563d1b3e05cc44a79072a8abe1efae55c06646fc0060be2f2a4f2a12a24c0fa845def6a0a99f303cc01e15fc56d895a624ebbd2611e930259fa62e94d9bfa184a3f480866a0ee89226fd5cfbc750cf2d01f85bab29b0ab4ea5214f2ed78530507247e671c1c9d0a06544e8119dd92af077e56fc61467535aaa7ceb51c433571d2ae938f2631cb9dd3464c2a4a0638fb913d2aad922cbfb4a6a00c968456088fbaf6b6166e29b26b11502503d0e2a6901caf6c8dc5ef8f0bec0efc3bfddcbb38097d4bc47393ba6d5c65be2db430f8d56bdb3418216907394d902271c6028e4c1355bd64de919027ba54896364fca861b47963536718c2f2872f76ded599ac5e35b3fcec6c9c33cbd7c5191f7875e04165f0661df0830f494af6874baa0ec70b89dfde51f4dd1e6c48866309d70615642ad2597951f48b28e71a45bf2fafccf7cd66996282c24b8be881efd2f7d48a74a66d8dd4afd6c4e8fb444e206bda55f46ff55b5cfc18a3c4a55924a7e3e69d0000159facf9dbef3f2424ce69b6e06f8d604021a5e906f281c72fe244d48f6edbf908355adf323ce9c004ce87bd465b7b943bffa3f7e50f83f767dae0897ba115d8312739338af7571d7a9320c19b6d15b42450a11e6f30cb01af8fc930f8796d2c184247ef63691850a85f6609bff5e6c1a75dcb45f4f2e8f27e6767dd0e11076d92c89928bd2b74e190bf2c9efeeabc25e24aaa988c00fd5083e60b4ad52e3f4ab52e99aa9f10e448e5baa277ffa13830badd17e708086c24fd1ee3695a7a20dfcf21f0e595e4e379c74e4f70e2f2b43a1c521ee16d</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入密码：</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
-              
+              <div class="markdown-body">
+                
+                <h1>Xilinx各系列时序与延迟</h1>
+<blockquote>
+<p>注：下列数值为“典型/工程估计范围”，用于快速预算与对比。精确分析请参照目标器件的 Data Sheet（DS）与相关 User Guide（UG），并以 Vivado 生成的 Timing Report 为准。(<a target="_blank" rel="noopener" href="https://docs.amd.com/v/u/en-US/ds180_7Series_Overview?utm_source=chatgpt.com">docs.amd.com</a>)</p>
+</blockquote>
+<hr>
+<h2 id="一、触发器（CLB-FF）建立时间（Tsu）与保持时间（Th）">一、触发器（CLB FF）建立时间（Tsu）与保持时间（Th）</h2>
+<ul>
+<li>说明：Tsu/Th 与器件家族、速度等级、温度/电压及触发器类型（带/不带异步复位）有关；Data Sheet 给出器件、速度等级下的具体值（常给出典型 / 最大 / 最小值）。请用器件 DS 中的 “AC Switching Characteristics” 表格做最终验证。(<a target="_blank" rel="noopener" href="https://docs.amd.com/v/u/en-US/ds180_7Series_Overview?utm_source=chatgpt.com">docs.amd.com</a>)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>系列</th>
+<th style="text-align:right">典型 Tsu（估计）</th>
+<th style="text-align:right">典型 Th（估计）</th>
+<th>说明 / 参考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7 Series（Artix/Kintex/Virtex）</td>
+<td style="text-align:right">~0.3 – 0.8 ns</td>
+<td style="text-align:right">~0.1 – 0.5 ns</td>
+<td>依速度等级（-1/-2 等）与器件不同而变动；参考 DS180 中的 AC switching 表格。(<a target="_blank" rel="noopener" href="https://docs.amd.com/v/u/en-US/ds180_7Series_Overview?utm_source=chatgpt.com">docs.amd.com</a>)</td>
+</tr>
+<tr>
+<td>Spartan-7</td>
+<td style="text-align:right">~0.4 – 0.9 ns</td>
+<td style="text-align:right">~0.2 – 0.6 ns</td>
+<td>入门级，速度等级较低，见 Spartan-7 DS（DS189）。(<a target="_blank" rel="noopener" href="https://docs.amd.com/r/en-US/ds189-spartan-7-data-sheet/Spartan-7-FPGAs-Data-Sheet-DC-and-AC-Switching-Characteristics?utm_source=chatgpt.com">docs.amd.com</a>)</td>
+</tr>
+<tr>
+<td>UltraScale / UltraScale+</td>
+<td style="text-align:right">~0.25 – 0.6 ns</td>
+<td style="text-align:right">~0.1 – 0.4 ns</td>
+<td>工艺与布局改进通常令部分时序优化；参考 UltraScale/UltraScale+ DS 与相关 UG。(<a target="_blank" rel="noopener" href="https://docs.amd.com/api/khub/documents/pTysoma4TYgNH95BrY1Sbw/content?utm_source=chatgpt.com">docs.amd.com</a>)</td>
+</tr>
+<tr>
+<td>Versal (ACAP)</td>
+<td style="text-align:right">~0.2 – 0.5 ns</td>
+<td style="text-align:right">~0.1 – 0.3 ns</td>
+<td>Versal 的同步结构和 NoC/时钟资源不同，Tsu/Th 仍需查看 DS950/相关文档。(<a target="_blank" rel="noopener" href="https://www.mouser.com/datasheet/2/903/ds950_versal_overview-2634484.pdf?srsltid=AfmBOoqtgpdQlzYc_dDwfvn9QK8DjQV4VnylWpZb5_mFyX-80yCiA6Yo&amp;utm_source=chatgpt.com">穆尔森</a>)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>提示</strong>：不要把单一数值当成“通用真值” —— 比如同一系列不同 speed-grade（-1、-2）与温度/电压条件会显著改变 Tsu/Th（Data Sheet 会列出 speed-grade 相关的具体项）。(<a target="_blank" rel="noopener" href="https://docs.amd.com/v/u/en-US/ds180_7Series_Overview?utm_source=chatgpt.com">docs.amd.com</a>)</p>
+<hr>
+<h2 id="二、组合逻辑延迟（LUT-逻辑级数-进位链-DSP）">二、组合逻辑延迟（LUT / 逻辑级数 / 进位链 / DSP）</h2>
+<h3 id="1-单级-LUT-延迟（典型）">1) 单级 LUT 延迟（典型）</h3>
+<ul>
+<li><strong>典型量级</strong>：<strong>~150–450 ps（0.15–0.45 ns）/LUT 级</strong>，具体随器件与实现（LUT6、是否有映射到专用级联路径）而变。<br>
+解释：Data Sheet 中 CLB 的时序（Clock-to-Q / Tco、logic path delays）与 Vivado 报告可反推单级 LUT/CLB 的近似延迟。对于高性能器件或更快 speed-grade，该值偏低；低速器件或复杂布线下偏高。(<a target="_blank" rel="noopener" href="https://docs.amd.com/v/u/en-US/ds180_7Series_Overview?utm_source=chatgpt.com">docs.amd.com</a>)</li>
+</ul>
+<h3 id="2-多级逻辑（级联）与进位链">2) 多级逻辑（级联）与进位链</h3>
+<ul>
+<li><strong>多级 LUT 级联（3 级）</strong>：估计 <strong>~0.5–1.2 ns</strong>（包含布线开销）。</li>
+<li><strong>进位链 (CARRY4/CARRY8 等)</strong>：每 bit 的 effective carry 延迟 <strong>典型约 40–80 ps/bit</strong>（不同器件略有差异；CARRY4 实现 4 位段，实际最快加法可达几百 ps 的总体延迟，依 pipeline 与布线而定）。(<a target="_blank" rel="noopener" href="https://www.researchgate.net/figure/The-CARRY4-primitive-available-in-7-Series-Xilinx-FPGAs_fig4_291019054?utm_source=chatgpt.com">ResearchGate</a>)</li>
+</ul>
+<h3 id="3-DSP（专用乘-累加）延迟">3) DSP（专用乘/累加）延迟</h3>
+<ul>
+<li><strong>量级</strong>：对完整的乘-累（无 pipeline）路径，通常是 <strong>数 ns 级</strong>（例如 2–6 ns），具体视 DSP 版本（DSP48E1 / DSP48E2 / Versal 的 DSP）与是否启用 pipeline 寄存器而定。带 pipeline 的 DSP 能以更高频率工作（降低组合延迟但增加寄存器阶段）。请参考 DSP UG/DS 的 Switching Characteristics 表。(<a target="_blank" rel="noopener" href="https://www.xilinx.com/publications/archives/books/dsp.pdf?utm_source=chatgpt.com">AMD</a>)</li>
+</ul>
+<hr>
+<h2 id="三、布线（互连）延迟">三、布线（互连）延迟</h2>
+<ul>
+<li>
+<p><strong>趋势</strong>：布线延迟与物理距离与所选路由资源密切相关。一般结论：</p>
+<ul>
+<li><strong>同 Slice / 同 CLB 内</strong>：几十至数百皮秒（~50–200 ps）；</li>
+<li><strong>跨 CLB / 模块级</strong>：几百 ps 到几 ns（~0.3–2 ns），视距离与拥塞情况而定；</li>
+<li><strong>长跨芯片/远距</strong>：可达到数 ns（若跨整个芯片/package 路由，延迟可达几 ns 到 10+ ns 的极端情况，取决于器件大小与互连层使用）。</li>
+</ul>
+</li>
+<li>
+<p>Xilinx Data Sheet/Architecture 文档强调：<strong>互连延迟通常是时序的主导项，需要靠布局（LOC/RLOC）和管脚/约束来优化</strong>。Vivado 的 Timing Report 与后布局时序估计（post-route）是最终依据。(<a target="_blank" rel="noopener" href="https://docs.amd.com/v/u/en-US/ds180_7Series_Overview?utm_source=chatgpt.com">docs.amd.com</a>)</p>
+</li>
+</ul>
+<hr>
+<h2 id="四、I-O、IODELAY-与-时钟网络（Clocking）">四、I/O、IODELAY 与 时钟网络（Clocking）</h2>
+<ul>
+<li><strong>IODELAY（IDELAY/ODELAY）tap 延迟</strong>：不同家族的 tap 值与实现不同，Data Sheet 中给出典型 tap 时间与最大范围（例如 Spartan/7 与 7-series、UltraScale+ 的实现和单位差别较大），应以目标器件的 I/O 文档为准（IDELAYTAPS、TAP_DELAY 等参数在 DS/UG 中列出）。(<a target="_blank" rel="noopener" href="https://docs.amd.com/r/en-US/ds189-spartan-7-data-sheet/Spartan-7-FPGAs-Data-Sheet-DC-and-AC-Switching-Characteristics?utm_source=chatgpt.com">docs.amd.com</a>)</li>
+<li><strong>全局时钟 BUFG / 时钟网络延迟</strong>：全局时钟缓冲相比普通布线的延迟要小、且更可预测（clock tree 的 skew 与延迟由时钟资源类型决定）。Versal/UltraScale+ 的时钟网络与传统 7-series 有架构差异（如 NoC 与专有时钟分布），请参阅 Clocking Architecture 文档。(<a target="_blank" rel="noopener" href="https://0x04.net/~mwk/xidocs/am/am003-versal-clocking-resources.pdf?utm_source=chatgpt.com">0x04</a>)</li>
+</ul>
+<hr>
+<h2 id="五、工程实践建议（来自官方建议与行业实践）">五、工程实践建议（来自官方建议与行业实践）</h2>
+<ol>
+<li><strong>以器件 Data Sheet（DS）为准</strong>：所有精确的 Tsu/Th、Tco、Tpd、IODELAY tap 等参数都写在器件的 DS 或对应 UG 的 Switching Characteristics 表格里。Vivado 的 Timing Report（合成后、布局后）给出针对当前实现的精确数值。(<a target="_blank" rel="noopener" href="https://docs.amd.com/v/u/en-US/ds180_7Series_Overview?utm_source=chatgpt.com">docs.amd.com</a>)</li>
+<li><strong>使用后布局（post-route）Timing Report 校核真实延迟</strong>：预估有用，但后布局报告才是可用于签核的数值。</li>
+<li><strong>对关键路径做布局约束（LOC/RLOC/Pblock）并使用区域约束减少布线延迟</strong>。</li>
+<li><strong>利用流水线与专用资源（carry chain、DSP、BRAM）减小组合深度</strong>。</li>
+<li><strong>对高速 IO/SerDes 使用器件提供的 PHY/IP 与 IO timing guide（包括 IDELAY/IODELAY 的校准）</strong>。(<a target="_blank" rel="noopener" href="https://www.xilinx.com/publications/archives/books/dsp.pdf?utm_source=chatgpt.com">AMD</a>)</li>
+</ol>
+<hr>
+<h1>主要参考资料（已查证并推荐直接阅览）</h1>
+<ol>
+<li><strong>7 Series FPGAs Data Sheet (DS180)</strong> — Xilinx.（7 系列总览与 AC switching characteristics）. (<a target="_blank" rel="noopener" href="https://docs.amd.com/v/u/en-US/ds180_7Series_Overview?utm_source=chatgpt.com">docs.amd.com</a>)</li>
+<li><strong>Spartan-7 FPGAs Data Sheet: DC and AC Switching Characteristics (DS189)</strong> — Xilinx.（Spartan-7 具体 AC 参数）. (<a target="_blank" rel="noopener" href="https://docs.amd.com/r/en-US/ds189-spartan-7-data-sheet/Spartan-7-FPGAs-Data-Sheet-DC-and-AC-Switching-Characteristics?utm_source=chatgpt.com">docs.amd.com</a>)</li>
+<li><strong>UltraScale Architecture DSP Slice User Guide / DSP48E2 documentation (UG579 / UG958)</strong> — Xilinx.（DSP 性能与时序特性）. (<a target="_blank" rel="noopener" href="https://0x04.net/~mwk/xidocs/ug/ug579-ultrascale-dsp.pdf?utm_source=chatgpt.com">0x04</a>)</li>
+<li><strong>Versal ACAP Data Sheet / Overview (DS950) &amp; Versal clocking resources docs</strong> — Xilinx.（Versal 架构、NoC 与时钟体系）. (<a target="_blank" rel="noopener" href="https://www.mouser.com/datasheet/2/903/ds950_versal_overview-2634484.pdf?srsltid=AfmBOoqtgpdQlzYc_dDwfvn9QK8DjQV4VnylWpZb5_mFyX-80yCiA6Yo&amp;utm_source=chatgpt.com">穆尔森</a>)</li>
+<li><strong>Xilinx DSP / XtremeDSP Switching Characteristics (应用与切换特性)</strong> — Xilinx 文档合集（关于 DSP 的 setup/hold/clk-to-Q 等）。(<a target="_blank" rel="noopener" href="https://www.xilinx.com/publications/archives/books/dsp.pdf?utm_source=chatgpt.com">AMD</a>)</li>
+</ol>
+<blockquote>
+<p>如果你需要，我可以把上面每一项的<strong>直接 PDF 链接</strong>或把针对某一型号（例如 <code>Kintex-7 XC7K325T-2</code>、<code>Virtex UltraScale+ XCVU19P</code>、<code>Versal VC1902</code>）的 <strong>Data Sheet / Timing 表</strong> 逐一检索并在回答中列出（我会把对应的 DS/UG 链接逐个列出并标注你关心的确切表格/页码）。你想要我按“器件型号”还是按“系列（7、US+, Versal）”把 PDF 链接展开？</p>
+</blockquote>
 
-              
+                
+              </div>
             
             <hr/>
             <div>
@@ -607,23 +688,6 @@
     });
   });
 </script>
-
-
-  
-  <script defer>
-    if (document.getElementById('hbePass') || document.querySelector('hbe-prefix')) {
-      Fluid.utils.waitElementLoaded('hbe-prefix', function() {
-        var hbePrefix = document.querySelector('hbe-prefix');
-        hbePrefix.parentElement.classList.add('markdown-body');
-        Fluid.utils.retry(function() {
-          if (Fluid.boot && Fluid.boot.refresh) {
-            Fluid.boot.refresh();
-            return true;
-          }
-        }, 100, 10);
-      })
-    }
-  </script>
 
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>

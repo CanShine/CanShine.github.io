@@ -19,16 +19,16 @@
   <meta name="author" content="CanShine">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Git 常用命令">
+    <meta name="description" content="Git常用命令 本文总结 Git 日常开发中最常用的命令及其推荐使用流程，适用于个人开发与基本协作场景。  一、Git 常用命令速查    命令 作用 影响区域 是否联网     status 查看当前仓库状态 只读 ❌   add 工作区 → 暂存区 暂存区 ❌   commit 暂存区 → 本地仓库 本地仓库 ❌   fetch 获取远程更新（不合并） 远程跟踪分支 ✅   pull 获取并合">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git常用命令">
 <meta property="og:url" content="https://canshine.github.io/2025/12/16/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Git 常用命令">
+<meta property="og:description" content="Git常用命令 本文总结 Git 日常开发中最常用的命令及其推荐使用流程，适用于个人开发与基本协作场景。  一、Git 常用命令速查    命令 作用 影响区域 是否联网     status 查看当前仓库状态 只读 ❌   add 工作区 → 暂存区 暂存区 ❌   commit 暂存区 → 本地仓库 本地仓库 ❌   fetch 获取远程更新（不合并） 远程跟踪分支 ✅   pull 获取并合">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://canshine.github.io/img/%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0.png">
 <meta property="article:published_time" content="2025-12-16T12:50:00.000Z">
-<meta property="article:modified_time" content="2026-04-28T04:50:30.236Z">
+<meta property="article:modified_time" content="2026-07-21T05:34:40.540Z">
 <meta property="article:author" content="CanShine">
 <meta property="article:tag" content="Git">
 <meta property="article:tag" content="命令">
@@ -174,18 +174,6 @@
             </li>
           
         
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/academic/" target="_self">
-                <i class="iconfont icon-book"></i>
-                <span>学术</span>
-              </a>
-            </li>
-          
-        
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
@@ -302,22 +290,164 @@
             <h1 id="seo-header">Git常用命令</h1>
             
             
-              
-              <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误，请重试。" data-whm="博客解密失败，但仍可访问解密后的内容。">
-  <script id="hbeData" type="hbeData" data-hmacdigest="8069644d70bf1fa4a302dbfc6260aeb744161cf014fb2fd8fa537f2fb10889dd">9ad6c89fad563ff050d22f26b96bab82aeb0625730c6274e226f164ede31ce7c85b447977a276510133f4ef2695f3d37c22425b8145fcc5e9a64c490535d37088241888e629d36ae7c1629878690bbbb1cc368cb9fdfab4f729ff6ad5e7dfe925fa20778887cafec5caf7222a2c88c2f4bf0e256cbcbaa23141b9a142e32301b47464eee060197a8a2148adde0e208ab55cd62e9f7efe3ef3323449ff2670f39c5a6025def433fdbd98f05100be1c4478ba9095492409a1ffa1c38548a7d8c495dde09a412ccec9f85f233ade332d094c72a537363f186be6aa5c2c790596ad1bd36f018cf652905414796a2c10f0a0855a4e19ebe3db0805029ba9934fb6f310a606a5606cd16939544fcfb6bfb20a004f301194c8d5a4d3ac734ebff2cc4b31aad9c66dc622b5d02f7d5633d14b2e9d37448c77f832271f2383b2fb6d87c4ec77ad6fc48ce097ebe7d02314b31e0e8f92941d043c694ea94064ada168816f2a375e08ef5802876a0a5e8ddf7bb9969e192966319999b648527afb800c0354a9c84194eaf5b65deefd15ad8ecb3917e83461c640be3173f522aec2cb805f96e03e017fa5d9b63a2be534d7c716019a5a62c63463b9132e30cf545cf36653dcf27780d7c374f7ffd838905cc36bc6bd8d0654e3f5fc8ebab6141f9ee2a42c2d54ba77e024627ecb4b0b91a0342f0e1277c3233360b437f099f8913485f809331e095a61ebd8e25a4bafc2e300a85429cf974922676fe040aee0819e147d96fe511b6359cbb7023eaacd68c518a4483626721111a25e7832044d785792323462df1ad0b2a3a0cc6dd7a35c7d41ff9c073ce614e2df16db4c414ae39cf3095dd146bb543914ada1fe0c39e4b02827efad3ea205ac01f0575ffcda7fa6bbc475504c54efb915d6ef8733d0595c64ca103bff6994d137b47078b07cf8d8c29b9631c7a484baeeed72a8e989b5d36abbe08ffac7a0fd3c1e6c5a47d042fd28a5cd18e56ed5d523eb129cc8517906c9d330cbcf1ab83ca01f29c4873ff8e93eeff227fdcb0922f6abb6555bee5aed71b07c011c5634cce660f398df2a5381250e7ea68959c835bb06596b5449197f3fa3f9731616c3725c442ee659f1dd0ec1f8f9d04124c54abd1befb9b6351a8fcfaf2d9d3ec6b032ef6d9157976a206da65a88f46fc67159984016664a6cb90febf7824b349c522a8b2363124a33db35c1a4e4c9dffed2147c012b12190014c437bd39fe3b4c7d0942753b890533e1e5ecd875e0df7dc5dafdf83e964223d7cd6ca9c6a078aa2c3644565d952a4cb9f797e3e1c911112d1aad62932770f921cb15aee1cdb2abe05707cf3b27a5e7727aa2a47bee82c543f49dab9b97f31f8a6750fb99f205fb0853a82f8599afd0a227806e7af0bd700bc33350cb9f95d92fb3624556119e3b5e0c8c326e2c62a29af65ee3ad7e04d13caf72ecc73fbee97d0eca20783a158b8883cb52856cbb796fbe6e6d0e62afee8f80c4030b5e01e79e7b1d3df8347d621b3d378ab5cbc300a4b25f96f027edd9efa528235afc614cc77551de91c25466eb467bc01e46a7bccf7d983625a5c18fbf123516f832f0e3f5cc11dff1ec67ae665c2c52a42c25c5d0038ef769ce41be2d530c182d01d3023dd48cb448b9d7df9fc2b7d2815a442a31ca4b81483cb67943feac08394d1d9ac439c0887bcf4cdb4fd10fb9e5969ba08f76063efb29c439693e8945adbb9ce97ae2f787efc8c3bccb04bcc74a1e1e2363b6f7f1cd91a04316c822178e87de268de54b6a38580407273f1389aa5342d3cd7d2c74337d72315b3251825e8a9b5bb4dd33c44df68d9c75f0810e8d566d61bf29b8d9de9f612cf85d075d74ed2e943a7205b1c3a7be1fcd90db18a37f299893c6dd3ce5f66fd13eab6bdc50a9f27f5fbec5a827c1839f5e9e0f4a21875c47df41433c5454b6591807a759278b2714b1a6ac726b9f1445c782d254bb3ac4691a23decb4bde92ec35696f0c6f339676d529e3d80a49416bba396e60b90adc1d8f3a696cd1b6ed4b4adbc82eb0f6aa9780b95467011810da9064ff35b169fe3692a9b4e9377fb169c1f64f4cdf91d2fdadea99b60a5275502381387f1cc19bb5f35b8b7869ae8a9919684c76cf09eb1f04ded5d456d9cfc6df7da1c99675db576b7608872b650c96018a5702df4b5b3343ceb875bf5d22432e6dc24001d72bb0f735e4214e6d78ea6b1f873e3e66abf0fd1a891bc898a8dca49c5c2340897c50d779f603c220d11839d7cc05d6416333f08994e62ca380862f91c1aa03d3eff7c3bd3cb740e43e2e775405d1bebf63f0d30fc8d280db170b53d993cd586bd267df095516235412e5cfec256893967811f5fbe1b62913deeb03e58ae691f2f30af1406b3686ba9049b9c681d3113eaf3217d7d06de8dda42602e5855c3149e62d27cdf2cd278700dcf28b4da1a00d1cf9c3ab15f1fda5abe7524976f8297cfdef5662361feee3caf7d1bdaeac93783fab7aca2f95789c9e1461a1fdc0ff2d561beacbe4090b9e87d42631fc8340173c052a622c765f1c00373b98974332e30d2cde69dff905ac9ec75d2a916deab50181d228881d1dda3fe885780e0686e43806e01eed963bf141ece9928da1f4b19a09b8090a79770ce2c9eb08f545c479cbee2f8d19bfadd3184a2c6d1e6c9f22b392aa61fb4e98e7b988ea5cbe192b508a63659f0b522570a837e5b17b281867a7359691f78e9c6f63092ef7e8a10b8077e3968c0789e5964062f6c5cc19389c4c26b970cb1458bfd571fc840fb3c183827d065d3cd1c5f9929417df1f5b0513982b156c247deee50a1e1b7a0ecd07914c246505a2846e3dc54af759356c653bd19ec798745bf3564a74b106fa9d36b74284606279795439aa5f194561e5a42aa8d9c3e803995c782097bcbd28017829b1f9a82428d54e6e82b8b64e12eb73ab22e6531804276a4d5e656cd27a327d231d1b901d5d447573737f4fbc0c9c0f0998b0d58286fbcd02366e03ab6d6f74b7bc6dc15dfd56eee42d5ed9e33b35448800daebc7858775c5eb61f35453046ffa93f8b2921ff5e6a858e1e6e1733a153c87e5bdda5d7b5f303f063b96ecabb8294804a2ebeb914fbd0d05cc7de76f145d7bbe50094ba46fe7180393c6fbf16687e4373eb9db53d8b6273d41db5261d98915874e32c0516a8d64304ae77d63d6de637f6215a9d2990171e1ca1e7a8c01bfab7395bfddced5fa61f9338b421c9e0e676e1028f6990cdff18ca99476a62a38e78315b12f2053ca585db802e566e47aa6090328752e3350243a9d56e61440b8e478b30f86d54e045703998e1c94e904e5ebb031af306db76219567e0be4bf74a49c6803f9a333c24c5c61619abf6f07ac24474b7764fd14b29358e873e198f3965b6b036cee7116b73c775fb92819b9492333c01d7634b115043c195a7f615f5f851d84b6e941c97ef291483e5645158b3527046cb2188239f4c54b5bc47103df22afb35753983df5fa353033f3c9c5893865dfd092e2ff503e568329de4b65221d8bf9e8267ea59250a4f2ccddf2cb43e830befef0fa0f9661babe83353da3941664968dc7429a8a61a04b80ad43870906fd3cdbd6410d721fb26e5576b858081f6b0eadffe9f9d7e853256ace37470edd78ed1fea4836129d4152a3cdca0c957d0cd86c3a167a39934dc0cd7976fedaed675019207ba8e5c034c38314a378ccfc0c7990a1b57fe80e88b9bcf0c99b5a86f8e8a1bbb33fada320662e0d886b677078ac75574b6834dd1da8379ea3a39ccc7d70ff5ba82c36ffc4bf534f0b4b2faaf6903c8a1a53050caf545c478df984494dd931b2424d23ec3d8c7e2de03581c3db3ac06c129962f362e02359c8c0d9d7c028a26416d286cb3919fcb5614921e716b40da7b45faf1f79d4555b0840b57399f17c0379e98182c043385ed3f0d9e6ad65e27a74239ce21304d161efd5c676f152955ea6bcbeb2ea5f2ff66909e0c52ce7d3b2e746fbd27de695466b198fb26b3b63f0e10a5c5fc7c81ef5109815df1bf13d78e419e0ccfdf336db927d8c8a85697bd851cbee924bc8b40ba2646fd7b6324b67bcc40da2e29f9f4366044b3309e82bb75e568b73df0b7aa0712640c8db5aaa2ff8c8301ab12271a39a9bac46d788542593990449b1f94e255330cdecc76de45284c95cc5db4f402cfdb9dcf996fcd89218a11ad8bd709f0fd27a1ed7fc44115503e33d012ba19bf39d1f610ed4619b356ad9a5df9a325807202a511bc421d56c4336556c7ee7c92317fa28aa9c3cdf61a68ce3cc3a0ce21904dc6bb3e3e5fa536dfeddfe95f652793b6a5eb53d3d615f8d2dd67fd5cc8a626e8a59d43b83b4790ad358e71e73f67f09644a9b4626b759c77c093f950927e97d45034dfa5d529b5e6a3338528a4b39987e7dba1ce22e4e3f16371b4ff46fe1970fda7276c407913e60820c8834b0dcc3cd685197b88db02a1b1d7d5e2a32f030e794a247bf4bdd7d923006526b08f7fca96b870e07220cbdd2b336c6fb61ed7461224298390454406c82b5312182516164e94b595a1dcc8a21286a90ad0fc1dab40d44124520056337bdecfc6712c7a53ca7042550b44a449c6eeb595841e4ded6e36d6f9f0ca59fc775625b70eeaa31399b7e3877efc711a9d6794c918c9a2c0143034060cdd946e92938308e8cbd8b4ef10b7215ff50bd4bfefa5da85398ad7358b7fbfd7a3edbf2ba6598365e748704ab7f85a789b785b2cc495dc6119cda9370d631bfc9e39f39cf00962d12e867e2f5daebf3ba83578f5bdbe328578a4e471228814f8ef795293d0d6677b85db71f491bf4047a7b4b7d6e1c22f7c8cf52ec0914ef26e05d4de73ea720a62d47857490fde4c7f419b5366d5cbbbc6c2c253c326f983fc2cfafeb20ad0934bfcb86d86dfac90a600a15223d6a0a36272d4801ddd361aa0406ac62b84519c17106446018a5f75c58498eb3e44097c11445806e3bcb761e670ce7ee2b82e95e927f6130c362931af4bc807d29f3d518adfda592496fd155a075a23ea1157f0e5dfd2ffc847c5396894e846789f3e280a991994bad4f0a7822b754c5fcb62440ab1f68d21d4a7a8395c12169d8817648a9bb87078f6d5a0d9a8fcb06aff34aa55cd89c577676ae6c1344d2f2b748d8c3b12b0fc06f56f5aed5b6967741ce2150cd5ac9b7303100422856ed82030f8ccacda6472c8062c48f42fe17b6f230aa521b11263c2b5b769e3b7d899ce2623c42df08aef6ca605fbada1f47647eda7d79bf885ac3fff62c952b1eb653d06c6314b96b91c22140cfd2574bfffa70f982925383223adbd79a984863d3983351644ac605d4dc8d42bae1a1160734a42374d2f6971ae37c3a22ddcafd87f6c6d8051b77c5632276fbdb0f3b50983a7decb59515e874c07ba1ea6564feeadf2c84bad180f34b8f444ac802f30dae00f70e0eeafeec4ae3cd5665eb952093149971442904422c624f4ca140aa03ff18919088a39db7ec83db4df2852dc65af012f693b6acfdeb7d6a0287f90283836e313644939fafafc85aed7e18b1837379cdadb911df64b62f3fdc94754eb3a82527b49975728245df4815a662863d2da6c3b6be8081cf80cd357963c606e5c719b497d9efbfcbe758dbfaa46b2265237f9402d8cdbe291ce095b335af0ca9e0c2872bb263db9d642af431f250ba3139439b8b1f6235b590447db49bfe979c2aae6dc05d851a97cfe8ee5528ed64c31f45409c05f7321fc9082bc08d388cdd1e647d6b930b1462690e0914efcbe3d4fdcf74bf0ca1a523b87f4618b31a3adfb121ee6a19b0f49b2be3ec1df5c8286bcfbeb4b38b1429f301c2393be5ebf72bb0b792b6f0c743d8c6f59e9dfac51c22ae54aa564959ca9b19ee659d2e9a88c1fd8a35300dadb0452cda12d0166251e620b2682f075462f52802047c9625e64c5efc47d702d774dc5a365ce6c139472e713d8c225aef2a0a890e804fbc07461434b4b946ea0bd2e9237fe3fc059b4d87244b165c45614cbfbbc9f7b370b6a03d3c68eb701da265cbe725559149853da7c637a4aa4c766abf56fa81a234e7219fa92a0f54f9d65b696cd44a179ecec78d0f26152ec7b4ea5622422e49f6085caa1bef3fff1e3a80e5406ddd42472d41917e5896f107a5c8825775c2a6ad0d9cdba590f6aa08a87ed224d4d2950cccb91144a226a8aaec0bc384f0aea43b25f6d4e883354d5324460961b9b425ea62c090a369205e1947963dcd9686e9b847cf32c606cde42e68c17d3eb264ce41c4dd0a52c1e633d08af903e8a172f3288d1fa9ef0af2978bb7aeb4746f18968f054a59b63186d1544ba3bc410fb7ebf49cbee74165c448bdcf57f66684bbdff11b8b83ad7466778097c084cf2c319a10f47c200756a87e25e7ef5ad0532fdec547f96d55d4ca628d56299222cc7c73bfb9df7675de827059c258f6b925f6eea9250e00c274ba9aac9db8e7c21b7b73ba34e1c163182a923058fb8fd2441ec5ae820f04d6cc512dedabfe6ce629e05e4bf516eb701bf218fe5ba6961d273d31b46299e9ad185c3871d2cc7d881a74dafb25713c35f8a</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入密码：</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
-              
+              <div class="markdown-body">
+                
+                <h1>Git常用命令</h1>
+<p>本文总结 Git 日常开发中最常用的命令及其推荐使用流程，适用于个人开发与基本协作场景。</p>
+<hr>
+<h2 id="一、Git-常用命令速查">一、Git 常用命令速查</h2>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+<th>影响区域</th>
+<th>是否联网</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>status</td>
+<td>查看当前仓库状态</td>
+<td>只读</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>add</td>
+<td>工作区 → 暂存区</td>
+<td>暂存区</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>commit</td>
+<td>暂存区 → 本地仓库</td>
+<td>本地仓库</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>fetch</td>
+<td>获取远程更新（不合并）</td>
+<td>远程跟踪分支</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>pull</td>
+<td>获取并合并远程更新</td>
+<td>本地分支</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>push</td>
+<td>推送本地提交到远程</td>
+<td>远程仓库</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="二、最常见的日常开发流程">二、最常见的日常开发流程</h2>
+<p>适用于个人开发或小规模协作，是最常用、最推荐的流程。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">git status<br>git add .<br>git commit -m <span class="hljs-string">&quot;xxx&quot;</span><br>git pull<br>git push<br></code></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>目的说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>status</td>
+<td>查看本地修改内容</td>
+</tr>
+<tr>
+<td>add</td>
+<td>选择要提交的改动</td>
+</tr>
+<tr>
+<td>commit</td>
+<td>将改动保存到本地仓库</td>
+</tr>
+<tr>
+<td>pull</td>
+<td>同步远程更新，避免冲突</td>
+</tr>
+<tr>
+<td>push</td>
+<td>将本地提交推送到远程</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="三、新电脑-新环境的首次配置流程">三、新电脑 / 新环境的首次配置流程</h2>
+<p>在新环境中使用 Git 前，需要完成用户信息配置。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global user.name <span class="hljs-string">&quot;xxx&quot;</span><br>git config --global user.email <span class="hljs-string">&quot;xxx&quot;</span><br>git <span class="hljs-built_in">clone</span> 仓库地址<br></code></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://user.name">user.name</a> / user.email</td>
+<td>标识提交者身份</td>
+</tr>
+<tr>
+<td>clone</td>
+<td>克隆远程仓库到本地</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="四、git-fetch-与-git-status-的配合使用">四、<code>git fetch</code> 与 <code>git status</code> 的配合使用</h2>
+<h3 id="推荐顺序">推荐顺序</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git fetch<br>git status<br></code></pre></td></tr></table></figure>
+<h3 id="使用说明">使用说明</h3>
+<ul>
+<li><code>git fetch</code>：从远程仓库更新 <strong>远程跟踪分支（如 <code>origin/main</code>）</strong></li>
+<li><code>git status</code>：对比 <strong>本地分支</strong> 与 <strong>本地记录的远程状态</strong></li>
+</ul>
+<p>⚠️ <code>git status</code> <strong>不会主动访问远程仓库</strong>，只有在执行 <code>fetch</code> 或 <code>pull</code> 后，远程状态才是最新的。</p>
+<hr>
+<h2 id="五、使用建议总结">五、使用建议总结</h2>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>推荐操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>查看本地改动</td>
+<td><code>git status</code></td>
+</tr>
+<tr>
+<td>判断是否落后远程</td>
+<td><code>git fetch</code> → <code>git status</code></td>
+</tr>
+<tr>
+<td>日常提交代码</td>
+<td><code>status → add → commit → pull → push</code></td>
+</tr>
+<tr>
+<td>谨慎合并前检查</td>
+<td><code>fetch → status → log</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="六、关键理解（核心一句话）">六、关键理解（核心一句话）</h2>
+<blockquote>
+<p><strong>Git 不会自动联网<br>
+所有远程信息都是本地缓存，需要 fetch 或 pull 才会更新</strong></p>
+</blockquote>
+<hr>
 
-              
+                
+              </div>
             
             <hr/>
             <div>
@@ -607,23 +737,6 @@
     });
   });
 </script>
-
-
-  
-  <script defer>
-    if (document.getElementById('hbePass') || document.querySelector('hbe-prefix')) {
-      Fluid.utils.waitElementLoaded('hbe-prefix', function() {
-        var hbePrefix = document.querySelector('hbe-prefix');
-        hbePrefix.parentElement.classList.add('markdown-body');
-        Fluid.utils.retry(function() {
-          if (Fluid.boot && Fluid.boot.refresh) {
-            Fluid.boot.refresh();
-            return true;
-          }
-        }, 100, 10);
-      })
-    }
-  </script>
 
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>

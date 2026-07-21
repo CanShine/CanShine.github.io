@@ -19,16 +19,16 @@
   <meta name="author" content="CanShine">
   <meta name="keywords" content="">
   
-    <meta name="description" content="ZYNQ的PS端DDR带宽">
+    <meta name="description" content="ZYNQ的PS端DDR带宽 1 背景概念 PS（Processing System）端的 DDR 是 ARM CPU 访问外部内存的主要通道，其性能由以下因素决定： 理论带宽 &#x3D; 数据速率 (MT&#x2F;s) × 总线宽度 (bits) &#x2F; 8  数据速率：DDR 的有效传输速率（MT&#x2F;s）。 总线宽度：DDR 控制器与 DRAM 之间的数据线宽度（bit）。 除以 8 转为字节（Byte）。  备注：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ZYNQ的PS端DDR带宽">
 <meta property="og:url" content="https://canshine.github.io/2025/10/22/ZYNQ%E7%9A%84PS%E7%AB%AFDDR%E5%B8%A6%E5%AE%BD/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="ZYNQ的PS端DDR带宽">
+<meta property="og:description" content="ZYNQ的PS端DDR带宽 1 背景概念 PS（Processing System）端的 DDR 是 ARM CPU 访问外部内存的主要通道，其性能由以下因素决定： 理论带宽 &#x3D; 数据速率 (MT&#x2F;s) × 总线宽度 (bits) &#x2F; 8  数据速率：DDR 的有效传输速率（MT&#x2F;s）。 总线宽度：DDR 控制器与 DRAM 之间的数据线宽度（bit）。 除以 8 转为字节（Byte）。  备注：">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://canshine.github.io/img/%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0.png">
 <meta property="article:published_time" content="2025-10-22T06:14:00.000Z">
-<meta property="article:modified_time" content="2026-04-28T04:50:30.365Z">
+<meta property="article:modified_time" content="2026-07-21T05:34:46.750Z">
 <meta property="article:author" content="CanShine">
 <meta property="article:tag" content="DDR">
 <meta property="article:tag" content="MIG">
@@ -174,18 +174,6 @@
             </li>
           
         
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/academic/" target="_self">
-                <i class="iconfont icon-book"></i>
-                <span>学术</span>
-              </a>
-            </li>
-          
-        
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
@@ -302,22 +290,130 @@
             <h1 id="seo-header">ZYNQ的PS端DDR带宽</h1>
             
             
-              
-              <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误，请重试。" data-whm="博客解密失败，但仍可访问解密后的内容。">
-  <script id="hbeData" type="hbeData" data-hmacdigest="6b2cd0930f2f90c7892a72b978496675783d5f7bf97120c94c9f6c4c595b4870">9ad6c89fad563ff050d22f26b96bab82d8c2a2f57468dc1adaa5d741c447041dccda024d09b07b17752a085e203e0dc010c32543d56c590db68f4172bd7abc7145fd5bf3967c2ab6fb209c96903c7663b450df36edb3df63bc3f087864fcad3c929a077160308bc8902c384ca48216669ffd2b20aa4499a2aa93492b64d9406d692e64dd194e5207fdab29e3094ad574c125e1dc25887f405f0a10b8397d60444b0aabfef6f42b85d52f8e36a78dba3ddece2a521dcbdf8ef8b37cc43f31dd23f5dc6c483a33e819113dfccd9cc2c350458a6c715c2ac809dee28b1ddd69e759f9f6f1764b9bc767ac87d428bbd7629464f3a4705d8797d0bf62c5938c33c0b736b819f98038e6c0b4c3156f79e85c6e469181caced7f634db17cecf5f0063a448238ea5f8e4b53df62313ea5be679adcb1b1ef8bbc7a8ec52ce68df15e96ef973befe154741d1737d4acb93989e250628ef1e2819ef85ecc56407d19dc622df42190eeb5488431ab9d078eedae0b190dad89628bc34aa7a7ec10a6b5fd6417b7e82c400873dc7112bafc3f7cbea0980ce2150b9795ce13153abc54005c6c280696fc178b3dd9164998331b338421244203aa6535e3fde952bfd7ed889fd063d9c654eb77dabab9933b370c0fc09fe90e86d19a63085d40d96ed312bf6130b525ad9a5f8946a4853caa6428cabee612fe8df887a07ea3d747fb5f47beb872cd965ad1ad6771b6fe2499b28051cbfca7c47374f8bdbb178ce9508e55cbfa56ac0401f32d1706f6ba3d3f99f1918b6b69192aff5c91aabc4d7bfabd9012097c9976f15538412026d2a5e8ff5b1e101eb1a0974f30f76cf998509f5caf6a75adb86971033cb34b79e8770a4740956b1ee5cb2f5166906275539b2c7016bc6aee9ca504ee461a66f71733dc54f8802a80c721eac9065ec7e3bb398deb664bde4caab778782f0163fd69993a04d0ac28b7e0fae2d524d40679d6423e3162047d9738abb5a253049a9affebc7df6a0a7e42f725cea3c30690fa613fe3b74ed2e8399efde94c4cd09bc3cd6e6959a7def0575a055e2aec92426872e3454043e1d5c7e739f64b838063e3158368b348ff03320102b2ea80592a013441c9011d97094e90a4067d0ec041a1acf900bb13f08da3a2af0bb7561279fba364f67858651808903c76cc9c4bc94d3d1e98083b56979d832a569bb2500f6c17d39410a94f2125419ac0c7d12f81f1227e2f2be750e57baeb4b9f4d33221656b82352ef3531ad25b89e7f7c5bffd7ab7e7d1f94a785b91826ed4bdec866fe1bb1dd69ad9b0b274c619b334163f92d162d7efe0e85f8f5145ea7e72a5d1a3906d9c09014ccf9f17165ee05c890215345c9a99467d42d0be7c87d16731d9bbb74c4a858ce19f61de79ea6552b41d32b7cac05585ac7f95ae919e33d3f546b27734704e4b3af18900ccc258c7c1940cd28773edac16fcf879a39b01f49ffacaf2b40bdc459252d6298b42e95007a7d83fcb68a070fdff305374050047f981a510b7c6311174f581a7be60d04ebe729a11459234da2fafc0793c0c1f7f06cc0636b6ff668b4cc2b126273b7c224eeb8b53d060598b0800c3d7805e089ee76aab715f2e9fb305f948e8856234a07c3a584cb71b45c02960c6922b1d773ff0c65477fd7f1fd78442065f52ce411b7917321e8ead2f745300a7147e6d096234e0ab484cfd08ea62724f6980849bb6d7ecd0aa3bfeb42df50d8d93b11867470aeb6c6ddcd4bed6e0cdcf739bf662835539fc0f88e29e42a01e1a61b9adad00506ce58a2d86c08716a65fbd3cff2352ccc611af9d607e9fd3d2aac6b3334879d433829ef399aad3448c21a52c8657cd4959ab14e99495148cf3483bd639d49919f425a1f3642ada811b40eae1dbeaf910c16e33449d8c0cc187672eca717d9ea51682fb1483ecb178251137b9d3731061af1786d459edc372a1031df1a219220692667bda9bfc296731c6d473b462338de47a3c26b5c1e9c793a705dbee0c940410cc08d552607401e9a3e9755980927126119533775ce5295f5ddb064f81eabe353bf3b9be8ab521cc747ae760b11c0760226e95a45ac0d70e640b20f663c7b504fce8bdd76744dd794d46adf531445ffeb40fdcd8e832bf49829522d7a1fd0987fdd5ed8e403554dd14d0bb48c8e1774fc7105b73152d1be321c52f2440c3f66fe6993bafd37a6a8176806af49d78ba91ac66cc50b103270e4586184cfafc80a1f8abe8940de979f98fa3cc7c198d6378f3e9eb4b341fc8a1c2c32b89f89dab773448b26ed2605e4c420b7fb29197131e26d21f7007365f972119741b25f41ebae14324dfb6e3dea276fc33d8e6beba142c7d7a78615691bc69e8030faf9a8dbd7a9c7fac9daf40491b32437e8fc2ae34c330ced80820fc73910448aba36d8d74117798b4ffcf3a4c6c21518e77b2e1f3bccb3f194da246371441642e1e9d3a461d05b8d18ff329dfd46a2181ea7d58fb20e7565694dfb08a6c3a65e8ea9af119ca3053ff615ba19771a4610264b0373970b8a5119833126406d2ce73211c8738088b87ef34cee6528739aae4f12e4a38fbfa13171ed6c1c2608827d93e0835215f6759bd9c623ac2d71d82534366b5925b9115e55845db86b7336a6f49bb867af9718f8c23de98105fa82dae8ab7542300f12e883bda3df6b38b21dff26de98fee32f15f6e456490995415a1258d95f36d1ff8015cd2afafdb516d83615517d0bf05f158f4ca9c112fb8eaadd2e49b48d40ff01923383470362aea8c22a40aca7c8a701eca74b75ea452a0439c55e86dc356642e2518caa71106024702551b50d6a2267102b98b845eb77f2a6c9317ec0ca7b706bcc4b8f98ace6a98256ee7321115180d38e8b4da22c931c81333b531805e27ba35735c489d4815ca5468d8ef1973a43460ca0653c95ae16947edbfd12707919e7d48d0e78c482135756dc1a561016774fd047d97cde2789ff39243aca9ed8bdf3adb7f0f77653f2a808627ae7cc0dc834fa43921c2bd248373c84c4993e76854c3c49dba894c0a4566a3c84356299dd22ef89751cd68fa35a980aafe267aa95abd943584b66c56227e7d0c0c2fe97f78e22169f67ec88a285124ff6ce54a2eabf16d9e6c4ed1c3cf3cd34a8fbb5677d0be2b2b45083d19e074828b51140949af513da64057f173eeb7a84fe00fed601815fea998e464d31f67b4817bb41cfa83e34260ec10e4aca707ae733baf49f7018502566d8ae5e947500f6887119a7a5a5434ca8e5b56b5ab526398fe91cc55e9507573defa6c4715a19d44fa0b30648e9ca8f5a555a4fc03d3fc9e3f7b333b866977f5d3be40d8ea90729ff4cf80f531df55bd8d33f629e5e922f99712957d7b219be81aa283a8fc1f8dbcc7ed05ea217fbffe83dd8ac590b02ab68ca886557ec07e0b544101fe67f74c4655bdc547eca8f726a1debf9c11c86b6a5d8e3b818e0957f4f410fbd03d6245109b686e9a525044be1d233381bdce3ad46aa505d1e8e3c633ca9a618cc6b6e9a2cb32e1ac1871ea3506fbcbd2dd7ae27ae22597271fda1e7205f16a404221e0b5fd006903bf09027cb9bca42ceaf31a26f0aaa87633a097e42bd651b7c4b35ea9f905b6761302d5bf4637285427b654909709448073caa53fed4f52c0b80927a1e42fd85d145a6b91f1842b7546168f5ae8c4c1224d48b4baa384f373a2de2e1844399ef38963393b7c7c85c6dfe211634fa5d36cfdf97a7100230780785efe4df5da5331046445f9fe68eebbb50cb31e5f3865e8ff6cb911028c6e6d3ba5a688c6708d75117b18b35394d948fb2be5e0da2051f381274952068b4137307678a8feced72c7762fe3026bc79eac3d2498dfcba7f912883a9f9d2f7714e89d98fc975bf04116681898d98a44dc506ad894e7d1fc88f3c0f74814f05c3f9f479c9991c057d60219cb64e8801cf0507c955591c67c5c8f47e079f3edac480078d3cce01af1fcc49cb798b1fb7b20a511c680e5889f523632b38f11c1fe1235b18aebdc4d27e003b73818633d37aed0ce127bcb21bad027dd4491264ddb3ac5329b47f16ddb2b9792eb831fdfd1f5362c3597f987d563a0c2a39d01175b6591d08978fc2359d9205cda63764ad93aa51cc43ed36f506e861f80872daf53dfa68ab9faad96eea3b2442dfc3c9131bce42782940b28ee55dfbae3caa2c2367af713dfeb82d8ba43e0c214f9a0976065fba4ec70e97fe2946fc4813c3d326032e55b28df079c336fc1e6d9ce2f94676e8ee24bdce1ba3d88052c7dbf6f26033e634bd27cc55b43b6317bf8df46fa243f60a90a2a56922e65cfe022aec0d1590c217415640353051596c7f9b510a522e6a1b585c6b6bbd2a5159ab7065476e86f1a5f173810fd1f84c9b6abb0edff9cf8f7abe33b122093183ba6e52eb605b32e7a452646eb8d0848e56bd27f3812738983f2c235d5b90fffd1d2536e22cc8037a0070149433ad14136ad41af2eed25263f860ab39bcfeab82c94960725f17499418f61caea097cd96137fcf28dfdae5adf5d7a73962b9b72dcfb12c319cd20790b4d8a9c677110ef75059387c96c0fdc02bca8bf60d70fbed03477685f2a829ad546628c3f55ad47520817eca1cb7dfe75194dac4f4d2bb667e995ca1f7fc680a7f46f198eb8a55aa674f27db6df70efc3f3ded5e5e20568628bafe7148710972c6ac66c4c95eb1b1f54c52180fdf82b6881ff3cc30d6136284d3a88272c000d1f97bc864123f41e29a64a944a0f8fc5a0aeaf6bc139dd3ef25c66aab1a6fdf386739f7649ed6ae9e38f8cbe42bf3f83145781424ab83d497c6f0923eeb6ac9dd2a6c9f1f73357a0ebe24005e48a3a4e8426abc3fcf19d44da0ac45b9ebf3a61b02241408ed03539e38d34d2b871a1700cbe063631650efe56125deb0774c7a0d5ea1b4f894472b7d035aa2c87996bdb71540d5e67cd5be2618059258b5274a5419c7887b0c34857cc563f3434ba15254b7814b47cfc5b9323a0b3e31875130d7cb1bcb7029d20fffc30759aabb71f53ecb3c88b22faaee47eacf109dc45ab13c3d215b323a52f6faea41216bd078e5a812a0624eda6b3924c529f0d04bca2f697f557346e4389c1c02f87c110cd0102a61e57f350326079c579dc071988a35b578c3ca15c0475e45546406537888b842c0bc2e217d35325ef68aa7f92f2ecd849de3ebf3a353b04a5d8cb9056a4dc7662186a26c6782468434bf9d4f96e7cd0b812bf3a219b2ae718fceb8043ac10e56f99f2bab8a77f9a7393f3adbb91938a6f9c6c3e7935d5b221452b5b187de337a8d9b6959dc1531cc0eac04fb0c08af3377f3d6f90431b8adf4eb3f73f2ddf805f029d19cecca9bf065f8e85389e16f8d6e5bfdc778750a64f58dfe3adaa4974d00d8d3d7ef52f41102029f904a8b84c88bd177b7c4a7361404f4095a4958d8045e08695537f0f5b40945dbeefdbcec1cae9efb2ec73d9e245361d376ff3330118f127dc4242066f216e7cfe3f7f09070970fa79991f877fd331f773203fbe52c58e38bfd1de5a421115dba387f2b141648f7a09a5d22e1f9f244720cbbe1531f9ca823f34e720a3f605636b1b7e8582e79099481be08d695c7842303a4c5a4ace2ebc1b1422bb4a89f061defa07d06e11726169374d33df7da58e14c9467ac084ff53e087acd26a90a71409308c950d81</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入密码：</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
-              
+              <div class="markdown-body">
+                
+                <h1>ZYNQ的PS端DDR带宽</h1>
+<h2 id="1-背景概念">1 背景概念</h2>
+<p>PS（Processing System）端的 DDR 是 ARM CPU 访问外部内存的主要通道，其性能由以下因素决定：</p>
+<p>理论带宽 = 数据速率 (MT/s) × 总线宽度 (bits) / 8</p>
+<ul>
+<li>数据速率：DDR 的有效传输速率（MT/s）。</li>
+<li>总线宽度：DDR 控制器与 DRAM 之间的数据线宽度（bit）。</li>
+<li>除以 8 转为字节（Byte）。</li>
+</ul>
+<p>备注：文中“GB/s”采用十进制（1 GB = 1000 MB）；若需以 GiB/s（1 GiB = 1024 MB）请按需换算。</p>
+<h2 id="2-Zynq-7000-PS-DDR-带宽">2 Zynq-7000 PS DDR 带宽</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DDR 类型</td>
+<td>DDR3 / LPDDR2</td>
+<td>Zynq PS 支持</td>
+</tr>
+<tr>
+<td>最大数据速率</td>
+<td>DDR3-1066 MT/s</td>
+<td>时钟 533 MHz</td>
+</tr>
+<tr>
+<td>总线宽度</td>
+<td>32 bit</td>
+<td>固定宽度</td>
+</tr>
+<tr>
+<td>理论带宽</td>
+<td>1066 × 4 = 4.26 GB/s</td>
+<td>DDR3-1066 × (32 / 8)</td>
+</tr>
+</tbody>
+</table>
+<p>实际带宽通常为理论值的 50%～80%，视访问模式和系统配置而定。</p>
+<h2 id="3-ZYNQ-UltraScale-MPSoC-PS-DDR-带宽">3 ZYNQ UltraScale+ MPSoC PS DDR 带宽</h2>
+<table>
+<thead>
+<tr>
+<th>板卡示例</th>
+<th>DDR 类型</th>
+<th>数据速率 (MT/s)</th>
+<th>时钟频率 (MHz)</th>
+<th>总线宽度</th>
+<th>理论带宽</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ZCU102 (XCZU9EG)</strong></td>
+<td>DDR4-2666</td>
+<td>2666</td>
+<td>1333</td>
+<td>64 bit</td>
+<td>21.3 GB/s</td>
+<td>官方推荐配置</td>
+</tr>
+<tr>
+<td><strong>ZCU104 (XCZU7EV)</strong></td>
+<td>DDR4-2400</td>
+<td>2400</td>
+<td>1200</td>
+<td>64 bit</td>
+<td>19.2 GB/s</td>
+<td>支持 LPDDR4 可略高</td>
+</tr>
+<tr>
+<td><strong>ZCU106 (XCZU7EV)</strong></td>
+<td>DDR4-2400</td>
+<td>2400</td>
+<td>1200</td>
+<td>64 bit</td>
+<td>19.2 GB/s</td>
+<td>与 ZCU104 类似</td>
+</tr>
+<tr>
+<td><strong>ZCU111 (RFSoC)</strong></td>
+<td>DDR4-2400</td>
+<td>2400</td>
+<td>1200</td>
+<td>64 bit</td>
+<td>19.2 GB/s</td>
+<td>PS DDR 控制器一致</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-计算公式举例">4 计算公式举例</h2>
+<p>以 ZCU102 DDR4-2666, 64-bit 为例：</p>
+<p>带宽 = 2666 × 64 / 8 = 21328 MB/s ≈ 21.3 GB/s</p>
+<p>若为 32-bit 总线（例如某些低端器件）：</p>
+<p>带宽 = 2666 × 32 / 8 = 10664 MB/s ≈ 10.6 GB/s</p>
+<p>注意：上面为理论峰值，实际值会受多种因素影响。</p>
+<h2 id="5-MT-s-与时钟关系">5 MT/s 与时钟关系</h2>
+<ul>
+<li>MT/s（Mega Transfers per second）表示每秒百万次数据传输次数。</li>
+<li>DDR（Double Data Rate）技术在每个时钟周期的上升沿和下降沿都进行数据传输，使得有效数据传输速率接近时钟频率的两倍。</li>
+<li>例如，DDR4-2666 的芯片数据速率是 2666 MT/s，对应的 DRAM 时钟是 1333 MHz（2666 = 1333 × 2）。</li>
+</ul>
+<h2 id="6-实测带宽影响因素（简要）">6 实测带宽影响因素（简要）</h2>
+<ul>
+<li>PS 端 AXI 总线/互连带宽与通路宽度（AXI Data Width、跨域桥接等）。</li>
+<li>CPU Cache、TLB、Cache 合并/冲刷与缓存不可缓存映射（cached vs uncached）。</li>
+<li>DMA 配置（突发长度、对齐、传输大小）对效率影响显著。</li>
+<li>控制器开销、刷新、延迟与 Bank 冲突、行命中率。</li>
+<li>外围设备或其他 Master 对 DDR 总线的竞争（仲裁）。</li>
+<li>驱动/内核配置（如 QOS、Memory partitioning、coherency settings）。</li>
+</ul>
+<p>一般情况下，顺序大块传输（large, well-aligned bursts）最接近理论峰值；随机小尺寸访问则效率显著降低。</p>
+<h2 id="7-总结（一句话）">7 总结（一句话）</h2>
+<p>理论带宽容易计算且有参考价值，但实际性能受系统互连、访问模式与控制器等多方面影响，进行评估时应结合合适的基准与配置验证。</p>
 
-              
+                
+              </div>
             
             <hr/>
             <div>
@@ -607,23 +703,6 @@
     });
   });
 </script>
-
-
-  
-  <script defer>
-    if (document.getElementById('hbePass') || document.querySelector('hbe-prefix')) {
-      Fluid.utils.waitElementLoaded('hbe-prefix', function() {
-        var hbePrefix = document.querySelector('hbe-prefix');
-        hbePrefix.parentElement.classList.add('markdown-body');
-        Fluid.utils.retry(function() {
-          if (Fluid.boot && Fluid.boot.refresh) {
-            Fluid.boot.refresh();
-            return true;
-          }
-        }, 100, 10);
-      })
-    }
-  </script>
 
 
   <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>

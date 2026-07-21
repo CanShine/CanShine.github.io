@@ -160,18 +160,6 @@
             </li>
           
         
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/academic/" target="_self">
-                <i class="iconfont icon-book"></i>
-                <span>学术</span>
-              </a>
-            </li>
-          
-        
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
@@ -253,7 +241,7 @@
       
       <a class="index-excerpt " href="/2026/04/30/ASIC%E4%B8%8EFPGA%E6%97%B6%E5%BA%8F%E8%BF%9D%E4%BE%8B%E5%88%86%E6%9E%90%E4%B8%8E%E6%94%B6%E6%95%9B%E6%8C%87%E5%8D%97/" target="_self">
         <div>
-          FPGA/ASIC 时序违例分析与收敛指南
+          FPGA/ASIC 时序违例分析与收敛指南 在数字 IC 和 FPGA 设计中，**时序收敛（Timing Closure）**是决定系统能否在目标频率下稳定运行的关键环节。本文档全面总结了建立时间（Setup）与保持时间（Hold）违例的核心区别、产生原因、源头预防机制以及行之有效的修复策略。 一、 建立时间 (Setup) 与 保持时间 (Hold) 的核心差异 在理解具体违例之前，必须清楚这
         </div>
       </a>
 
@@ -324,7 +312,7 @@
       
       <a class="index-excerpt " href="/2026/04/29/Vivado%E6%97%B6%E9%92%9F%E7%BA%A6%E6%9D%9F%E8%A7%84%E8%8C%83%E6%8C%87%E5%AF%BC%E6%89%8B%E5%86%8C/" target="_self">
         <div>
-          Vivado 时钟约束规范指导手册
+          Vivado 时钟约束规范指导手册 文档版本: V1.1 (增加典型应用场景与虚拟时钟详解) 适用对象: FPGA 逻辑工程师、数字前端设计工程师 适用工具: Xilinx Vivado Design Suite 1. 概述 在 FPGA 时序驱动的设计流程中，时钟约束是静态时序分析（STA）的基石。时序分析工具必须明确所有时钟的频率、占空比以及时钟之间的相位关系，才能准确计算建立时间（Setup
         </div>
       </a>
 
@@ -393,7 +381,7 @@
       
       <a class="index-excerpt " href="/2026/04/29/Vivado-RTL-Linter%20%E5%AE%98%E6%96%B9%E8%A7%84%E5%88%99%E6%80%BB%E7%BB%93/" target="_self">
         <div>
-          Vivado RTL Linter 官方规则总结
+          Vivado RTL Linter 官方规则总结 本文档基于 AMD Xilinx 官方文档《Vivado Design Suite User Guide: Synthesis (UG901)》中的 RTL Linter 规则列表整理，并补充了实际开发中常见但官方表格略过的隐藏规则。Linter 是在代码编译和综合前检查潜在硬件电路问题的防线。 📑 官方参考链接: Vivado Synthesi
         </div>
       </a>
 
@@ -432,15 +420,15 @@
           <div class="post-meta">
             <i class="iconfont icon-tags"></i>
             
-              <a href="/tags/Verilog/">#Verilog</a>
-            
-              <a href="/tags/SystemVerilog/">#SystemVerilog</a>
-            
               <a href="/tags/Vivado/">#Vivado</a>
             
               <a href="/tags/RTL/">#RTL</a>
             
               <a href="/tags/Linter/">#Linter</a>
+            
+              <a href="/tags/Verilog/">#Verilog</a>
+            
+              <a href="/tags/SystemVerilog/">#SystemVerilog</a>
             
           </div>
         
@@ -468,7 +456,7 @@
       
       <a class="index-excerpt " href="/2025/12/16/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" target="_self">
         <div>
-          Git 常用命令
+          Git常用命令 本文总结 Git 日常开发中最常用的命令及其推荐使用流程，适用于个人开发与基本协作场景。  一、Git 常用命令速查    命令 作用 影响区域 是否联网     status 查看当前仓库状态 只读 ❌   add 工作区 → 暂存区 暂存区 ❌   commit 暂存区 → 本地仓库 本地仓库 ❌   fetch 获取远程更新（不合并） 远程跟踪分支 ✅   pull 获取并合
         </div>
       </a>
 
@@ -544,7 +532,7 @@
       
       <a class="index-excerpt " href="/2025/12/10/Linux-shell%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" target="_self">
         <div>
-          Linux shell 常用命令
+          Linux shell 常用命令 1 查看文件 1.1 ls 与 find 命令总结    分类 内容 命令示例 说明     命令用途 ls：列出当前目录内容（不递归） ls 查看当前目录有哪些文件和文件夹    find：递归查找文件/文件夹 find . -type f 遍历当前目录及所有子目录   ls 常用参数 显示所有文件（包括隐藏文件） ls -a 显示 .git、.bashrc 等
         </div>
       </a>
 
@@ -629,7 +617,7 @@
       
       <a class="index-excerpt " href="/2025/11/20/FPGA%E6%97%B6%E5%BA%8F%E7%BA%A6%E6%9D%9F/" target="_self">
         <div>
-          FPGA时序约束
+          FPGA时序约束 1. FPGA时序约束的主要类别    类别 常用命令 应用场景     时钟约束 create_clock, create_generated_clock, set_clock_groups 定义所有时钟特性   IO 约束 set_input_delay, set_output_delay, set_load 与外设接口的时序匹配   时序例外 set_false_path,
         </div>
       </a>
 
@@ -696,7 +684,7 @@
       
       <a class="index-excerpt " href="/2025/11/20/Xilinx%E5%90%84%E7%B3%BB%E5%88%97%E6%97%B6%E5%BA%8F%E4%B8%8E%E5%BB%B6%E8%BF%9F/" target="_self">
         <div>
-          时序与延迟
+          Xilinx各系列时序与延迟  注：下列数值为“典型/工程估计范围”，用于快速预算与对比。精确分析请参照目标器件的 Data Sheet（DS）与相关 User Guide（UG），并以 Vivado 生成的 Timing Report 为准。(docs.amd.com)   一、触发器（CLB FF）建立时间（Tsu）与保持时间（Th）  说明：Tsu/Th 与器件家族、速度等级、温度/电压及触
         </div>
       </a>
 
@@ -772,7 +760,7 @@
       
       <a class="index-excerpt " href="/2025/11/13/%E5%AF%84%E5%AD%98%E5%99%A8%E7%B1%BB%E5%9E%8B%E4%BB%8B%E7%BB%8D/" target="_self">
         <div>
-          寄存器
+          寄存器类型介绍 1 按功能角色分类（逻辑功能角度）    类型 说明 常见命名     控制寄存器（Control Register） 控制模块的工作模式、启动、复位、选择等功能 CTRL,CFG,EN,START   状态寄存器（Status Register） 反映模块内部状态（busy、error、done等） STAT,STS,FLAG   中断寄存器（Interrupt Register
         </div>
       </a>
 
@@ -839,7 +827,7 @@
       
       <a class="index-excerpt " href="/2025/11/13/%E6%95%B0%E5%AD%97IC%E4%B8%8EFPGA%E7%9A%84%E5%A4%8D%E4%BD%8D%E5%85%A8%E9%9D%A2%E8%A7%A3%E6%9E%90/" target="_self">
         <div>
-          复位
+          数字IC与FPGA的复位全面解析 复位（Reset）是数字电路设计中不可或缺的控制信号，用于将寄存器、状态机或整个系统置于已知初始状态。不同类型的复位在 FPGA 与 ASIC 中的实现方式和工程影响有所不同。本文系统总结复位类型、原理、FPGA 原语支持及工程实践建议。  1 复位类型与基本概念 1.1 同步复位（Synchronous Reset）   定义：复位信号在时钟边沿生效，与普通逻辑
         </div>
       </a>
 
@@ -906,7 +894,7 @@
       
       <a class="index-excerpt " href="/2025/10/23/%E5%B8%B8%E8%A7%81%E9%AB%98%E9%80%9F%E6%8E%A5%E5%8F%A3%E5%92%8C%E5%8D%8F%E8%AE%AE/" target="_self">
         <div>
-          常见高速接口和协议
+          常见高速接口和协议 1 网络与通信接口    接口 典型速率 备注     Ethernet (以太网) 10 Mbps – 400 Gbps 包括 10/100/1000 Mbps、10/25/40/100 Gbps，常用 TCP/UDP/IP   InfiniBand 10 G – 400 Gbps 高性能计算(HPC)互连   USB USB 2.0: 480 MbpsUSB 3.0: 5
         </div>
       </a>
 
